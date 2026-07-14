@@ -1,0 +1,95 @@
+@use '../../../styles/palletes' as plt;
+@use '../../../styles/mixins' as *;
+
+.header-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid plt.$border;
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 30% minmax(0, 70%);
+    grid-template-rows: 80px;
+
+    h2 {
+        place-content: center;
+        margin-left: 32px;
+        font-size: 24px;
+        letter-spacing: 2px;
+        color: plt.$text;
+        font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    }
+
+    .nav-main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+
+        ul {
+            margin-right: 32px;
+            display: flex;
+            gap: 16px;
+            width: auto;
+            height: 80%;
+
+            li {
+                font-family: "Inter";
+                padding: 0 8px 0 8px;
+                @include flex-center;
+                height: 100%;
+                color: plt.$text;
+                font-size: 16px;
+                cursor: pointer;
+                transition: color 0.2s ease-in-out;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    display: flex;
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 50%;
+                    height: 4px;
+                    background: plt.$primary;
+                    border-radius: 3px;
+                    opacity: 0;
+                    transition: 
+                        opacity 0.2s ease-in-out,
+                        width 0.3s ease-in-out
+                    ;
+                }
+
+                &:hover {
+                    color: plt.$primary;
+
+                    svg > g > path {
+                        stroke: plt.$primary;
+                    }
+
+                    &::before {
+                        opacity: 1;
+                        width: 90%;
+                    }
+                }
+            }
+
+            li {
+                svg {
+                    height: 50%;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+
+                    path {
+                        transition: stroke 0.2s ease-in-out;
+
+                    }
+                }
+            }
+        }
+    }
+}
