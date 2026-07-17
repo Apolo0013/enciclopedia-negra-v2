@@ -9,12 +9,17 @@ function BackgroundHome() {
     //hook
     const {
         refsImg,
-        exchargeLate
+        exchargeLate,
+        SortImgIndex
     } = useBackgroundHome()
+    //
     useEffect(() => {
         if (refsImg.current.length == 0)
             return
-        const timer = setInterval(exchargeLate, 3000)
+        //sortea indice da imagem inicial
+        SortImgIndex()
+        //loop
+        const timer = setInterval(exchargeLate, 10000 + (1000)) // +1000 pro tempo da transicao
         return () => clearInterval(timer)
     }, [])
     return (
@@ -35,10 +40,10 @@ function BackgroundHome() {
                         key={i}
                         src={src}
                         alt="imagem de fundo"
-                        data-vez={i == 0 ? "yes" : "no"}
+                        data-vez='no'
                         //o primeiro comecera com opacidade 1
                         style={{
-                            opacity: i == 0 ? 1 : 0
+                            opacity: 0
                         }}
                     />
                 ))  

@@ -1,6 +1,24 @@
 import { useRef } from "react"
 
 function useBackgroundHome() {
+    function randint(min: number, max: number): number {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function SortImgIndex() {
+        //vai sortea a image que vai aparece primeiro.
+        if (refsImg.current.length == 0)
+            return
+        const indexSort: number = randint(0, refsImg.current.length - 1)
+        const refImgSort: HTMLImageElement = refsImg.current[indexSort]
+        if (!refImgSort) //caso o indice nao seja valido.
+            return
+        //aplicando o style, 
+        refImgSort.style.opacity = '1' 
+        //alterando a vez de dataset
+        refImgSort.dataset.vez = 'yes'
+    }
+
     function exchargeLate() {
         if (refsImg.current.length == 0)
             return;
@@ -28,7 +46,8 @@ function useBackgroundHome() {
     const refsImg = useRef<HTMLImageElement[]>([])
     return {
         refsImg,
-        exchargeLate
+        exchargeLate,
+        SortImgIndex
     }
 }
 
