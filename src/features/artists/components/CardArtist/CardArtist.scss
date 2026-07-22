@@ -1,0 +1,94 @@
+@use '../../../../styles/palletes' as plt;
+
+.card-artist {
+    position: relative;
+    padding: 16px;
+    border-radius: 14px;
+    width: 100%;
+    aspect-ratio: 1 / 0.8;
+    background: rgba(plt.$surface-2, 0.2);
+    border: 1px solid plt.$border;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 30%;
+    transition: border 0.4s ease-in-out;
+    box-shadow: 0 0 20px 4px plt.$shadow;
+
+    &::before { 
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        position: absolute;
+        z-index: 2;
+        border-radius: 14px;
+        width: 100%;
+        height: 100%;
+        background: rgba(plt.$primary, 0.1);
+        display: block;
+        inset: 0;
+        content: ' ';
+    }
+
+    &:hover {
+        border: 1px solid plt.$primary;
+        
+        &::before {
+            opacity: 1;
+        }
+    }
+
+
+    .card-artist-letra {
+        font-family: "Cinzel";
+        font-size: 92px;
+        place-self: end center;
+        color: plt.$primary;
+    }
+
+    .card-artist-btn {
+        z-index: 3;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 25px;
+        padding: 0px 10px 0px 10px;
+        place-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        width: 90%;
+        height: 100%;
+        outline: 0;
+        border: 0;
+        transition: 
+            background 0.2s ease-in-out
+        ;
+
+        &:hover {
+            background: plt.$primary;
+            p {
+                color: plt.$surface-2;
+            }
+
+            svg > g > path {
+                fill: plt.$surface-2;
+            }
+        }
+
+        p {
+            font-family: 'Inter';
+            font-size: 18px;
+            font-weight: 600;
+            color: plt.$text;
+            transition: color 0.4s ease-in-out;
+        }
+
+        svg {
+            height: 28px;
+            aspect-ratio: 1 / 1;
+            g > path {
+                transition: fill 0.4s ease-in-out;
+                fill: plt.$text;
+            }
+        }
+    }
+}

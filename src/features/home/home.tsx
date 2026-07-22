@@ -9,7 +9,7 @@ function Home() {
     return (
         <main className="home">
             <BackgroundHome />
-            <HeaderNav/>
+            <HeaderNav posAbsolute/>
             <ContentHome/>
         </main>
     )
