@@ -1,0 +1,26 @@
+@use '../../../../styles/palletes' as plt;
+
+$width-line: 2px;
+
+.features-section {
+    margin-top: 18px;
+    padding: 32px;
+    background: rgba(plt.$surface-2, 0.2);
+    border: 1px solid plt.$border;
+    border-radius: 14px;
+    width: calc(100% - 64px);
+    flex-basis: 170px;
+    display: grid;
+    grid-template-columns: 1fr $width-line 1fr $width-line 1fr;
+    grid-template-rows: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    gap: 32px;
+
+    .line {
+        width: 100%;
+        height: 100%;
+        background: plt.$border;
+        border-radius: 14px;
+    }
+}

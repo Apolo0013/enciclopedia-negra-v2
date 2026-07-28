@@ -10,7 +10,7 @@ function ArtistsGrid() {
         "V", "W", "X", "Y", "Z"
     ];
     return (
-        <div className='grid-artists'>
+        <section className='grid-artists'>
             {
                 alfabeto.map((letra) => (
                     <CardArtist
@@ -18,7 +18,7 @@ function ArtistsGrid() {
                     />
                 ))
             }
-        </div>
+        </section>
     )
 }
 

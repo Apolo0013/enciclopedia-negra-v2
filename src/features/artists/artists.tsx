@@ -2,6 +2,7 @@ import './artists.scss'
 //componentes
 import HeaderNav from '../../shared/components/headerNav/headerNav'
 import ArtistsGrid from './components/AristisGrid/ArtistsGrid'
+import FeaturesSection from './components/FeaturesSection/FeaturesSection'
 
 function Artists() {
     return (
@@ -14,7 +15,7 @@ function Artists() {
                 </div>
             </div>
             <ArtistsGrid />
-            
+            <FeaturesSection />
         </main>
     )
 }
