@@ -4,17 +4,13 @@ import HeaderNav from '../../shared/components/headerNav/headerNav'
 import ArtistsGrid from './components/AristisGrid/ArtistsGrid'
 import FeaturesSection from './components/FeaturesSection/FeaturesSection'
 import Footer from './components/Footer/Footer'
+import ArtistsDescription from './components/ArtistsDescription/ArtistsDescription'
 
 function Artists() {
     return (
         <main className="artists">
             <HeaderNav showLine />
-            <div className="artists-description">
-                <div className='wraper-description'>
-                    <h1>Explore artistas de A a Z</h1>
-                    <p>Conheça e valorize a história, a cultura e o impacto de grandes artistas negros.</p>
-                </div>
-            </div>
+            <ArtistsDescription/>
             <ArtistsGrid />
             <FeaturesSection />
             <Footer />
