@@ -1,0 +1,128 @@
+@use '../../../../styles/palletes' as plt;
+
+$width-border: 2px;
+$width-line: 2px;
+$footer-spacing: 24px;
+
+.wraper-footer {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 32px;
+    width: calc(100% - 64px);
+
+    .copyright {
+        flex-shrink: 1;
+        ///padding: 16px 0 16px 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: plt.$text-muted;
+        }
+    }
+}
+
+.footer {
+    padding: $footer-spacing 0px $footer-spacing 0px;
+    margin-top: 16px;
+    border-bottom: $width-border solid plt.$surface-2;
+    border-top: $width-border solid plt.$surface-2;
+    width: 100%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr $width-line 1fr 1fr;
+    grid-template-rows: 100%;
+    gap: $footer-spacing;
+
+
+    .footer-line {
+        width: 100%;
+        height: 90%;
+        place-self: end;
+        background: plt.$surface-2;
+    }
+
+    .footer-card {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 90%;
+        gap: 16px;
+
+        h3 {
+            color: plt.$primary;
+            font-size: 18px;
+            font-weight: bold;
+            place-content: center;
+        }
+
+        p {
+            color: plt.$text;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .footer-contact {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3, 1fr);
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 45px;
+                    aspect-ratio: 1 / 1;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .footer-frase {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 15% 85%;
+        grid-template-rows: 2fr 1fr;
+        row-gap: 16px;
+        column-gap: 0;
+
+        img {
+            width: 64px;
+            aspect-ratio: 1 / 1;
+            grid-row: 1 / 3;
+            grid-column: 1 / 2;
+        }
+
+        h2, h3 {
+            font-weight: 300;
+        }
+
+        h2 {
+            align-self: end;
+            justify-self: center;
+            text-align: center;
+        }
+
+        h3 {
+            color: plt.$text;
+            place-content: start;
+            justify-self: center;
+            align-self: start;
+            font-style: italic;
+        }
+    }
+}

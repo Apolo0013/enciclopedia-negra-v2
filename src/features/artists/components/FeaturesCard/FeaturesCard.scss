@@ -9,8 +9,6 @@
     row-gap: 8px;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 2fr;
-
-
     
     &:nth-child(1) > .wraper-img {
         background: rgba(plt.$accent-red, 0.1);

@@ -16,6 +16,7 @@ $width-line: 2px;
     flex-grow: 0;
     flex-shrink: 0;
     gap: 32px;
+    box-shadow: -1px 9px 20px 10px plt.$shadow;
 
     .line {
         width: 100%;

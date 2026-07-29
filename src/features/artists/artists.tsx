@@ -3,6 +3,7 @@ import './artists.scss'
 import HeaderNav from '../../shared/components/headerNav/headerNav'
 import ArtistsGrid from './components/AristisGrid/ArtistsGrid'
 import FeaturesSection from './components/FeaturesSection/FeaturesSection'
+import Footer from './components/Footer/Footer'
 
 function Artists() {
     return (
@@ -16,6 +17,7 @@ function Artists() {
             </div>
             <ArtistsGrid />
             <FeaturesSection />
+            <Footer />
         </main>
     )
 }
