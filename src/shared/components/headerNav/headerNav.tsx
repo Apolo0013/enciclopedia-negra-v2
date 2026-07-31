@@ -32,11 +32,15 @@ function HeaderNav({
             </div>
             <nav className='nav-main'>
                 <ul>
-                    <li>Inicio</li>
+                    <li
+                        onClick={() => nav('/home')}
+                    >Inicio</li>
                     <li
                         onClick={() => nav('/artists')}
                     >Artista</li>
-                    <li>Sobre Nos</li>
+                    <li
+                        onClick={() => nav('/about-us')}
+                    >Sobre Nos</li>
                     <li>
                         <ImgSearch/>
                     </li>

@@ -3,7 +3,7 @@ import './artists.scss'
 import HeaderNav from '../../shared/components/headerNav/headerNav'
 import ArtistsGrid from './components/AristisGrid/ArtistsGrid'
 import FeaturesSection from './components/FeaturesSection/FeaturesSection'
-import Footer from './components/Footer/Footer'
+import Footer from '../../shared/components/Footer/Footer'
 import ArtistsDescription from './components/ArtistsDescription/ArtistsDescription'
 
 function Artists() {
