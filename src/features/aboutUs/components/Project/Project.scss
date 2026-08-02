@@ -1,0 +1,24 @@
+@use '../../../../styles/palletes' as plt;
+
+.section-project {
+    border-top: 1px solid plt.$border;
+    display: flex;
+    flex-direction: column;
+    background: lighten(plt.$background, 1%);
+    padding-top: 16px !important;
+    
+    h2 {
+        font-family: "Bebas Neue";
+        font-size: 56px;
+        color: plt.$text;  
+        text-align: center;
+    }
+
+    p:first-of-type {
+        margin-top: 18px;
+    }
+
+    p {
+        margin-top: 16px;
+    }
+}

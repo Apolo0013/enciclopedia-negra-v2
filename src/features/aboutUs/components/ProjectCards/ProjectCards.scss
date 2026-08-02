@@ -1,0 +1,84 @@
+@use "../../../../styles/palletes" as plt;
+
+.project-grid {
+    margin-top: 32px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: fit-content(200px);
+    width: 100%;
+
+    .project-card {
+        background: darken(plt.$background, 0.5%);
+        box-shadow: -9px 10px 9px 6px plt.$shadow;
+        padding: 20px;
+        border-radius: 14px;
+        border: 1px solid plt.$primary-hover;
+        display: grid;
+        grid-template-columns: 85px 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 14px;
+        transition: 
+            border 0.4s ease-in-out,
+            background 0.2s ease-in-out,
+            transform 0.1s ease-in
+        ;
+
+        &:hover {
+            border-color: plt.$primary !important;
+            background: lighten(plt.$background, 1%);
+            transform: scale(1.01);
+        }
+
+        h3, h4 {
+            width: 100%;
+            text-align: start;
+        }
+
+        div {
+            display: flex;
+            height: fit-content;
+            gap: 8px;
+            flex-direction: column;
+            grid-template-columns: 2 / 3;
+            grid-row: 1 / 3;
+            
+            h3 {
+                color: plt.$primary;
+                font-family: "Bebas Neue";
+                font-size: 24px;
+                line-height: 1.2;
+                font-weight: 500;
+                justify-self: center;
+                align-self: start;
+            }
+
+            h4 {
+                font-weight: 400;
+                justify-self: center;
+                align-self: start;
+                color: plt.$text-soft;
+                line-height: 1.2;
+            }
+        }
+
+        .project-card-wraperImg {
+            border-radius: 50%;
+            border: 1px solid plt.$primary-hover;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            padding: 16px;
+            display: flex;
+            place-self: start center;
+
+            img {
+                place-self: center;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+        
+    }
+}

@@ -1,7 +1,7 @@
 import './FeaturesSection.scss'
 //imagens
 import ImgPeople from '../../assets/people.svg'
-import ImgStar from '../../assets/start.svg'
+import ImgStar from '../../../../shared/assets/star.svg'
 import ImgHeart from '../../assets/heart.svg'
 //componente
 import FeaturesCard from '../FeaturesCard/FeaturesCard'
