@@ -3,6 +3,7 @@ import './aboutUs.scss'
 import HeaderNav from '../../shared/components/headerNav/headerNav'
 import MyTeam from './components/MyTeam/Myteam'
 import Project from './components/Project/Project'
+import ProjectCreation from './components/ProjectCreation/ProjectCreation'
 //imagens
 
 
@@ -13,6 +14,7 @@ function AboutUs() {
             <div className="content">
                 <MyTeam />
                 <Project />
+                <ProjectCreation/>
             </div>
         </main>
     )

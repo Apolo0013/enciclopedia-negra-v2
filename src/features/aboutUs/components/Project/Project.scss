@@ -1,10 +1,11 @@
 @use '../../../../styles/palletes' as plt;
 
 .section-project {
+    grid-row: 2 / 3;
     border-top: 1px solid plt.$border;
+    border-bottom: 1px solid plt.$border;
     display: flex;
     flex-direction: column;
-    background: lighten(plt.$background, 1%);
     padding-top: 16px !important;
     
     h2 {

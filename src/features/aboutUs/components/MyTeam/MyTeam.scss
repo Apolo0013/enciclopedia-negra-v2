@@ -1,6 +1,7 @@
 @use '../../../../styles/palletes' as plt;
 
 .section-myTeam {
+    grid-row: 1 / 2;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 35%;
