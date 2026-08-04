@@ -7,7 +7,7 @@ function ProjectCreation() {
         <section className='section-about project-creation'>
             <h3>CRIAÇÃO DA PLATAFORMA</h3>
             <p>Nossa plataforma foi desenvolvida por uma equipe dedicada e criativa. Eles transformaram a ideia da Enciclopédia Negra em uma experiência digital acessível e inovadora.</p>
-            <ul className='list-auto'>
+            <ul>
                 <li>
                     <ImgPeople/>
                     <p><strong>Apolônio Guilherme Lima da Silva</strong> — Desenvolvedor da plataforma, responsável pela arquitetura, programação e implementação do site</p>

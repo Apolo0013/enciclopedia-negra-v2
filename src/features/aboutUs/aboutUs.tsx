@@ -4,6 +4,7 @@ import HeaderNav from '../../shared/components/headerNav/headerNav'
 import MyTeam from './components/MyTeam/Myteam'
 import Project from './components/Project/Project'
 import ProjectCreation from './components/ProjectCreation/ProjectCreation'
+import SearchContent from './components/SearchContent/SearchContent'
 //imagens
 
 
@@ -14,7 +15,11 @@ function AboutUs() {
             <div className="content">
                 <MyTeam />
                 <Project />
-                <ProjectCreation/>
+                <section className='section-about wraper-section-dual'>
+                    <ProjectCreation />
+                    <div className="line-col"></div>
+                    <SearchContent />
+                </section>
             </div>
         </main>
     )

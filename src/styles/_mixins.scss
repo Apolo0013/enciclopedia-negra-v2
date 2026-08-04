@@ -1,5 +1,60 @@
+@use './palletes' as plt;
+
 @mixin flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+// tag ul
+@mixin list-auto {
+    width: 100%;
+    height: fit-content;
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 8px;
+
+    li {
+        gap: 4px;
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-auto-rows: auto;
+
+        svg, img{
+            width: 36px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+        
+        p {
+            align-self: center;
+            width: 100%;
+            height: fit-content;
+            margin: 0;
+            color: plt.$text-soft;
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+        }
+    }
+}
+
+//sao propriedades padrao das sessao que falam do autores
+@mixin author-session {
+    padding-top: 40px !important;
+    width: 100%;
+
+    h3 {
+        font-size: 28px;
+        text-align: start;
+        line-height: 1;
+    }
+
+    p {
+        margin-top: 22px;
+        line-height: 1.6;
+    }
 }
