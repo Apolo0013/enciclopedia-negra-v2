@@ -1,0 +1,13 @@
+@use '../../../../styles/mixins' as *;
+
+.search-concept {
+    @include author-session;
+
+    ul {
+        @include list-auto;
+
+        li > img {
+            transform: scale(.8);
+        }
+    }
+}

@@ -7,10 +7,16 @@
 }
 
 // tag ul
-@mixin list-auto {
+@mixin list-auto($indent: false) {
+    //condicao
+    @if $indent {
+        margin-left: 18px;
+    }
+
+
     width: 100%;
     height: fit-content;
-    margin-top: 18px;
+    margin-top: 12px;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
@@ -51,6 +57,25 @@
         font-size: 28px;
         text-align: start;
         line-height: 1;
+    }
+
+    .sub-title {
+        margin-top: 18px;
+        height: 42px;
+        display: flex;
+        gap: 16px;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+        }
+
+        h4 {
+            place-self: center;
+            color: plt.$text;
+            font-size: 20px;
+        }
     }
 
     p {

@@ -1,9 +1,9 @@
 import './home.scss'
 //components HOME
-import BackgroundHome from './components/backgroundHome/backgroundHome'
-import ContentHome from './components/contentHome/contentHome'
+import BackgroundHome from './components/backgroundHome'
+import ContentHome from './components/contentHome'
 //Shared
-import HeaderNav from '../../shared/components/headerNav/headerNav'
+import HeaderNav from '../../shared/components/HeaderNav'
 
 function Home() {
     return (

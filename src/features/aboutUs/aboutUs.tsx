@@ -1,10 +1,11 @@
 import './aboutUs.scss'
 //componente
-import HeaderNav from '../../shared/components/headerNav/headerNav'
-import MyTeam from './components/MyTeam/Myteam'
-import Project from './components/Project/Project'
-import ProjectCreation from './components/ProjectCreation/ProjectCreation'
-import SearchContent from './components/SearchContent/SearchContent'
+import HeaderNav from '../../shared/components/HeaderNav/HeaderNav'
+import MyTeam from './components/MyTeam'
+import Project from './components/Project'
+import ProjectCreation from './components/ProjectCreation'
+import SearchContent from './components/SearchContent'
+import SearchConcept from './components/SearchConcept'
 //imagens
 
 
@@ -15,10 +16,19 @@ function AboutUs() {
             <div className="content">
                 <MyTeam />
                 <Project />
-                <section className='section-about wraper-section-dual'>
+                <section
+                    className='section-about wraper-section-dual'
+                >
                     <ProjectCreation />
                     <div className="line-col"></div>
                     <SearchContent />
+                </section>
+                <section
+                    className='section-about wraper-section-dual'
+                >
+                    <SearchConcept />
+                    <div className="line-col"></div>
+                    
                 </section>
             </div>
         </main>

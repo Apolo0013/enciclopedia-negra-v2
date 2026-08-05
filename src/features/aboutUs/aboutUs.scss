@@ -20,7 +20,7 @@
             background: transparent;
         }
 
-        h1, h2, h3 {
+        * > h1, h2, h3, h4 {
             letter-spacing: 0.8px;
             color: plt.$text;
             font-family: 'Bebas Neue';

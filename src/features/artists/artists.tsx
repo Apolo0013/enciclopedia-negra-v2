@@ -1,10 +1,10 @@
 import './artists.scss'
 //componentes
-import HeaderNav from '../../shared/components/headerNav/headerNav'
-import ArtistsGrid from './components/AristisGrid/ArtistsGrid'
-import FeaturesSection from './components/FeaturesSection/FeaturesSection'
+import HeaderNav from '../../shared/components/HeaderNav/HeaderNav'
+import ArtistsGrid from './components/AristisGrid'
+import FeaturesSection from './components/FeaturesSection'
 import Footer from '../../shared/components/Footer/Footer'
-import ArtistsDescription from './components/ArtistsDescription/ArtistsDescription'
+import ArtistsDescription from './components/ArtistsDescription'
 
 function Artists() {
     return (

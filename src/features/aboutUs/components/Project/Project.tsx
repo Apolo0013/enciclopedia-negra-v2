@@ -1,7 +1,7 @@
 import '../../aboutUs.scss'
 import './Project.scss'
 
-import ProjectCards from '../ProjectCards/ProjectCards'
+import ProjectCards from '../ProjectCards'
 
 function Project() {
     return (
