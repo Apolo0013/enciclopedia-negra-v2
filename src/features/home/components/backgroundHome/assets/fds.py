@@ -1,2 +1,1 @@
-for i in range(1, 11):
-    print(f"import back{i} from './{i}.webp'")
+print(str("organização de uma exposição").upper())

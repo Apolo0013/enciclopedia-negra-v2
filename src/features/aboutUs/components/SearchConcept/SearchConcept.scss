@@ -2,6 +2,7 @@
 
 .search-concept {
     @include author-session;
+    grid-column: 1 / 2 !important;
 
     ul {
         @include list-auto;

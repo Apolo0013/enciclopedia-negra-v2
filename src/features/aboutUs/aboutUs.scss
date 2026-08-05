@@ -1,4 +1,5 @@
 @use '../../styles/palletes' as plt;
+@use "../../styles/mixins" as *;
 
 .about-us {
     width: 100%;
@@ -9,43 +10,11 @@
     overflow-y: auto;
 
     .section-about {
-        padding: 32px;
-        padding-top: 0;
-        width: 100%;
-        height: 100%;
-        grid-column: 1 / 3;
-        background: lighten(plt.$background, 1%);
-        
-        &:first-of-type {
-            background: transparent;
-        }
-
-        * > h1, h2, h3, h4 {
-            letter-spacing: 0.8px;
-            color: plt.$text;
-            font-family: 'Bebas Neue';
-        }
-
-        li, p {
-            color: plt.$text-soft;
-        }
+        @include section-about-default
     }
 
     .wraper-section-dual {
-        padding: 0;
-        height: auto !important;
-        display: grid;
-        grid-template-columns: 1fr 1px 1fr;
-        grid-template-rows: 1fr;
-        border-bottom: 1px solid plt.$border;
-
-        .line-col {
-            place-self: center;
-            grid-column: 2 / 3;
-            width: 100%;
-            height: 95%;
-            background: plt.$border;
-        }
+        @include wraper-section-dual;
     }
 
     //marcacao

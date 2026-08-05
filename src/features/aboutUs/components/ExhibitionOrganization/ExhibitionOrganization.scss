@@ -1,0 +1,20 @@
+@use '../../../../styles/mixins' as *;
+@use '../../../../styles/palletes' as plt;
+
+
+.exhibition-organization {
+    @include author-session;
+    grid-column: 3 / 4 !important;
+    
+    .sub-title > svg {
+        fill: plt.$accent-green;
+    }
+
+    .dual-list {
+        @include dual-list;
+
+        ul > li > img {
+            transform: scale(.8);
+        }
+    }
+}

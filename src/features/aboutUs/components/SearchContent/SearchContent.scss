@@ -5,30 +5,7 @@
     grid-column: 3 / 4 !important;
 
     .dual-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        width: 100%;
-        height: auto;
-        margin-top: 18px;
-        
-        ul {
-            margin: 0 !important;
-        }
-
-        ul:nth-of-type(1) {
-            @include list-auto;
-        }
-
-        ul:nth-of-type(2) {
-            @include list-auto;
-        }
+        @include dual-list;
     }
 }
 
-@media (max-width: 1300px) {
-    .dual-list {
-        grid-template-columns: 1fr !important;
-        gap: 8px;
-    }
-}

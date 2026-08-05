@@ -6,6 +6,7 @@ import Project from './components/Project'
 import ProjectCreation from './components/ProjectCreation'
 import SearchContent from './components/SearchContent'
 import SearchConcept from './components/SearchConcept'
+import ExhibitionOrganization from './components/ExhibitionOrganization'
 //imagens
 
 
@@ -28,7 +29,7 @@ function AboutUs() {
                 >
                     <SearchConcept />
                     <div className="line-col"></div>
-                    
+                    <ExhibitionOrganization />
                 </section>
             </div>
         </main>
