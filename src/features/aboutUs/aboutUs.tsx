@@ -7,6 +7,8 @@ import ProjectCreation from './components/ProjectCreation'
 import SearchContent from './components/SearchContent'
 import SearchConcept from './components/SearchConcept'
 import ExhibitionOrganization from './components/ExhibitionOrganization'
+import ResponsibleSupervision from './components/ResponsibleSupervision'
+import Footer from '../../shared/components/Footer'
 //imagens
 
 
@@ -31,7 +33,9 @@ function AboutUs() {
                     <div className="line-col"></div>
                     <ExhibitionOrganization />
                 </section>
+                <ResponsibleSupervision />
             </div>
+            <Footer />
         </main>
     )
 }   

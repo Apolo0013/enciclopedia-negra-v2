@@ -5,7 +5,7 @@ $width-line: 2px;
 $footer-spacing: 24px;
 
 .wraper-footer {
-    width: auto;
+    place-self: center;
     height: auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -109,6 +109,7 @@ $footer-spacing: 24px;
 
         h2, h3 {
             font-weight: 300;
+            color: plt.$text;
         }
 
         h2 {
@@ -118,7 +119,6 @@ $footer-spacing: 24px;
         }
 
         h3 {
-            color: plt.$text;
             place-content: start;
             justify-self: center;
             align-self: start;
