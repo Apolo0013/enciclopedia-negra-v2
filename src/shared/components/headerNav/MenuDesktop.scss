@@ -22,7 +22,7 @@
             cursor: pointer;
             transition: color 0.2s ease-in-out;
             position: relative;
-            font-size: 18px;
+            font-size: 20px;
             white-space: nowrap;
 
             &::before {
@@ -74,6 +74,12 @@
 
 
 //Responsividade
+@media (max-width: 1000px) {
+    .nav-main > ul > li {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 700px) {
     .nav-main > ul > li {
         font-size: 16px;

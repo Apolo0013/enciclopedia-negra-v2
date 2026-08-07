@@ -4,7 +4,6 @@
 .content-home {
     @include flex-center;
     flex-direction: column;
-    gap: 16px;
     width: 100%;
     height: auto;
 
@@ -16,15 +15,18 @@
     h1 {
         font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
         font-size: 128px;
+        line-height: 0.9;
     }
 
     p {
+        margin-top: 34px;
         line-height: 1.5;
         width: 50%;
         font-size: 24px;
     }
 
     .btn-show-artist {
+        margin-top: 38px;
         padding: 0 48px 0 48px;
         height: 72px;
         background: plt.$primary;
@@ -46,4 +48,91 @@
     }
 }
 
-//
+//Responsividade
+@media (max-width: 1200px) {
+    .content-home {
+        h1 {
+            font-size: 96px;
+        }
+
+        p {
+            margin-top: 28px;
+        }
+
+        .btn-show-artist {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .content-home {
+        h1 {
+            font-size: 82px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .btn-show-artist {
+            padding: 0 32px 0 32px;
+            height: 64px;
+            font-size: 19px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .content-home {
+        h1 {
+            font-size: 68px;
+        }
+
+        p {
+            margin-top: 20px;
+            width: 70%;
+            font-size: 17px;
+        }
+
+        .btn-show-artist {
+            margin-top: 24px;
+            padding: 0 28px 0 28px;
+            height: 58px;
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 499px) {
+    .content-home {
+        h1 {
+            font-size: 48px;
+        }
+
+        p {
+            width: 90%;
+            font-size: 16px;
+        }
+
+        .btn-show-artist {
+            padding: 0 24px 0 24px;
+            height: 52px;
+            font-size: 17px;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .content-home {
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 15px;
+            width: 95%;
+            line-height: 1.4;
+        }
+    }
+}
