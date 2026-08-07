@@ -1,6 +1,8 @@
 @use '../../../styles/palletes' as plt;
 @use '../../../styles/mixins' as *;
 
+
+
 .header-nav {
     //terar a opcao de deixa ele com position abslute nao ou nao
     //position: absolute;
@@ -12,6 +14,12 @@
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 80px;
+
+    * > ul > li, * > p {
+        color: plt.$text;
+        font-size: 16px;
+        font-family: "Inter";
+    }
 
     .header-nav-icon {
         width: 100%;
@@ -49,77 +57,25 @@
         }
     }
 
-    
+    //so parece pra mobile
+    .menu-burger {
+        cursor: pointer;
+        place-self: center end;
+        margin-right: 16px;
+        height: 80%;
+        aspect-ratio: 1 / 1;
 
-    .nav-main {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 100%;
-        height: 100%;
-
-        ul {
-            margin-right: 32px;
-            display: flex;
-            gap: 16px;
-            width: auto;
-            height: 80%;
-
-            li {
-                font-family: "Inter";
-                padding: 0 8px 0 8px;
-                @include flex-center;
-                height: 100%;
-                color: plt.$text;
-                font-size: 16px;
-                cursor: pointer;
-                transition: color 0.2s ease-in-out;
-                position: relative;
-
-                &::before {
-                    content: '';
-                    display: flex;
-                    position: absolute;
-                    top: 100%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 50%;
-                    height: 4px;
-                    background: plt.$primary;
-                    border-radius: 3px;
-                    opacity: 0;
-                    transition: 
-                        opacity 0.2s ease-in-out,
-                        width 0.3s ease-in-out
-                    ;
-                }
-
-                &:hover {
-                    color: plt.$primary;
-
-                    svg > g > path {
-                        stroke: plt.$primary;
-                    }
-
-                    &::before {
-                        opacity: 1;
-                        width: 90%;
-                    }
-                }
-            }
-
-            li {
-                svg {
-                    height: 50%;
-                    aspect-ratio: 1 / 1;
-                    object-fit: cover;
-
-                    path {
-                        transition: stroke 0.2s ease-in-out;
-
-                    }
-                }
-            }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
+    }
+}
+
+//Responsividade
+@media (max-width: 600px) {
+    .header-nav > .header-nav-icon > h2{
+        font-size: 20px;
     }
 }

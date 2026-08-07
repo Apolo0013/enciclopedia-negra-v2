@@ -1,1 +1,1 @@
-export { default } from './contentHome'
+export { default } from './ContentHome'

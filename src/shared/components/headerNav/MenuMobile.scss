@@ -1,0 +1,112 @@
+@use '../../../styles/palletes' as plt;
+
+//fora dele, irmao.
+.menu-mobile {
+    backdrop-filter: blur(1px);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 10 !important;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: end;
+    transition: left 0.3s ease;
+
+    .wraper-nav-mobile {
+        padding: 16px 32px 0 32px;
+        width: 60%;
+        height: 100%;
+        background: rgba(plt.$background, 0.8);
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .nav-mobile {
+            width: 100%;
+            height: auto;
+            display: grid;
+            row-gap: 14px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 
+                50px 1px
+                50px 1px
+                50px 1px
+                50px
+            ;
+
+            .nav-line {
+                width: 100%;
+                height: 100%;
+                background: plt.$border;
+            }
+
+            & > li:nth-child(odd) {
+                cursor: pointer;
+            }
+
+            li {
+                display: grid;
+                grid-template-columns: 32px auto;
+                grid-template-rows: 100%;
+                width: 100%;
+                height: 100%;
+                gap: 16px;
+
+                p {
+                    place-content: center;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: plt.$text;
+                }
+
+                img, svg{
+                    place-self: center;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        .menu-close {
+            transition: background 0.3s ease;
+            border-radius: 50%;
+            width: 100%;
+            height: 42px;
+            display: flex;
+            justify-content: end;
+
+            img {
+                cursor: pointer;
+                padding: 8px;
+                border-radius: 50%;
+                height: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+    }
+}
+
+//Responsividade
+@media (max-width: 400px) {
+    .menu-mobile > .wraper-nav-mobile > .nav-mobile {
+        row-gap: 8px;
+        grid-template-rows:
+            40px 1px
+            40px 1px
+            40px 1px 
+            40px 
+        ;
+        li > p {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import './contentHome.scss'
+import './ContentHome.scss'
 
 function ContentHome() {
     return (

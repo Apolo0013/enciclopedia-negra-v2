@@ -1,7 +1,10 @@
-import './headerNav.scss'
-//Imagem
-import ImgSearch from '../../assets/Search'
-import { useNavigate } from 'react-router-dom'
+import './HeaderNav.scss'
+//imagem
+import ImgBurgerMenu from '../../assets/menu-burger.svg'
+//componente
+import MenuMobile from './MenuMobile'
+import MenuDesktop from './MenuDesktop'
+import useHeaderNav from './useHeaderNav'
 
 type Props = {
     showLine?: boolean,
@@ -12,41 +15,52 @@ function HeaderNav({
     showLine = false,
     posAbsolute = false
 }: Props) {
-    const nav = useNavigate()
+    //hook
+    const header = useHeaderNav()
+    const {
+        isMobile,
+        setClickMenuMobile
+    } = header
+
     return (
-        <header
-            className="header-nav"
-            style={{
-                position: posAbsolute ? 'absolute' : 'relative'
-            }}
-        >
-            <div className='header-nav-icon'>
-                <h2>ENCICLOPÉDIA NEGRA</h2>
-                { 
-                    showLine 
-                        ?  <div className="line-icon">
-                                <div></div>
-                            </div>
-                        : null
+        <>
+            <header
+                className="header-nav"
+                style={{
+                    position: posAbsolute ? 'absolute' : 'relative'
+                }}
+            >
+                <div className='header-nav-icon'>
+                    <h2>ENCICLOPÉDIA NEGRA</h2>
+                    { 
+                        showLine 
+                            ?  <div className="line-icon">
+                                    <div></div>
+                                </div>
+                            : null
+                    }
+                </div>
+                {
+                    !isMobile
+                        ? <MenuDesktop/>
+                        : <div className='menu-burger'
+                            onClick={() => {
+                                setClickMenuMobile(prev => !prev)
+                            }}
+                        >
+                            <img
+                                src={ImgBurgerMenu}
+                                alt="Menu burger"
+                            />
+                        </div>
                 }
-            </div>
-            <nav className='nav-main'>
-                <ul>
-                    <li
-                        onClick={() => nav('/home')}
-                    >Inicio</li>
-                    <li
-                        onClick={() => nav('/artists')}
-                    >Artista</li>
-                    <li
-                        onClick={() => nav('/about-us')}
-                    >Sobre Nos</li>
-                    <li>
-                        <ImgSearch/>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+            </header>
+            {
+                isMobile
+                    ? <MenuMobile useHeaderNav={header} />                    
+                    : null
+            }
+        </>
     )
 }
 

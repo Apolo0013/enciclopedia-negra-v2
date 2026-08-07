@@ -1,1 +1,1 @@
-export { default } from './backgroundHome'
+export { default } from './BackgroundHome'

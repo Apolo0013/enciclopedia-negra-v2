@@ -1,4 +1,4 @@
-import './backgroundHome.scss'
+import './BackgroundHome.scss'
 //imagem
 import { imagensBack } from './assets/index'
 //hook
