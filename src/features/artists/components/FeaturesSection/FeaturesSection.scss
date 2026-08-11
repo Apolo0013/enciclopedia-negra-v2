@@ -2,13 +2,19 @@
 
 $width-line: 2px;
 
+.wraper-features-section {
+    width: 100%;
+    height: auto;
+}
+
 .features-section {
+    place-self: center;
     margin-top: 18px;
     padding: 32px;
     background: rgba(plt.$surface-2, 0.2);
     border: 1px solid plt.$border;
     border-radius: 14px;
-    width: calc(100% - 64px);
+    width: 100%;
     flex-basis: 170px;
     display: grid;
     grid-template-columns: 1fr $width-line 1fr $width-line 1fr;
@@ -23,5 +29,26 @@ $width-line: 2px;
         height: 100%;
         background: plt.$border;
         border-radius: 14px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .wraper-features-section > .features-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px $width-line 90px $width-line 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wraper-features-section > .features-section {
+        grid-template-rows: 100px $width-line 100px $width-line 100px;
+        gap: 24px;
+    }
+} 
+
+@media (max-width: 480px) {
+    .wraper-features-section > .features-section {
+        grid-template-rows: auto $width-line auto $width-line auto;
     }
 }

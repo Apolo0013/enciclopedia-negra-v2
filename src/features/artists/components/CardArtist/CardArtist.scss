@@ -5,12 +5,13 @@
     padding: 16px;
     border-radius: 14px;
     width: 100%;
-    aspect-ratio: 1 / 0.8;
+    height: 200px;
     background: rgba(plt.$surface-2, 0.2);
     border: 1px solid plt.$border;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 70% 30%;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 7fr 3fr;
+    gap: 16px;
     transition: border 0.4s ease-in-out;
     box-shadow: 0 0 20px 4px plt.$shadow;
 
@@ -36,12 +37,12 @@
         }
     }
 
-
     .card-artist-letra {
         font-family: "Cinzel";
         font-size: 92px;
         place-self: end center;
         color: plt.$primary;
+        white-space: nowrap;
     }
 
     .card-artist-btn {
@@ -49,13 +50,12 @@
         cursor: pointer;
         background: transparent;
         border-radius: 25px;
-        padding: 0px 10px 0px 10px;
+        padding: 0px 32px 0px 32px;
         place-self: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 32px;
-        width: 90%;
+        gap: 16px;
         height: 100%;
         outline: 0;
         border: 0;
@@ -75,6 +75,7 @@
         }
 
         p {
+            white-space: nowrap;
             font-family: 'Inter';
             font-size: 18px;
             font-weight: 600;
@@ -88,6 +89,84 @@
             g > path {
                 transition: fill 0.4s ease-in-out;
                 fill: plt.$text;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px)  {
+    .card-artist {
+        padding: 14px;
+        gap: 12px;
+        height: 250px;
+
+        .card-artist-letra {
+            font-size: 78px;
+        }
+
+        .card-artist-btn {
+            height: 90%;
+            gap: 20px;
+
+            p {
+                font-size: 17px;
+            }
+
+            svg {  
+                height: 26px;
+            }
+        }
+    }
+}
+
+//Responsividade
+@media (max-width: 768px) {
+    .card-artist {
+        aspect-ratio: none;
+        height: 125px;
+        grid-template-columns: 35% auto;
+        grid-template-rows: 1fr;
+        padding: 16px;
+        border-radius: 12px !important;
+
+        .card-artist-letra {
+            place-self: center;
+            font-size: 64px;
+        }
+
+        .card-artist-btn {
+            place-self: center end;
+            width: auto;
+            height: 50%;
+
+            p {
+                font-size: 14px;
+            }
+
+            svg {
+                height: 22px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .card-artist {
+        height: 125px;
+
+        .card-artist-letra {
+            font-size: 54px;
+        }
+
+        .card-artist-btn {
+            p {
+                font-size: 13px;
+            }
+
+            svg {
+                gap: 10px;
+                height: 20px;
             }
         }
     }

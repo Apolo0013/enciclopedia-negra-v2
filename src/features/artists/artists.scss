@@ -1,7 +1,6 @@
 @use "../../styles/palletes" as plt;
 
 .artists {
-    overflow-y: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -10,4 +9,17 @@
     position: relative;
     background: plt.$background;
     color: plt.$text;
+    overflow: hidden;
+    overflow-y: auto;
+
+
+    section {
+        padding: 0 32px 0 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .artists > section {
+        padding: 0 16px 0 16px;
+    }
 }

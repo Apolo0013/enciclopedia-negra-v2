@@ -13,7 +13,7 @@
     height: 80px;
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 100%;
+    grid-template-rows: 80px;
 
     * > ul > li, * > p {
         color: plt.$text;
@@ -75,13 +75,20 @@
 
 //Responsividade
 @media (max-width: 1200px) {
-    .header-nav > .header-nav-icon > h2 {
-        font-size: 20px;
+    .header-nav > .header-nav-icon {
+        .line-icon {
+            display: none;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
     }
 }
 
 @media (max-width: 600px) {
     .header-nav {
+        grid-template-rows: 60px;
         height: 60px;
         .header-nav-icon > h2 {
             font-size: 18px;

@@ -1,34 +1,88 @@
 @use '../../../../styles/palletes' as plt;
 
 
-.artists-description {
-    width: 100%;
+.wraper-artists-description {
+    margin-top: 120px;
+    width: 600px;
     height: auto;
+    place-self: start;
 
-    .wraper-description {
+    .artists-description {
         padding: 16px 0px 16px 32px;
         border-left: 4px solid plt.$primary;
-        margin-top: 120px;
         margin-left: 32px;
         display: flex;
         gap: 16px;
         flex-direction: column;
-        width: 600px;
+        width: 100%;
         height: auto;
-    }
 
-    h1,
-    p {
-        font-family: "Manrope";
-    }
+        h1,
+        p {
+            font-family: "Manrope";
+        }
 
-    h1 {
-        font-size: 48px;
-        font-weight: 800;
-    }
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+        }
 
-    p {
-        font-size: 26px;
-        line-height: 1.5;
+        p {
+            font-size: 26px;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .wraper-artists-description > .artists-description {
+        h1 {
+            font-size: 38px;
+        }
+
+        p {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .wraper-artists-description {       
+        margin-top: 80px;
+        width: 100%;
+
+        .artists-description {
+            padding: 16px;
+            gap: 14px;
+            margin-left: 0;
+            border-left: none;
+
+            h1 {
+                font-size: 34px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .wraper-artists-description {
+        margin-top: 50px;
+
+        .artists-description {
+            gap: 8px;
+
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 1.4;
+            }
+        }
     }
 }

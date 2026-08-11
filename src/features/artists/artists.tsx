@@ -1,4 +1,4 @@
-import './artists.scss'
+import './Artists.scss'
 //componentes
 import HeaderNav from '../../shared/components/HeaderNav/HeaderNav'
 import ArtistsGrid from './components/AristisGrid'

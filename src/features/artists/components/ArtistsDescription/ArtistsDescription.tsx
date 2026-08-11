@@ -2,8 +2,8 @@ import './ArtistsDescription.scss'
 
 function ArtistsDescription() {
     return (
-        <div className="artists-description">
-            <div className='wraper-description'>
+        <div className="wraper-artists-description">
+            <div className='artists-description'>
                 <h1>Explore artistas de A a Z</h1>
                 <p>Conheça e valorize a história, a cultura e o impacto de grandes artistas negros.</p>
             </div>

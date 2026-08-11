@@ -26,24 +26,26 @@ function FeaturesSection() {
         }
     }
     return (
-        <section className='features-section'>
-            <FeaturesCard
-                title={contentFeatures.representation.title}
-                description={contentFeatures.representation.description}
-                src={contentFeatures.representation.src}
-            />
-            <div className="line"></div>
-            <FeaturesCard
-                title={contentFeatures.history.title}
-                description={contentFeatures.history.description}
-                src={contentFeatures.history.src}
-            />
-            <div className="line"></div>
-            <FeaturesCard
-                title={contentFeatures.culture.title}
-                description={contentFeatures.culture.description}
-                src={contentFeatures.culture.src}
-            />
+        <section className="wraper-features-section">
+            <div className='features-section'>
+                <FeaturesCard
+                    title={contentFeatures.representation.title}
+                    description={contentFeatures.representation.description}
+                    src={contentFeatures.representation.src}
+                />
+                <div className="line"></div>
+                <FeaturesCard
+                    title={contentFeatures.history.title}
+                    description={contentFeatures.history.description}
+                    src={contentFeatures.history.src}
+                />
+                <div className="line"></div>
+                <FeaturesCard
+                    title={contentFeatures.culture.title}
+                    description={contentFeatures.culture.description}
+                    src={contentFeatures.culture.src}
+                />
+            </div>
         </section>
     )
 }
