@@ -13,7 +13,7 @@ function Artists() {
             <ArtistsDescription/>
             <ArtistsGrid />
             <FeaturesSection />
-            <Footer />
+            <Footer/>
         </main>
     )
 }
