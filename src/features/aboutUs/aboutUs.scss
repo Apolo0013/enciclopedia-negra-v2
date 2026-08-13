@@ -43,3 +43,15 @@
         grid-template-rows: auto auto auto;
     }
 }
+
+@media (max-width: 1024px) {
+    .about-us > .content {
+        margin-top: 64px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-paragraph {
+        font-size: 14px !important;
+    }
+}

@@ -1,4 +1,4 @@
-import './aboutUs.scss'
+import './AboutUs.scss'
 //componente
 import HeaderNav from '../../shared/components/HeaderNav/HeaderNav'
 import MyTeam from './components/MyTeam'
