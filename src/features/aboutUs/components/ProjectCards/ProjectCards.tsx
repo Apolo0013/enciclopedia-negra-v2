@@ -50,7 +50,7 @@ function ProjectCards() {
                         </div>
                         <div>
                             <h3>{title}</h3>
-                            <h4>{description}</h4>
+                            <p>{description}</p>
                         </div>
                     </div>
                 ))

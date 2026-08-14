@@ -14,11 +14,38 @@
         text-align: center;
     }
 
-    p:first-of-type {
+    & > p:first-of-type {
         margin-top: 18px;
     }
 
-    p {
+    & > p {
         margin-top: 16px;
+    }
+}
+
+//Responsividade
+@media (max-width: 1024px) {
+    .section-project {
+        h2 {
+            font-size: 52px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-project > h2 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-project {
+        p:first-of-type {
+            margin-top: 16px;
+        }
+
+        p {
+            margin-top: 14px;
+        }
     }
 }
