@@ -1,0 +1,211 @@
+@use '../../../styles/palletes' as plt;
+//Relacionado ao Sobre nos
+// tag ul
+@mixin list-auto($indent: false) {
+    //condicao
+    @if $indent {
+        margin-left: 18px;
+    }
+
+    width: 100%;
+    height: fit-content;
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 8px;
+
+    li {
+        gap: 4px;
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-auto-rows: auto;
+
+        svg, img {
+            width: 36px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+        
+        p {
+            align-self: center;
+            width: 100%;
+            height: fit-content;
+            margin: 0;
+            color: plt.$text-soft;
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            line-height: 1.5;
+        }
+    }
+
+    @media (max-width: 768px) {
+        & > li > img, svg{
+            width: 30px;
+        }
+    }
+}
+
+//sao propriedades padrao das sessao que falam do autores
+@mixin author-session {
+    padding-top: 40px !important;
+    width: 100%;
+
+    h3 {
+        font-size: 28px;
+        text-align: start;
+        line-height: 1;
+    }
+
+    .sub-title {
+        margin-top: 18px;
+        height: 42px;
+        display: flex;
+        gap: 16px;
+
+        img, svg {
+            object-fit: cover;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            
+        }
+
+        h4 {
+            font-family: "Inter";
+            place-self: center;
+            color: plt.$text;
+            font-size: 22px;
+        }
+    }
+
+    p {
+        margin-top: 22px;
+        line-height: 1.6;
+    }
+
+    //Responsividade
+    @media (max-width: 768px) {
+        & {
+            h3 {
+                font-size: 24px;
+            }
+
+            .sub-title {
+                height: 32px;
+                gap: 8px;
+
+                h4 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@mixin section-about-default {
+    padding: 32px;
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 3;
+    background: lighten(plt.$background, 1%);
+    
+    &:first-of-type {
+        background: transparent;
+    }
+
+    * > h1, h2, h3 {
+        letter-spacing: 0.8px;
+        color: plt.$text;
+        font-family: 'Bebas Neue';
+    }
+
+    li, p {
+        color: plt.$text-soft;
+    }
+
+    @media (max-width: 768px) {
+        & {
+            padding: 32px 16px 32px 16px;
+        }
+    }
+}
+
+@mixin wraper-section-dual {
+    padding: 0;
+    height: auto !important;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    grid-template-rows: 1fr !important;
+    border-bottom: 1px solid plt.$border;
+
+    .line-section {
+        place-self: center;
+        grid-column: 2 / 3;
+        width: 100%;
+        height: 95%;
+        background: plt.$border;
+    }
+
+    //Responsividade
+    @media (max-width: 1200px) {
+        & {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1px 1fr !important;
+
+            .line-section {
+                width: 90%;
+                grid-row: 2 / 3;
+            }
+
+            section, .line-section{
+                grid-column: 1 / 2 !important;
+            }
+
+            section:nth-of-type(1) {
+                grid-row: 1 / 2;
+            }
+
+            section:nth-of-type(2) {
+                grid-row: 3 / 4;
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        & {
+            grid-template-rows: auto 1px auto !important;
+        }
+    }
+}
+
+
+@mixin dual-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+    
+    ul {
+        margin: 0 !important;
+    }
+
+    ul:nth-of-type(1) {
+        @include list-auto;
+    }
+
+    ul:nth-of-type(2) {
+        @include list-auto;
+    }
+
+
+    @media (max-width: 768px) {
+        & {
+            grid-template-columns: 1fr !important;
+            gap: 8px;
+        }
+    }
+}

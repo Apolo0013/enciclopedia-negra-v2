@@ -14,7 +14,7 @@ function SearchConcept() {
     return (
         <section className='section-about search-concept'>
             <h3>PESQUISA DO CONCEITO DAS OBRAS</h3>
-            <p>A equipe foi braba e garantiu que as obras fossem vistas como devem: com presença, estrutura e impacto. Responsáveis pela logística, montagem e organização geral do espaço.</p>
+            <p className='about-paragraph'>A equipe foi braba e garantiu que as obras fossem vistas como devem: com presença, estrutura e impacto. Responsáveis pela logística, montagem e organização geral do espaço.</p>
             <div className='sub-title'>
                 <img
                     src={ImgClip}

@@ -12,7 +12,7 @@ $footer-spacing: 24px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     width: 100%;
-
+    padding: 0 32px 0 32px;
 
     .copyright {
         width: 100%;
@@ -169,15 +169,23 @@ $footer-spacing: 24px;
 }
 
 @media (max-width: 850px) {
+    .wraper-footer {
+        padding: 0 16px 0 16px;
+    }
+
     .footer {
         height: auto;
         column-gap: 8px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr $width-line 1fr;
 
-        .footer-card, .footer-frase, .footer-line {
+        .footer-card, .footer-frase {
             grid-column: 1 / 2;
             height: auto;
+        }
+
+        .footer-line {
+            grid-column: 1 / 2; 
         }
 
         & > .footer-card:nth-of-type(1) {

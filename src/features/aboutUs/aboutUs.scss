@@ -1,5 +1,5 @@
 @use '../../styles/palletes' as plt;
-@use "../../styles/mixins" as *;
+@use "./styles/mixins" as *;
 
 .about-us {
     width: 100%;
@@ -8,14 +8,6 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-
-    .section-about {
-        @include section-about-default
-    }
-
-    .wraper-section-dual {
-        @include wraper-section-dual;
-    }
 
     //marcacao
     .marking-text {
@@ -41,6 +33,15 @@
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: auto auto auto;
+
+
+        .section-about {
+            @include section-about-default
+        }
+
+        .wraper-section-dual {
+            @include wraper-section-dual;
+        }
     }
 }
 

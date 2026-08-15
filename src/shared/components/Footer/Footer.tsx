@@ -8,8 +8,8 @@ import ImgAspas from '../../assets/aspas.svg'
 function Footer() {
     const year = new Date().getFullYear()
     return (
-        <section className='wraper-footer'>
-            <footer className='footer'>
+        <footer className='wraper-footer'>
+            <div className='footer'>
                 <div className="footer-card">
                     <h3>JUSTIFICADO A DIREITO</h3>
                     <p>Plataforma desenvolvida na disciplina eletiva da Escola Estadual Profº Ana Júlia de Carvalho Mousinho (Localizado no Parque dos Coqueiros, Zona Norte de Natal – RN) por: <strong>Apolônio Guilherme Lima da Silva</strong> (Dev-Web)</p>
@@ -49,11 +49,11 @@ function Footer() {
                     <h2>Não basta não ser racista, é preciso ser antirracista.</h2>
                     <h3>– Angela Davis</h3>
                 </div>
-            </footer>
+            </div>
             <div className="copyright">
                 <p>© {year} Enciclopédia Negra. Todos os direitos reservados.</p>
             </div>
-        </section>
+        </footer>
     )
 }
 

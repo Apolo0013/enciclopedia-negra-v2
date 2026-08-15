@@ -22,7 +22,7 @@ function SearchContent() {
     return (
         <section className="section-about search-content">
             <h3>PESQUISA DE ARTISTAS E OBRAS</h3>
-            <p>Durante o desenvolvimento da <strong>Enciclopédia Negra</strong>, os alunos listados abaixo pesquisaram artistas e elaboraram biografias detalhadas. Cada um também selecionou duas obras de arte para compor a exposição final do projeto.</p>
+            <p className='about-paragraph'>Durante o desenvolvimento da <strong>Enciclopédia Negra</strong>, os alunos listados abaixo pesquisaram artistas e elaboraram biografias detalhadas. Cada um também selecionou duas obras de arte para compor a exposição final do projeto.</p>
             <div className='dual-list'>
                 <ul>
                     {

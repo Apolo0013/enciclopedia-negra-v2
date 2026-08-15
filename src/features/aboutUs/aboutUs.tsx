@@ -23,14 +23,14 @@ function AboutUs() {
                     className='section-about wraper-section-dual'
                 >
                     <ProjectCreation />
-                    <div className="line-col"></div>
+                    <div className="line-section"></div>
                     <SearchContent />
                 </section>
                 <section
                     className='section-about wraper-section-dual'
                 >
                     <SearchConcept />
-                    <div className="line-col"></div>
+                    <div className="line-section"></div>
                     <ExhibitionOrganization />
                 </section>
                 <ResponsibleSupervision />

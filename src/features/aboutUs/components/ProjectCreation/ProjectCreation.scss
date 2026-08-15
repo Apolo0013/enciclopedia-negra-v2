@@ -1,5 +1,5 @@
 @use '../../../../styles/palletes' as plt;
-@use "../../../../styles/mixins" as *;
+@use "../../styles/mixins" as *;
 
 .project-creation {
     @include author-session;
