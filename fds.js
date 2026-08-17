@@ -1,0 +1,1063 @@
+import clipboardy from "clipboardy";
+import { json } from "stream/consumers";
+const fds = {
+    "A": [
+        {
+        "Nome": "Abdias do Nascimento",
+        "Idade": "(1914 - 2011)",
+        "Profissoes": ["ativista", "político", "poeta", "professor", "dramaturgo"],
+        "Biografia": "Abdias do Nascimento foi uma das figuras mais importantes na luta contra o racismo no Brasil. Fundador do Teatro Experimental do Negro, em 1944, atuou como militante pela valorização da cultura negra nas artes e na política. Durante a ditadura militar, denunciou o racismo brasileiro em organismos internacionais como a ONU. Na política, foi deputado federal e senador, defendendo pautas como cotas raciais e a criação do Dia da Consciência Negra. Sua vida é símbolo de resistência e ativismo antirracista.",
+        "texto_obras": {
+            "obra1": [
+            "Título: O Quilombismo (1980)",
+            "Essa obra teórica propõe uma sociedade baseada nos valores dos quilombos — liberdade, solidariedade e coletividade. É um marco na luta por direitos civis e pela construção de uma identidade negra no Brasil. Abdias usa o termo 'quilombismo' para refletir um projeto político-cultural afro-brasileiro, conectando passado e futuro em uma proposta de emancipação social baseada na ancestralidade africana."
+            ],
+            "obra2": [
+            "Título: Sortilégio (1944)",
+            "Peça teatral que denuncia o racismo estrutural presente na sociedade brasileira, ao mesmo tempo em que exalta a ancestralidade e os valores afro-brasileiros. Foi encenada pelo Teatro Experimental do Negro e marcou uma virada histórica na presença negra nos palcos. A obra propõe um resgate da autoestima, combatendo estereótipos racistas e colocando personagens negros em papéis de protagonismo intelectual e cultural."
+            ]
+            }
+        ,"legado" : "Abdias do Nascimento deixou como legado uma base sólida para o movimento negro contemporâneo, um marco na luta por igualdade racial no Brasil e um exemplo de resistência, consciência histórica e afirmação da identidade negra."
+        },
+        {
+        "Nome": "Arthur Timótheo da Costa",
+        "Idade": "(1882 - 1922)",
+        "Profissoes": ["pintor", "desenhista", "cenógrafo", "entalhador", "decorador"],
+        "Biografia": "Arthur Timótheo da Costa foi um dos primeiros artistas negros a conquistar reconhecimento no cenário artístico brasileiro. Sua obra é marcada por domínio técnico refinado, uso expressivo da cor e da luz, e por retratar temas como paisagens, retratos e cenas do cotidiano. Nascido no Rio de Janeiro, iniciou sua formação artística como aprendiz na Casa da Moeda. Em 1894, ingressou na Escola Nacional de Belas Artes e foi aluno de mestres como Zeferino da Costa e Henrique Bernardelli. Estudou em Paris após vencer o prêmio de viagem ao exterior em 1907. Participou da decoração do Pavilhão Brasileiro em Turim e fundou a Sociedade Brasileira de Belas Artes em 1919.",
+        "texto_obras": {
+            "obra1": [
+            "Título: Autorretrato (1908)",
+            "Neste autorretrato, o artista revela não só sua habilidade com pinceladas precisas e luz dramática, como também seu estado emocional introspectivo. A obra transmite dignidade e profundidade psicológica. Ele utiliza um fundo neutro para destacar seu semblante sério e uma paleta de tons sóbrios para reforçar o impacto visual. É considerada uma afirmação de identidade e um gesto de autoafirmação num tempo em que artistas negros eram invisibilizados."
+            ],
+            "obra2": [
+            "Título: Menino com Legumes (1917)",
+            "A pintura retrata um garoto humilde com uma cesta de legumes, capturado com riqueza de detalhes e sensibilidade. A expressão do menino é serena, quase melancólica, e sua postura transmite humanidade e intimidade. Arthur demonstra empatia com as camadas sociais mais baixas, além de maestria no uso da luz natural, da textura dos alimentos e da pele. A obra também pode ser vista como uma crítica social sutil, exaltando a simplicidade da vida e o valor do trabalho infantil doméstico."
+            ]
+            }
+        ,"legado" : "Arthur Timótheo da Costa foi um importante pintor brasileiro do início do século XX, conhecido por ser um dos primeiros artistas negros a ganhar destaque no cenário artístico nacional. Seu trabalho uniu elementos do academicismo e do impressionismo, com foco em retratos, paisagens e cenas do cotidiano. Ele também se destacou como decorador, participando da ornamentação do Theatro Municipal do Rio de Janeiro. Apesar do talento reconhecido, enfrentou dificuldades por conta do racismo e terminou a vida internado por problemas mentais. Seu legado permanece como símbolo de resistência e excelência artística negra no Brasil."
+        }
+    ],
+    "B": [
+        {
+            "Nome": "Bruno Baptistelli",
+            "Idade": "(1985)",
+            "Profissoes": ["artista visual", "pintor", "fotógrafo", "videomaker", "instalacionista", "artista conceitual"],
+            "Biografia": "Bruno Baptistelli é um artista visual brasileiro nascido em 1985, em São Paulo, onde vive e trabalha. Graduado em Artes Visuais pela UNICAMP, sua prática artística abrange diversas mídias, incluindo pintura, fotografia, vídeo, objetos, instalações e projetos conceituais. Desde a segunda metade dos anos 2000, desenvolve trabalhos que exploram a relação entre pessoas e os espaços que ocupam, utilizando conceitos da psicanálise como fio condutor de sua produção. Baptistelli iniciou sua carreira com intervenções em espaços públicos e observações do ambiente urbano, direcionando recentemente seu foco para a dinâmica entre espaços públicos e objetos de uso particular, explorando como arquitetura, sociedade e linguagem podem modificar essas relações.",
+            "texto_obras": {
+                "obra1": [
+                "Bandeira afro-brasileira (em diálogo com David Hammons) – 2ª versão (2020)",
+                "Confeccionada em tecido de algodão, essa obra notável foi doada ao MASP no contexto da exposição Histórias brasileiras (2021–2022) e integra o acervo do museu."
+                ],
+                "obra2": [
+                "Memento (2022)",
+                "Uma obra forte e simbólica de Bruno Baptistelli, exibida na galeria 55SP em São Paulo. A escultura apresenta um molde dos dentes do próprio artista fundido em ouro, exposta isoladamente com iluminação direcionada, refletindo sobre identidade, valor e memória."
+                ]
+            }
+            ,"legado" : "Bruno Baptistelli é um artista, gravurista e muralista brasileiro conhecido por sua produção ligada à xilogravura e à arte urbana. Nascido em São Paulo, sua obra dialoga com o espaço urbano, muitas vezes propondo reflexões sobre o cotidiano, o trabalho e a paisagem das grandes cidades. Ele também atua no campo da arte pública e da intervenção urbana, sendo bastante ativo em muros e espaços coletivos."
+        },
+        {
+            "Nome": "Benedito José Tobias",
+            "Idade": "(1894 - 1963)",
+            "Profissoes": ["artista plástico", "pintor"],
+            "Biografia": "Benedito José Tobias (São Paulo, 1894 – 1963) foi um dos primeiros artistas negros a se destacar no cenário das artes plásticas paulistas no século XX. Sua obra, marcada por retratos sensíveis e paisagens urbanas, é considerada um testemunho visual da presença negra na cultura brasileira, embora ainda seja pouco estudada. Filho de uma família de posses, Tobias teve acesso à educação formal e iniciou sua carreira artística na década de 1930. Participou de diversas edições do Salão Paulista de Belas Artes entre 1934 e 1952, período em que sua produção foi mais intensa. Sua pintura é caracterizada por um estilo próximo ao expressionismo, com uso de óleo sobre madeira e guache sobre papel. Destacam-se retratos de homens e mulheres negros, nos quais captava com delicadeza expressões, traços físicos e marcas pessoais, buscando revelar a humanidade dos retratados. Além dos retratos, Tobias produziu paisagens urbanas que retratam a São Paulo do início do século XX. Em obras como Gigantes e Pigmeus (1934), ele contrapõe a imponência de casarões com a precariedade das moradias populares, evidenciando as desigualdades sociais da época.",
+            "texto_obras": {
+                "obra1": [
+                "Porta da Policlínica (1937)",
+                "Uma das obras conhecidas de Benedito José Tobias, representativa da sua fase madura."
+                ],
+                "obra2": [
+                "Gigantes e Pigmeus (1934)",
+                "Nesta obra, Tobias contrapõe a imponência de casarões com a precariedade das moradias populares, evidenciando desigualdades sociais."
+                ]
+            }
+            ,"legado" : "Benedito José Tobias (1894–1963) foi um importante pintor, desenhista e aquarelista brasileiro, notável por retratar com sensibilidade e dignidade a população negra de São Paulo nas décadas de 1930 e 1940. Seu legado está na representação humanizada e expressiva de pessoas negras, muitas vezes invisibilizadas na arte da época. Apesar de ter sido pouco reconhecido em vida, sua obra ganhou valorização nas últimas décadas, sendo hoje vista como fundamental para a história da arte afro-brasileira e da representação racial no Brasil."
+        }   
+    ],
+    "C" :
+    [
+        {
+            "Nome": "Chica Xavier",
+            "Idade": "1932 - 2020",
+            "Profissoes": ["atriz", "produtora", "sacerdotisa do candomblé", "autora"],
+            "Biografia": "Nascida em Salvador em 22 de janeiro de 1932, Chica Xavier teve uma carreira artística que atravessou mais de seis décadas. Estreou no teatro em 1956 com 'Orfeu da Conceição' e consolidou-se como uma das mais importantes atrizes negras do Brasil. Atuou em diversos filmes e mais de 50 papéis na televisão, incluindo novelas marcantes como 'Sinhá Moça', 'Dancin’ Days', 'Renascer' e 'Tenda dos Milagres'. Também foi líder religiosa no candomblé, fundadora do terreiro Irmandade do Cercado do Boiadeiro, e autora do livro 'Chica Xavier canta sua prosa' (1999). Foi homenageada com o Troféu Palmares em 2010 e com a biografia 'Chica Xavier: Mãe do Brasil' (2013).",
+            "texto_obras": {
+                "obra1": [
+                "Título: Tenda dos Milagres (1985)",
+                "Na minissérie inspirada na obra de Jorge Amado, Chica interpreta Magé Bassã, uma poderosa mãe-de-santo que representa a ancestralidade e a sabedoria da cultura afro-brasileira. Sua personagem simboliza a resistência espiritual e a preservação das tradições africanas no Brasil, sendo uma referência de força e respeito dentro da narrativa."
+                ],
+                "obra2": [
+                "Título: Sinhá Moça (1986)",
+                "Como Virgínia, conhecida como 'Bá', Chica deu vida a uma personagem que personifica a maternidade, a resistência e a dignidade negra em meio à violência do Brasil escravista. Sua atuação marcou profundamente o público, tornando-se símbolo de memória e respeito pela ancestralidade afrodescendente."
+                ]
+            },
+            "legado": "Chica Xavier foi pioneira na representação da mulher negra na televisão e no teatro brasileiros, inspirando gerações com sua presença marcante, dignidade e luta por visibilidade. Fora das artes, sua atuação religiosa como mãe-de-santo e sua liderança comunitária consolidaram sua imagem como guardiã da cultura afro-brasileira. Homenagens como o Troféu Palmares e centros culturais com seu nome reforçam sua importância histórica e espiritual para o Brasil."
+            }
+            ,
+            {
+  "Nome": "Conceição Evaristo",
+  "Idade": "(1946– )",
+  "Profissoes": ["Escritora", "Professora", "Pesquisadora"],
+  "Biografia": "Maria da Conceição Evaristo de Brito nasceu em 29 de novembro de 1946, em Belo Horizonte (MG), em uma família numerosa e humilde. Trabalhou como empregada doméstica até concluir o magistério. Formou-se em Letras pela UFRJ, fez Mestrado na PUC-RJ e Doutorado na UFF. Sua estreia literária ocorreu em 1990 nos Cadernos Negros. Criadora do conceito de 'escrevivência', sua escrita une experiência de vida e ficção para retratar as vivências de mulheres negras.",
+  "texto_obras": {
+    "obra1": [
+      "Ponciá Vicêncio (2003)",
+      "Romance que acompanha Ponciá, descendente de escravizados, lidando com memória ancestral e identidade. A obra reflete sobre herança histórica, resistência e a reconstrução do pertencimento feminino negro."
+    ],
+    "obra2": [
+      "Becos da Memória (2006)",
+      "Ambientado em uma favela, entrelaça memórias coletivas e individuais de opressão, marginalidade e solidariedade. Os becos simbolizam caminhos esquecidos da história negra e oferecem visibilidade a essas trajetórias."
+    ]
+  },
+  "legado": "Conceição Evaristo é referência na literatura afro-brasileira, com reconhecimento nacional e internacional. Criadora da 'escrevivência', recebeu o Prêmio Jabuti (2015), o troféu Juca Pato (2023), e teve obras traduzidas em diversos países. Sua produção acadêmica e literária impulsiona debates sobre raça, gênero e ancestralidade, sendo amplamente estudada em universidades e centros culturais."
+}
+
+    ],
+    "D" : 
+    [
+        {
+            "Nome": "Dalton Paula",
+            "Idade": "(1982)",
+            "Profissoes": ["Artista visual"],
+            "Biografia": "Dalton Paula é um artista visual brasileiro nascido em 1982, em Brasília, e atualmente reside e trabalha em Goiânia, Goiás. Formado em Artes Visuais pela Universidade Federal de Goiás, sua obra se destaca por uma profunda investigação da história e cultura afro-brasileiras, resgatando personagens e narrativas historicamente marginalizadas.",
+            "texto_obras": {
+                "obra1": [
+                "Estilo e temáticas",
+                "Sua produção abrange pintura, desenho, vídeo, performance e objetos. Um dos focos centrais é a recriação de retratos de personalidades negras que foram apagadas ou invisibilizadas pela história oficial. Com o uso de folhas de ouro de 22 quilates e elementos simbólicos, suas obras conferem dignidade, reconhecimento e continuidade histórica a essas figuras."
+                ],
+                "obra2": [
+                "Exposições e reconhecimento",
+                "Dalton participou da 32ª Bienal de São Paulo (2016) e da exposição 'Histórias Afro-Atlânticas' (2018). Em 2020, realizou sua primeira mostra internacional: 'Dalton Paula: um sequestrador de almas', em Nova York. Em 2022, o MASP exibiu 'Dalton Paula: retratos brasileiros', com 30 retratos de lideranças negras, das quais 12 foram doadas ao acervo do museu."
+                ]
+            },
+            "legado": "Dalton Paula é um dos principais nomes da arte contemporânea brasileira, conhecido por trazer à tona memórias silenciadas da população negra e por oferecer, por meio de suas obras, uma reconfiguração da representação histórica no Brasil. Recebeu o Prêmio CNI SESI SENAI Marcantonio Vilaça em 2019 e o Chanel Next Prize em 2024. Sua obra está documentada em publicações como 'Dalton Paula: O Sequestrador de Almas' e '20 em 2020 – Os Artistas da Próxima Década – América Latina'."
+        },
+        {
+            "Nome": "Djavan",
+            "Idade": "(1949)",
+            "Profissoes": ["Cantor", "Compositor", "Produtor musical", "Violonista"],
+            "Biografia": "Djavan Caetano Viana, nascido em 27 de janeiro de 1949, em Maceió, Alagoas, é um dos artistas mais consagrados da música popular brasileira (MPB). Autodidata no violão, Djavan é reconhecido por sua habilidade singular de fundir samba, jazz, funk, blues e música africana em uma sonoridade única e sofisticada.",
+            "texto_obras": {
+                "obra1": [
+                "Início da carreira",
+                "Na juventude, Djavan aprendeu violão sozinho e fundou o grupo Luz, Som, Dimensão (LSD), que se apresentava em eventos locais. Em 1973, mudou-se para o Rio de Janeiro, começando a compor para outros artistas. Seu primeiro álbum solo, 'A Voz, o Violão, a Música de Djavan' (1976), revelou o sucesso 'Flor de Lis'."
+                ],
+                "obra2": [
+                "Discografia e sucessos",
+                "Ao longo de sua carreira, lançou álbuns icônicos como 'Alumbramento' (1980), 'Luz' (1982), 'Lilás' (1984), 'Oceano' (1989), 'Ária' (2010) e 'Vesúvio' (2018). Seus maiores sucessos incluem 'Flor de Lis', 'Meu Bem Querer', 'Oceano', 'Lilás', 'Seduzir', 'Pétala', 'Sina', 'Samurai', 'Eu Te Devoro' e 'Linha do Equador'."
+                ]
+            },
+            "legado": "Djavan é um dos nomes mais respeitados da MPB, celebrado por sua voz inconfundível, lirismo poético e habilidade de transcender gêneros musicais. Com uma carreira que influenciou gerações, seu legado é marcado pela fusão de ritmos brasileiros com elementos do jazz, funk, soul e música africana. Em 2024, lançou o álbum ao vivo 'D Ao Vivo Maceió', reafirmando sua relevância artística e conexão com suas raízes."
+        }
+    ],
+    "E" : 
+    [
+        {
+            "Nome": "Estêvão Silva",
+            "Idade": "(c. 1844 – 1891)",
+            "Profissoes": ["Pintor", "Desenhista", "Professor"],
+            "Biografia": "Estêvão Roberto da Silva (c. 1844 – 9 de novembro de 1891) foi um pintor, desenhista e professor brasileiro, reconhecido como o primeiro artista negro a alcançar destaque na Academia Imperial de Belas Artes no século XIX. É especialmente notável por suas naturezas-mortas, tornando-se um dos maiores expoentes desse gênero na arte brasileira.",
+            "texto_obras": {
+                "obra1": [
+                "Formação e trajetória",
+                "Nascido no Rio de Janeiro, filho de pessoas escravizadas ou ex-escravizadas, ingressou na Academia Imperial de Belas Artes em 1864. Foi aluno de Victor Meirelles, Jules Le Chevrel e Agostinho José da Mota, este último influenciando-o na pintura de naturezas-mortas. Destacou-se pela técnica apurada, apesar dos obstáculos sociais e raciais."
+                ],
+                "obra2": [
+                "Naturezas-mortas e estilo",
+                "Especializou-se na representação de frutas tropicais e flores, mesclando realismo e sensibilidade estética. Obras como 'Natureza-Morta' (1891) demonstram seu domínio da luz, textura e cor, elevando o gênero a um novo patamar artístico."
+                ]
+            },
+            "legado": "Após sua morte, a obra de Estêvão Silva foi reavaliada e ganhou reconhecimento a partir da década de 1980, com suas pinturas preservadas no Museu Nacional de Belas Artes e no Museu Afro Brasil. É hoje celebrado como pioneiro negro da arte acadêmica brasileira e mestre das naturezas-mortas."
+        }   
+        ,
+        {
+            "Nome": "Emanoel Alves de Araújo",
+            "Idade": "(1940 – 2022)",
+            "Profissoes": ["Escultor", "Gravador", "Pintor", "Curador", "Museólogo"],
+            "Biografia": "Emanoel Alves de Araújo (15 de novembro de 1940 – 7 de setembro de 2022) foi um dos mais influentes artistas e gestores culturais do Brasil. Destacou-se por sua atuação na valorização da cultura afro-brasileira e por sua contribuição significativa ao cenário artístico nacional.",
+            "texto_obras": {
+                "obra1": [
+                "Formação e trajetória artística",
+                "Iniciou sua formação na juventude aprendendo marcenaria e linotipia. Aos 20 anos, realizou sua primeira exposição individual em Salvador. Sua obra abrange esculturas, gravuras, pinturas e cenografias, marcadas por cores vibrantes, formas geométricas e referências à cultura africana e afro-brasileira."
+                ],
+                "obra2": [
+                "Museu Afro Brasil",
+                "Fundou em 2004 o Museu Afro Brasil, localizado no Parque Ibirapuera, São Paulo. A instituição abriga mais de 8 mil obras que celebram a contribuição africana e afro-brasileira para a sociedade nacional, servindo como espaço de arte, memória e educação."
+                ]
+            },
+            "legado": "Emanoel Araújo foi fundamental na promoção da arte afro-brasileira como artista e curador, valorizando artistas negros e preservando a memória cultural afrodescendente no Brasil. Faleceu em 2022, sendo amplamente homenageado."
+            }
+
+    ],
+    "F" : 
+    [
+        {
+            "Nome": "Firmino Monteiro",
+            "Idade": "(1855 – 1888)",
+            "Profissoes": ["Pintor", "Tipógrafo"],
+            "Biografia": "Antônio Firmino Monteiro (22 de fevereiro de 1855 – 3 de julho de 1888) foi um pintor e tipógrafo brasileiro do século XIX, reconhecido por suas paisagens e cenas urbanas do Rio de Janeiro. De origem modesta, iniciou sua vida profissional como caixeiro, encadernador e tipógrafo antes de ingressar na Academia Imperial de Belas Artes (AIBA).",
+            "texto_obras": {
+                "obra1": [
+                "Trajetória artística",
+                "Destacou-se por suas pinturas que retratam o cotidiano e as paisagens do Rio de Janeiro na segunda metade do século XIX, com lirismo melancólico, composições cuidadosas e uso expressivo da cor. Obras notáveis incluem Paisagem de Niterói (1884), Camões no seu leito de morte e Um episódio da Retirada da Laguna."
+                ],
+                "obra2": [
+                "Viagens e reconhecimento",
+                "Com apoio de Dom Pedro II, realizou viagens de estudo à Europa em 1880, 1885 e 1887, com estadias em Paris. Participou das Exposições Gerais de Belas Artes e recebeu o título de Cavaleiro da Imperial Ordem da Rosa em 1884."
+                ]
+            },
+            "legado": "Monteiro lecionou pintura e perspectiva em escolas de arte, e sua obra é preservada em instituições como o Museu Afro Brasil e o Museu Nacional de Belas Artes, reconhecida por representar a cultura afro-brasileira no século XIX."
+            }
+        ,
+        {
+        "Nome": "Fabiana Cozza dos Santos",
+        "Idade": "1976 - ",
+        "Profissoes": ["cantora", "pesquisadora", "escritora", "professora", "curadora"],
+        "Biografia": "Nascida em 16 de janeiro de 1976, em São Paulo, Fabiana Cozza é cantora, pesquisadora, escritora e intérprete. Começou no samba com influência de jazz e MPB. Formou-se em música pela Universidade Livre de Música Tom Jobim e jornalismo pela PUC-SP. Lançou seu primeiro álbum solo em 2004 ('O Samba É Meu Dom') e conquistou o cenário nacional com premiações como Prêmio da Música Brasileira (2012) e álbum premiado em categoria internacional (2018). É doutoranda em música na Unicamp e atua também como professora e curadora.",
+        "texto_obras": {
+            "obra1": [
+            "Título: O Samba É Meu Dom (2004)",
+            "Introduz sua presença refinada na MPB, valorizando o samba com interpretação precisa e timbre suave. Mistura instrumentos tradicionais e melodia sofisticada, abrindo espaço para novas vozes femininas negras no samba."
+            ],
+            "obra2": [
+            "Título: Dos Santos (2020)",
+            "Homenagem às matrizes africanas, o álbum une samba, percussão e ancestralidade, usando letras e arranjos que exaltam a cura simbólica e os ancestrais da cultura negra."
+            ]
+        },
+        "legado": "Fabiana é reconhecida como uma das vozes mais marcantes da nova geração da MPB, mesclando pesquisa e performance. É referência em curadoria (como a oficina 'O Corpo da Voz'), e seus álbuns têm presença internacional e premiações. Seu trabalho fortalece a visibilidade do samba e da cultura afro-brasileira, com destaque em festivais como Nuits d’Afrique e pelo álbum celebrado 'Dos Santos'."
+        }
+    ],
+    "G" : 
+    [
+        {
+            "Nome": "Gerson King Combo",
+            "Idade": "(1943–2020)",
+            "Profissoes": ["Cantor", "Compositor", "Dançarino"],
+            "Biografia": "Gerson King Combo foi um cantor, compositor e dançarino brasileiro, considerado um dos principais nomes do soul e do funk no Brasil, frequentemente chamado de 'James Brown brasileiro' pela sua presença de palco e influência no gênero.",
+            "texto_obras": {
+                "obra1": [
+                "Início e Ascensão",
+                "Nascido no Rio de Janeiro como Gerson Rodrigues Côrtes, iniciou sua carreira nos anos 1960, participando do programa Jovem Guarda e do grupo 'Formula 7'. Seu destaque veio nos anos 1970 com o movimento Black Rio, que valorizava a cultura negra por meio da música e da dança."
+                ],
+                "obra2": [
+                "Soul Brasileiro",
+                "Inspirado por James Brown, Marvin Gaye e Curtis Mayfield, Gerson adaptou o soul americano à realidade brasileira, criando músicas com forte apelo social e dançante. Sucessos como 'Mandamentos Black', 'Funk Brother Soul' e 'Good Bye' o tornaram um ícone."
+                ]
+            },
+            "legado": "Apesar de um período de esquecimento, sua obra foi redescoberta nos anos 2000, sendo reverenciado por novas gerações. Sua música é referência fundamental para o soul, funk e o ativismo negro no Brasil."
+            }
+        ,
+        {
+            "Nome": "Gilberto Passos Gil Moreira",
+            "Idade": "(1942– )",
+            "Profissoes": ["cantor", "compositor", "multi-instrumentista", "produtor musical", "político"],
+            "Biografia": "Gilberto Gil nasceu em 26 de junho de 1942, em Salvador (BA). É um dos principais nomes da música popular brasileira (MPB) e figura central no movimento tropicalista, ao lado de Caetano Veloso. Com uma carreira internacional de sucesso, Gil inovou ao misturar samba, bossa nova, rock, reggae e música nordestina. Além de sua trajetória artística, atuou na vida política, tendo sido Ministro da Cultura do Brasil entre 2003 e 2008. Sua obra reflete engajamento social, político e cultural, sendo um dos artistas brasileiros mais reconhecidos no mundo.",
+            "texto_obras": {
+                "obra1": [
+                    "Refazenda (1975)",
+                    "Um dos álbuns mais icônicos de Gil, que inaugura a chamada 'trilogia Re' (Refazenda, Refavela e Realce). Mistura elementos da música nordestina com influências internacionais, reafirmando a versatilidade musical do artista."
+                ],
+                "obra2": [
+                    "Expresso 2222 (1972)",
+                    "Álbum marcante lançado após seu retorno do exílio em Londres, onde traz referências do rock e do reggae, além de sucessos como 'Back in Bahia'. Representa um ponto de virada em sua carreira e na música brasileira."
+                ]
+            },
+            "legado": "Gilberto Gil é considerado um dos maiores ícones da música brasileira, com reconhecimento mundial. Sua produção artística e atuação política contribuíram para a valorização da cultura nacional e a defesa da diversidade. É membro da Academia Brasileira de Letras (ABL) desde 2021 e sua obra atravessa gerações, influenciando músicos e intelectuais dentro e fora do Brasil."
+        }
+
+    ], 
+    "H" : [
+        {
+            "Nome": "Horácio Hora",
+            "Idade": "(1853 – 1890)",
+            "Profissoes": ["Pintor"],
+            "Biografia": "Horácio Pinto da Hora, conhecido como Horácio Hora, nasceu em Laranjeiras, Sergipe, em 17 de setembro de 1853. Foi um destacado representante do Romantismo nas artes visuais do século XIX, reconhecido por retratos, cenas do cotidiano e interpretações literárias, consolidando-se como um dos maiores nomes da pintura sergipana.",
+            "texto_obras": {
+                "obra1": [
+                "Peri e Ceci",
+                "Pintura de 1882 baseada no romance O Guarani, de José de Alencar. A obra utiliza elementos pessoais, como o cenário de sua cidade natal e a imagem de sua irmã para representar Ceci."
+                ],
+                "obra2": [
+                "Miséria e Caridade",
+                "Uma das obras notáveis de Horácio Hora, retratando temas sociais e cenas realistas, presentes em importantes acervos brasileiros."
+                ]
+            },
+            "legado": "Horácio Hora produziu mais de 300 obras, que estão preservadas em instituições como o Museu Histórico de Sergipe, Museu Afro Brasil e Museu Mariano Procópio. Apesar de ter falecido jovem, aos 36 anos, seu legado artístico é celebrado e estudado até hoje, com eventos comemorativos realizados em seu sesquicentenário."
+            }
+        ,
+    {
+        "Nome": "Helena Theodoro",
+        "Idade": "1943 -",
+        "Profissoes": ["filósofa", "historiadora", "radialista", "escritora"],
+        "Biografia": "Helena é filósofa, historiadora, radialista e escritora, nascida no Rio de Janeiro. Formou-se em Direito (UFRJ, 1967), Pedagogia (Uerj, 1970), mestre em Educação (UFRJ, 1978) e doutora em Filosofia (Gama Filho, 1985). Foi a primeira mulher negra no Brasil a obter doutorado em Filosofia. Trabalhou por décadas na Rádio MEC, onde criou programas como 'Com o samba na palma da mão' e 'Origens', dando voz à cultura e religiosidade afro-brasileira. Sua pesquisa acadêmica e obras literárias tratam de temas como religiosidade, ancestralidade e o protagonismo das mulheres negras.",
+        "texto_obras": {
+            "obra1": [
+                "Título: Mito e Espiritualidade: Mulheres Negras (1996)",
+                "Livro de ensaios que explora o papel das mulheres negras como guardiãs das tradições africanas no Brasil. Reflete sobre papéis sociais, diversidade de matriarcas negras e a construção de identidade por meio da religiosidade afro-brasileira."
+            ],
+            "obra2": [
+                "Título: Iansã: Rainha dos Ventos e da Tempestade (2009–2010)",
+                "Obra litúrgica e narrativa que aprofunda o estudo sobre a força de Iansã dentro do culto afro-brasileiro. Combina pesquisa acadêmica e poética para valorizar os elementos espirituais e filosóficos ligados a Iansã, exaltando o protagonismo feminino nas religiões de matriz africana."
+            ]
+        },
+        "legado": "Primeira doutora negra em Filosofia no Brasil, abrindo caminho para intelectuais negras. Radiofônica e escritora engajada, deu voz à cultura e auxílios negros por meio de programas inovadores. Recebeu Medalha Tiradentes e Medalha Chiquinha Gonzaga (2024), reconhecendo sua luta contra a intolerância religiosa e destaque na cultura afro-brasileira. Inspirou projetos culturais como a trilogia teatral 'Matriarcas' (CCBB) e segue sendo referência nos estudos sobre ancestralidade, filosofia e protagonismo feminino negro."
+}
+
+
+    ],
+    "I" : [
+        {
+            "Nome": "Ingrid Silva",
+            "Idade": "(1988)",
+            "Profissoes": ["Bailarina", "Ativista"],
+            "Biografia": "Ingrid Silva, nascida no Rio de Janeiro, é uma bailarina brasileira reconhecida internacionalmente no balé clássico e ativista da diversidade e representatividade na dança. É primeira bailarina do Dance Theatre of Harlem, em Nova York.",
+            "texto_obras": {
+                "obra1": [
+                "Carreira e Conquistas",
+                "Interpretou papéis principais em obras de George Balanchine, Ulysses Dove e John Alleyne, e participou de campanhas internacionais como a da Nike no Mês da História Negra."
+                ],
+                "obra2": [
+                "Ativismo e Projetos Sociais",
+                "Fundadora do Blacks in Ballet e cofundadora da EmpowHerNY, Ingrid promove diversidade no balé e apoio a mulheres, compartilhando sua história em sua autobiografia 'A Sapatilha que Mudou Meu Mundo'."
+                ]
+            },
+            "legado": "Ingrid Silva é uma referência no balé mundial e ativismo por diversidade, quebrando barreiras para bailarinos negros e inspirando novas gerações, conciliando carreira artística e maternidade."
+            }
+        ,
+        {
+            "Nome": "Iléa Ferraz",
+            "Idade": "1960 - ",
+            "Profissoes": ["atriz", "diretora", "escritora", "cenógrafa", "artista multimídia"],
+            "Biografia": "Nascida no Rio de Janeiro em 27 de abril de 1960, Iléa Ferraz é atriz, diretora, escritora, cenógrafa e artista multimídia. Foi a primeira atriz negra indicada ao Prêmio Shell de Teatro, em 2003, pelo monólogo 'Nunca Pensei Que ia Ver Esse Dia'. Com uma carreira marcada pela versatilidade e engajamento, atuou em novelas como 'Tenda dos Milagres', 'Xica da Silva' e 'Império', além do filme 'Buena Sorte' (1997). Nos palcos, destacou-se com peças de impacto como 'Os Negros', 'Hamlet é Negro' e 'O Cheiro da Feijoada', esta última apresentada em espaços culturais no Brasil e em Angola.",
+            "texto_obras": {
+                "obra1": [
+                "Título: Nunca Pensei Que ia Ver Esse Dia (2003)",
+                "Monólogo teatral premiado e indicado ao Shell. A obra aborda as vivências e a trajetória de uma atriz negra no Brasil, revelando o enfrentamento cotidiano de racismo, identidade e resiliência — uma narrativa que mistura delicadeza e força cultural."
+                ],
+                "obra2": [
+                "Título: O Cheiro da Feijoada (2010–)",
+                "Monólogo musical criado e interpretado por Iléa. Através da memória de uma lavadeira idosa, o espetáculo narra a origem da feijoada e celebra a cultura afro-brasileira, valorizando a ancestralidade, a história popular e o saber feminino – com apresentações em teatros, escolas e comunidades, no Brasil e em Angola."
+                ]
+            },
+            "legado": "Pioneira no teatro negro, Iléa Ferraz ocupou espaços majoritariamente brancos com liderança criativa e autoral. Contribuiu para a valorização da cultura afro-brasileira por meio de espetáculos engajados e educativos, como 'O Cheiro da Feijoada'. Fundadora da Companhia Black e Preto no Rio de Janeiro, inspirou novas gerações de artistas negras, ampliando a representatividade nos palcos. Permanece ativa com produções cênico-musicais e literárias, reafirmando a força da arte negra nas artes cênicas brasileiras."
+            }
+
+    ],
+    "J" : 
+    [
+        {
+            "Nome": "José Gomes Filho",
+            "Idade": "(1919–1982)",
+            "Profissoes": ["cantor", "compositor", "instrumentista"],
+            "Biografia": "Jackson do Pandeiro nasceu em 31 de agosto de 1919, em Alagoa Grande (PB). Ficou conhecido como o 'Rei do Ritmo' por sua habilidade única de mesclar gêneros como forró, samba, coco, xaxado e baião, sempre com grande swing e criatividade rítmica. Começou a carreira como percussionista e rapidamente ganhou notoriedade nacional, se tornando um dos maiores nomes da música popular nordestina. Faleceu em 10 de julho de 1982, deixando um legado fundamental para a MPB e para a valorização da cultura nordestina.",
+            "texto_obras": {
+                "obra1": [
+                    "O Canto da Ema (1956)",
+                    "Um de seus maiores sucessos, consagrado no forró e no samba, que até hoje é interpretado por diferentes gerações de músicos."
+                ],
+                "obra2": [
+                    "Sebastiana (1953)",
+                    "Primeiro grande sucesso de Jackson, lançado ainda nos anos 1950, que ajudou a projetar sua carreira em nível nacional."
+                ]
+            },
+            "legado": "Jackson do Pandeiro é lembrado como um dos maiores ritmistas do Brasil. Seu estilo inovador influenciou artistas como Gilberto Gil, Alceu Valença e Lenine. Até hoje é considerado uma referência no forró e na música popular, celebrado como símbolo da identidade cultural nordestina."
+        }
+
+        ,{
+            "Nome": "João Timótheo da Costa",
+            "Idade": "(1879–1932)",
+            "Profissoes": ["Pintor", "Decorador", "Gravador"],
+            "Biografia": "João Timótheo da Costa foi um pintor, decorador e gravador brasileiro, destacado representante da arte acadêmica e impressionista no Brasil do início do século XX. Junto com seu irmão Arthur Timótheo da Costa, foi pioneiro na inserção de artistas negros no cenário artístico nacional.",
+            "texto_obras": {
+                "obra1": [
+                "Formação e Carreira",
+                "Iniciou sua formação artística em 1894 como aprendiz na Casa da Moeda do Rio de Janeiro, sob a mentoria de Enes de Souza. Estudou na Escola Nacional de Belas Artes com professores renomados como Daniel Bérard e Rodolfo Amoedo. Em 1910, viajou para Paris e participou da decoração do Pavilhão Brasileiro na Exposição Internacional de Turim, em 1911."
+                ],
+                "obra2": [
+                "Produção Artística",
+                "Produziu cerca de 600 obras incluindo paisagens, retratos, marinhas, pinturas históricas e de costumes. Destacam-se obras como 'Reflexos do Sol em Morro do Rio de Janeiro' (1909) e 'Interior da Cadeia Velha' (1917). Suas obras integram acervos do Museu Afro Brasil e da Pinacoteca do Estado de São Paulo."
+                ]
+            },
+            "legado": "João Timótheo da Costa participou de importantes exposições e recebeu prêmios, como a pequena medalha de ouro em 1926. Seu legado é fundamental para o reconhecimento da arte produzida por artistas negros no Brasil do início do século XX, apesar das dificuldades pessoais e do pouco estudo dedicado à sua obra."
+            }
+    ],
+    "K" : 
+    [
+        {
+            "Nome": "Ketleyn Quadros",
+            "Idade": "(1987– )",
+            "Profissoes": ["judoca", "atleta olímpica"],
+            "Biografia": "Ketleyn Quadros nasceu em Brasília, em 1º de outubro de 1987. Tornou-se um marco do esporte brasileiro ao conquistar a medalha de bronze nos Jogos Olímpicos de Pequim, em 2008, na categoria até 57kg do judô. Esse feito a consagrou como a primeira mulher brasileira a ganhar uma medalha olímpica em esportes individuais. Além do judô, Ketleyn também estudou Educação Física e manteve uma trajetória de destaque no cenário nacional e internacional do esporte.",
+            "texto_obras": {
+                "obra1": [
+                    "Medalha de Bronze nos Jogos Olímpicos de Pequim (2008)",
+                    "Primeira mulher brasileira a conquistar uma medalha em esportes individuais nas Olimpíadas, um marco histórico no judô e no esporte nacional."
+                ],
+                "obra2": [
+                    "Medalhas em campeonatos Pan-Americanos e competições internacionais",
+                    "Ketleyn acumulou títulos e medalhas em torneios de alto nível, reforçando seu papel como uma das principais judocas do Brasil nas últimas décadas."
+                ]
+            },
+            "legado": "Ketleyn Quadros é símbolo de superação e pioneirismo no esporte brasileiro. Sua conquista olímpica abriu caminho para a valorização de atletas mulheres em modalidades individuais, inspirando novas gerações de judocas e esportistas no país."
+        }
+,
+        {
+            "Nome": "Kika Carvalho",
+            "Idade": "(1992–)",
+            "Profissoes": ["Artista Visual", "Educadora Social"],
+            "Biografia": "Kika Carvalho é uma artista visual e educadora social brasileira, natural de Vitória, Espírito Santo. Destaca-se no grafite e muralismo, sendo uma das principais representantes da arte urbana contemporânea no Brasil.",
+            "texto_obras": {
+                "obra1": [
+                "Formação e Carreira",
+                "Graduada em Artes Visuais pela Universidade Federal do Espírito Santo (UFES), Kika iniciou sua trajetória no grafite, tornando-se a primeira mulher de destaque a pintar muros em Vitória. Sua prática inclui múltiplas técnicas, com ênfase na cor azul, marca registrada de suas obras."
+                ],
+                "obra2": [
+                "Reconhecimento e Temáticas",
+                "Suas obras foram expostas na Pinacoteca do Estado de São Paulo, Instituto Inhotim e galerias internacionais. Aborda temas como gênero, racismo e ancestralidade africana, com foco na mulher preta, conectando sua arte à história da pintura e às paisagens de Vitória."
+                ]
+            },
+            "legado": "Indicada ao Prêmio PIPA em 2021 e 2023, Kika Carvalho é reconhecida por sua contribuição significativa à arte contemporânea brasileira, especialmente na valorização da cultura negra e das mulheres nas artes urbanas."
+            }
+
+    ],
+    "L" : 
+    [
+        {
+            "Nome": "Liniker de Barros Ferreira Campos",
+            "Idade": "(1995–)",
+            "Profissoes": ["Cantora", "Compositora", "Atriz", "Artista Visual"],
+            "Biografia": "Liniker é uma cantora, compositora, atriz e artista visual brasileira, natural de Araraquara, São Paulo. Destaca-se por sua voz potente e por ser uma das principais representantes da comunidade trans e negra na música brasileira contemporânea.",
+            "texto_obras": {
+                "obra1": [
+                "Carreira Musical",
+                "Fundou em 2015 a banda Liniker e os Caramelows, lançando os álbuns 'Cru', 'Remonta' e 'Goela Abaixo'. Em 2020 seguiu carreira solo, lançando em 2021 o álbum 'Indigo Borboleta Anil', vencedor do Grammy Latino em 2022, e em 2024 o álbum 'Caju', aclamado pela crítica."
+                ],
+                "obra2": [
+                "Outras Atividades e Reconhecimentos",
+                "Atua como atriz em séries como 'Manhãs de Setembro' (Prime Video), '3%' (Netflix) e 'Cara e Coragem' (Rede Globo). Primeira artista trans brasileira a vencer Grammy Latino e a ocupar cadeira na Academia Brasileira de Cultura. Em 2024, foi a artista mais premiada no Prêmio Multishow."
+                ]
+            },
+            "legado": "Liniker é uma voz fundamental na representatividade LGBTQIA+ e negra, inspirando e empoderando com sua música e ativismo, consolidando-se como ícone cultural no Brasil contemporâneo."
+            }
+        ,
+        {
+            "Nome": "Lélia Gonzalez",
+            "Idade": "(1935–1994)",
+            "Profissoes": ["Historiadora", "Geógrafa", "Filósofa", "Antropóloga", "Professora", "Ativista"],
+            "Biografia": "Lélia Gonzalez foi uma intelectual e ativista brasileira, formada em História, Geografia e Filosofia, com mestrado em Comunicação e doutorado em Antropologia. Atuou como professora em instituições como UERJ, PUC-Rio e Parque Lage, onde criou o primeiro curso de Cultura Negra no Brasil. Foi uma das fundadoras de importantes movimentos e instituições do ativismo negro, como o IPCN, o MNU e o Coletivo Nzinga.",
+            "texto_obras": {
+                "obra1": [
+                "Lugar de Negro (1982)",
+                "Livro escrito em parceria com Carlos Hasenbalg, que analisa a inserção dos negros na sociedade e economia brasileira pós-1964. Introduz o conceito de 'pretuguês' e desconstrói o mito da democracia racial."
+                ],
+                "obra2": [
+                "Por um Feminismo Afro-Latino-Americano (1988)",
+                "Coletânea de textos que propõe um feminismo interseccional negro na América Latina, articulando raça, gênero, classe e ancestralidade com base nas experiências das mulheres negras."
+                ]
+            },
+            "legado": "Lélia Gonzalez é referência central do pensamento negro e feminista no Brasil. Desenvolveu conceitos como 'amefricanidade' e 'pretuguês' e influenciou teorias decoloniais e interseccionais. Participou da Constituinte, foi homenageada com prêmio, escola e Google Doodle, e seus escritos seguem fundamentais nos debates sobre raça, cultura e gênero."
+            }
+
+    ], 
+    "M" : 
+    [
+        {
+            "Nome": "Mestre Didi",
+            "Idade" : "1917–2013",
+            "Profissoes" : [
+                "Sacerdote (Alapini)",
+                "Escultor",
+                "Escritor",
+                "Artista plástico",
+                "Educador",
+                "Pesquisador da língua Iorubá",
+                "Tradutor"
+            ],
+            "Biografia": "Filho de Paizinho (Alagbá) e Mãe Senhora (ialorixá), cresceu na tradição Egungun no Candomblé desde os 8 anos. Após estudos religiosos, foi consagrado Alapini (sumo‑sacerdote) em 1975 e fundou o terreiro Ilê Asipá em 1980. Escultor autodidata, graduou-se como escritor, pesquisador da língua Iorubá (publicou seu primeiro dicionário em 1946) e publicador de contos africanos. Participou de exposições internacionais desde os anos 1960 e teve visibilidade global após a Bienal de São Paulo de 1996 (sala especial), Magiciens de la Terre (Paris, 1989) e mostra no Museu Afro Brasil em 2009.",
+            "texto_obras": {
+                "obra1": [
+                    "Título: Ope Olodo Ejo – Palma da Serpente do Rio",
+                    "Óleo sobre nervura de palmeira, couro, búzios e miçangas (sem data), pertencente ao acervo MASP.",
+                    "Conceito: Obra rica em simbolismo nagô, dialoga com forças da natureza e ancestrais (Orixás), mantendo a sacralidade estética sem ritualizar. Representa equilíbrio entre sagrado/profano e ancestralidade/contemporaneidade."
+                ],
+                "obra2": [
+                    "Título: Ejo Orun Ori Pupa",
+                    "Escultura dos anos 1980 feita com cultivos de classes cerimoniais: nervura de palmeira, couro pintado, búzios e contas.",
+                    "Conceito: Ilustra a presença mítica das serpentes divinas, unindo formas orgânicas e padrões sagrados — um totem moderno que evoca a ancestralidade yorubá."
+                ]
+            },
+            "legado": "Sacerdote-artista que articulou religiosidade (Candomblé) e arte contemporânea afro-brasileira. Transcendeu restrições etnocêntricas, levando esculturas litúrgicas ao reconhecimento artístico nacional e internacional. Fundador do Ilê Asipá, formador de sacerdotes e ativista cultural ao documentar a língua yorubá e contos africanos. Prêmios e exposições incluem Bienal de São Paulo, Pompidou, Guggenheim, e Order of Cultural Merit (1996). Hoje, suas esculturas estão nos acervos do MASP, Museu Afro Brasil, MAM, Guggenheim, além de recentes homenagens como a exposição “Mestre Didi: Spiritual Form” no El Museo del Barrio, NY (2025)."
+            }
+
+        ,
+        {
+            "Nome": "Moisés Patrício",
+            "Idade": "(1984–)",
+            "Profissoes": ["Artista Visual", "Arte-Educador"],
+            "Biografia": "Moisés Patrício é um artista contemporâneo afro-brasileiro que utiliza fotografia, vídeo, performance e instalações para refletir sobre racismo, intolerância religiosa e ancestralidade, articulando elementos da cultura afro-brasileira e africana.",
+            "texto_obras": {
+                "obra1": [
+                "Formação e Trajetória",
+                "Nascido em São Paulo, formou-se em Artes Visuais pela USP e desenvolve desde 2006 ações culturais que integram elementos sagrados da cultura ameríndia e afro-brasileira em sua arte."
+                ],
+                "obra2": [
+                "Produção Artística e Temáticas",
+                "Destaca-se pela série 'Aceita?', que simboliza resistência sobre a condição da mão escrava, além de obras como 'Álbum de Família' e 'Amarração', que exploram espiritualidade, conexões humanas e ancestralidade."
+                ]
+            },
+            "legado": "Seu trabalho dialoga com a identidade, religiosidade e resistência, marcando presença em importantes exposições nacionais e internacionais e coleções públicas brasileiras."
+            }
+
+    ],
+    "N" : 
+    [
+        {
+            "Nome": "Neusa Santos Souza",
+            "Idade": "(1948–2008)",
+            "Profissoes": ["psiquiatra", "psicanalista", "escritora", "intelectual", "professora"],
+            "Biografia": "Neusa Santos Souza foi uma importante psiquiatra, psicanalista e escritora brasileira, nascida em 1948 na Bahia. Tornou-se uma das primeiras médicas negras formadas pela Universidade Federal da Bahia (UFBA). Sua trajetória acadêmica e profissional foi marcada pela análise crítica da condição do negro na sociedade brasileira, especialmente a partir das perspectivas da psicanálise e das ciências sociais. Mudou-se para o Rio de Janeiro, onde atuou tanto na clínica quanto na docência e na militância intelectual.",
+            "texto_obras": {
+                "obra1": [
+                    "Tornar-se negro (1983)",
+                    "Sua obra mais conhecida, em que analisa os impactos psicológicos e subjetivos do racismo estrutural na identidade da população negra no Brasil, explorando a construção da negritude em uma sociedade marcada pelo preconceito e pela desigualdade racial."
+                ],
+                "obra2": [
+                    "Artigos e ensaios em revistas acadêmicas (anos 1980–2000)",
+                    "Neusa publicou textos em periódicos especializados em psicanálise e ciências sociais, nos quais aprofundava a discussão sobre subjetividade, racismo e identidade negra no Brasil."
+                ]
+            },
+            "legado": "Neusa Santos Souza deixou uma contribuição fundamental para os estudos das relações raciais no Brasil, sendo referência para intelectuais, militantes e pesquisadores que discutem racismo, subjetividade e identidade negra. Sua obra 'Tornar-se negro' continua sendo amplamente estudada e é considerada um marco no pensamento crítico brasileiro."
+        }
+        ,
+        {
+            "Nome": "Nádia Taquary",
+            "Idade": "(1967–)",
+            "Profissoes": ["Artista Visual"],
+            "Biografia": "Nádia Taquary é uma artista visual brasileira que explora as tradições afro-brasileiras, religiosidade, identidade e ancestralidade negra por meio de esculturas, instalações e joias, promovendo o protagonismo feminino negro e a resistência cultural.",
+            "texto_obras": {
+                "obra1": [
+                "Formação e Trajetória",
+                "Iniciou sua formação em Literatura e especializou-se em Educação Estética, Semiótica e Cultura. Superou resistência familiar para se dedicar à escultura, inspirada na joalheria afro-brasileira e na busca por identidade."
+                ],
+                "obra2": [
+                "Produção Artística e Exposições",
+                "Suas esculturas e instalações unem elementos afro-brasileiros com estética contemporânea, utilizando miçangas, búzios, metais e madeiras. Participou de exposições no MAR e Bienal de Sydney, e tem obras em museus no Brasil e no exterior."
+                ]
+            },
+            "legado": "Sua obra resgata e valoriza a ancestralidade negra, promovendo reflexões críticas sobre identidade, religiosidade e resistência afro-brasileira no contexto da arte contemporânea."
+            }
+    ],
+    "O" : 
+    [
+        {
+            "Nome": "Oga Mendonça",
+            "Idade": "(1980–)",
+            "Profissoes": ["Designer Multimídia", "Videomaker", "Ativista"],
+            "Biografia": "Oga Mendonça é um designer multimídia, videomaker e ativista brasileiro, reconhecido por sua atuação na valorização da cultura afro-brasileira e no combate ao racismo estrutural. Com uma trajetória marcada pelo engajamento em movimentos culturais negros, Mendonça contribui para a preservação e difusão das tradições afrodescendentes no Brasil.",
+            "texto_obras": {
+                "obra1": [
+                "Formação e Trajetória",
+                "Com mais de 20 anos de atuação no design e audiovisual, Oga Mendonça iniciou sua carreira em São Paulo, utilizando sua formação para promover a representatividade negra nos meios de comunicação e em projetos culturais."
+                ],
+                "obra2": [
+                "Obra e Reconhecimento",
+                "Ilustrador da Enciclopédia Negra, Mendonça retratou figuras históricas como Jandyra Aymoré, conectando arte e memória negra. Também participou de exposições e programas do Sesc que celebram as Tecnologias Negras."
+                ]
+            },
+            "legado": "Oga Mendonça utiliza o design como ferramenta de valorização da cultura afro-brasileira, contribuindo para a visibilidade de narrativas negras e a construção de uma estética centrada na identidade e resistência cultural."
+            }
+        , {
+    "Nome": "Olga de Alaketu",
+    "Idade": "(1925–2005)",
+    "Profissoes": ["ialorixá", "líder religiosa", "mãe de santo"],
+    "Biografia": "Maria Olga de Figueiredo, mais conhecida como Mãe Olga de Alaketu, nasceu em Salvador em 1925. Tornou-se uma das mais respeitadas ialorixás do candomblé brasileiro, liderando o tradicional Terreiro Ilê Maroiá Láji, fundado em 1636 e considerado um dos mais antigos do Brasil. Herdou a função de sua mãe, Mãe Senhora, e foi reconhecida como uma grande autoridade religiosa, cultural e social, atuando na preservação da tradição iorubá e no diálogo com a sociedade e o Estado. Seu terreiro recebeu visitas de intelectuais, artistas e autoridades, tornando-se um ponto central da resistência cultural e religiosa afro-brasileira.",
+    "texto_obras": {
+        "obra1": [
+            "Liderança no Terreiro Ilê Maroiá Láji",
+            "Conduziu o terreiro de Alaketu por décadas, fortalecendo a herança religiosa e cultural iorubá, mantendo ritos, costumes e ensinamentos ancestrais do candomblé."
+        ],
+        "obra2": [
+            "Reconhecimento nacional e internacional",
+            "Foi homenageada por instituições culturais e religiosas, tornando-se referência no Brasil e no exterior como uma das mais influentes mães de santo de sua geração."
+        ]
+    },
+    "legado": "Mãe Olga de Alaketu deixou uma marca profunda na história das religiões de matriz africana no Brasil. Sua liderança consolidou o terreiro de Alaketu como um espaço de resistência, fé e preservação cultural, inspirando sucessoras e fortalecendo a identidade afro-brasileira."
+}
+    ],
+    "P" : 
+    [{
+        "Nome": "Paulo Nazareth",
+        "Idade": "(1977–)",
+        "Profissoes": ["Artista visual", "Performer"],
+        "Biografia": "Paulo Nazareth é um artista visual e performer brasileiro, nascido em Governador Valadares, Minas Gerais, em 1977. Reconhecido por seu trabalho que mescla performance, instalação, fotografia e escultura, ele investiga temas como identidade, colonialismo, migração e ancestralidade afro-brasileira. Sua prática artística está profundamente conectada a experiências pessoais e à circulação por diferentes territórios.",
+        "texto_obras": {
+            "obra1": [
+            "Notícias de América",
+            "Nesta série performática, Paulo Nazareth percorreu longas distâncias a pé por países das Américas, interagindo com populações locais e documentando suas vivências. O projeto propõe uma reflexão crítica sobre fronteiras, deslocamentos e o legado colonial no continente."
+            ],
+            "obra2": [
+            "Para Quando Eles Me Buscarem no Deserto",
+            "Obra que reúne fotografias e objetos relacionados à cultura afro-brasileira e indígena, destacando práticas de resistência e espiritualidade. A instalação sugere um reencontro com saberes ancestrais e a revalorização de memórias historicamente marginalizadas."
+            ]
+        },
+        "legado": "Paulo Nazareth é reconhecido por redefinir o papel do artista como caminhante, mensageiro e cronista de seu tempo. Sua obra amplia o entendimento sobre arte contemporânea brasileira, colocando em evidência os saberes afro-indígenas, a crítica ao racismo estrutural e os modos de resistência cultural no Sul Global."
+        }
+        ,
+        {
+            "Nome": "Preta Ferreira",
+            "Idade": "1984",
+            "Profissoes" : [
+                "Publicitária",
+                "Cantora",
+                "Atriz",
+                "Produtora cultural",
+                "Escritora",
+                "Ativista social",
+                "Liderança do movimento por moradia"
+            ],
+            "Biografia": "Preta é publicitária de formação, mas também artista leve multiartista — cantora, atriz, produtora cultural e escritora. Tornou-se referência nacional no movimento por moradia como liderança da Ocupação 9 de Julho e da Frente de Luta por Moradia (MSTC/FLM) em São Paulo. Em junho de 2019, foi presa por 108‑109 dias, acusada injustamente de extorsão e associação criminosa, sem apresentação de provas, tornando‑se símbolo da criminalização de ativistas sociais no Brasil; recebeu apoio de figuras como Angela Davis e Papa Francisco. Após o cárcere, lançou o livro Minha Carne – Diário de uma prisão e continuou sua atuação artística e social.",
+            "texto_obras": {
+                "obra1": [
+                    "Título: Minha Carne – Diário de uma prisão (2021)",
+                    "Descrição: Relato autobiográfico em formato de diário escrito durante os 108 dias de cárcere. Combina narrativa em primeira pessoa, poemas, letras de música e depoimentos de outras presas.",
+                    "Conceito: A obra é um grito por liberdade e justiça, uma denúncia da violência do sistema prisional e uma celebração da resistência negra feminina."
+                ],
+                "obra2": [
+                    "Título: Receita de Caranguejo (Curta, 2020)",
+                    "Descrição: Curta‑metragem em que Preta atua como atriz; recebeu o Kikito de melhor atuação no Festival de Gramado (2020).",
+                    "Conceito: Explora narrativas sobre corpo, raça e fome, inserindo a estética da negritude e demandas sociais em linguagem cinematográfica."
+                ]
+            },
+            "legado": "Tornou-se símbolo nacional da resistência aos processos de criminalização de diferentes movimentos sociais. Sua escrita sensibilizou sobre as condições carcerárias no Brasil e potencializou projetos de leitura em prisões, formando redes de solidariedade e denúncia. Reconhecida com o Prêmio Dandara da Assembleia Legislativa do RJ (2019) e o Kikito por atuação em cinema (2020), segue engajada em arte-ativismo — lançou música com Angela Davis e Conceição Evaristo, e integra série e filmes com discursos políticos e antirracistas."
+            }
+
+    ],
+    "Q" : 
+    [
+        {
+            "Nome": "Quinho",
+            "Idade": "(1954-2024)",
+            "Profissoes": ["percussionista", "músico"],
+            "Biografia": "Quinho é um renomado percussionista brasileiro, reconhecido por sua contribuição à música popular brasileira, especialmente no samba e no pagode. Com uma carreira marcada por parcerias com grandes nomes da música nacional, Quinho é valorizado por sua técnica, ritmo e presença nos bastidores da cena musical. Sua percussão ajuda a manter viva a tradição afro-brasileira nos ritmos populares.",
+            "texto_obras": {
+                "obra1": [
+                "Título: Participações em discos de samba e pagode",
+                "Quinho colaborou com diversos artistas renomados da música brasileira, participando como percussionista em álbuns e shows que destacam a riqueza dos ritmos afro-brasileiros."
+                ],
+                "obra2": [
+                "Título: Projetos musicais e grupos",
+                "Além das participações em gravações, Quinho integrou e colaborou com grupos musicais que valorizam a cultura negra e a percussão tradicional, contribuindo para a difusão do samba e pagode no Brasil e no exterior."
+                ]
+            },
+            "legado": "Quinho deixou um legado importante para a percussão brasileira, ajudando a preservar e difundir ritmos tradicionais afro-brasileiros e inspirando gerações de músicos a valorizar a cultura negra na música popular."
+            }
+        ,{
+            "Nome": "Quelynah",
+            "Idade": "(1981-)", 
+            "Profissoes": ["cantora", "compositora", "atriz"],
+            "Biografia": "Quelynah é uma cantora e compositora brasileira, reconhecida por sua contribuição ao hip-hop e R&B nacional. Iniciou sua carreira aos 13 anos e ganhou destaque nos anos 2000 com o hit 'Talarica'. Além de sua carreira musical, participou da série e do filme Antônia, que abordam a vida de mulheres negras no cenário do hip-hop. Quelynah é conhecida por sua voz potente e por representar a cultura negra contemporânea no Brasil.",
+            "texto_obras": {
+                "obra1": [
+                "Título: Quelynah (2006)",
+                "Álbum de estreia que apresentou sua mistura de hip-hop, R&B e soul, consolidando seu lugar na cena musical brasileira."
+                ],
+                "obra2": [
+                "Título: Soul Diva (2019)",
+                "Álbum que reafirma sua influência no R&B brasileiro, com faixas que exploram temas como identidade, amor e resistência negra."
+                ]
+            },
+            "legado": "Quelynah é uma referência importante na música negra brasileira, inspirando novas gerações com sua arte e contribuindo para a valorização da cultura afro-brasileira no cenário musical nacional."
+            }
+    ]
+    , "R" :
+    [
+        {
+            "Nome": "Rosana Paulino",
+            "Idade": "(1967– )",
+            "Profissoes": ["Artista Visual", "Educadora"],
+            "Biografia": "Rosana Paulino é uma artista visual brasileira reconhecida por sua obra que aborda questões de raça, gênero, identidade e história afro-brasileira. Utilizando técnicas como gravura, colagem, bordado e escultura, sua prática artística denuncia as desigualdades e a violência sofrida pelas mulheres negras, ao mesmo tempo em que celebra sua resistência e protagonismo.",
+            "texto_obras": {
+                "obra1": [
+                "Série Empoderamento",
+                "Uma série de gravuras e bordados que exploram as narrativas das mulheres negras, resgatando suas histórias muitas vezes silenciadas pela história oficial."
+                ],
+                "obra2": [
+                "Auto-retrato e Identidade",
+                "Trabalhos que utilizam imagens autobiográficas para refletir sobre a construção da identidade negra e os desafios enfrentados no Brasil contemporâneo."
+                ]
+            },
+            "legado": "Rosana Paulino é considerada uma voz importante na arte contemporânea brasileira, contribuindo para o debate sobre racismo, feminismo negro e memória histórica, e inspirando novas gerações de artistas e ativistas."
+            }
+        , 
+        {
+            "Nome": "Robinho Santana",
+            "Idade": "(1983– )",
+            "Profissoes": ["Artista Visual", "Músico", "Performer"],
+            "Biografia": "Robinho Santana é um artista visual e performer brasileiro, cuja obra mescla música, dança, e artes visuais para explorar temas como identidade negra, ancestralidade e resistência cultural. Seu trabalho é marcado pela experimentação e pela busca de formas alternativas de expressão para narrativas afro-brasileiras.",
+            "texto_obras": {
+                "obra1": [
+                "Performance 'Memórias Vivas'",
+                "Uma performance que combina música e movimento para rememorar histórias de resistência da comunidade negra brasileira."
+                ],
+                "obra2": [
+                "Instalação 'Raízes'",
+                "Obra que utiliza objetos cotidianos e símbolos culturais para refletir sobre a ancestralidade e as conexões com a cultura afro-brasileira."
+                ]
+            },
+            "legado": "Robinho Santana é reconhecido por sua contribuição para a valorização da cultura afro-brasileira nas artes contemporâneas, ampliando o diálogo sobre identidade e memória através de múltiplas linguagens artísticas."
+            }
+    ],
+    "S" :
+    [
+        {
+            "Nome": "Sabotage",
+            "Profissoes" : ["Rapper", "Ator", "Compositor"],
+            "Idade": "(1973 - 2003)",
+            "Biografia": "Nasceu na favela do Canão, Zona Sul de São Paulo, e durante a infância participou do tráfico, chegando a ser interno da Febem. Em 2000, lançou Rap é Compromisso!, seu único disco em vida, que vendeu mais de 1,7 milhão de cópias e é considerado um clássico do rap nacional. Atuou como ator nos filmes O Invasor (2002) e Carandiru (2003), além de compor trilhas, participando do EP Revolusongs do Sepultura e em projetos com artistas como Rappin’ Hood, Chorão e Negra Li. Foi assassinado em 2003, após levar quatro tiros, poucos dias após se despedir da esposa para um evento; o crime permanece oficialmente sem solução.",
+            "texto_obras" : {
+            "obra1": [
+                "Título: Rap é Compromisso! (2000)",
+                "Descrição: Álbum de estreia, gravado ao lado de nomes como Negra Li, Black Alien, Chorão, Rappin’ Hood e RZO.",
+                "Conceito: Retrato visceral da vida periférica, misturando críticas sociais, denúncia, fé e resistência — o rap como compromisso com a realidade."
+            ],
+            "obra2": [
+                "Título: Projeto Sabotage 50 anos (2023–2024)",
+                "Descrição: Projeto celebrativo com lançamento de disco póstumo, documentário, livro ilustrado, exposição, série e coleções, idealizado pelos filhos Wanderson e Tamires e gravado pela Som Livre.",
+                "Conceito: Atualiza o legado ao manter sua mensagem viva por meio de colaborações com artistas da nova geração, promovendo representatividade e diálogo entre gerações."
+            ]},
+            "legado": 
+                "Fenômeno cultural: Conhecido como “Maestro do Canão”, revolucionou a cena do rap com autenticidade, humor, força poética e crítica social."
+
+        }
+        ,
+        {
+            "Nome": "Sueli Carneiro",
+            "Profissoes" : [
+                "Filósofa",
+                "Militante negra",
+                "Militante feminista",
+                "Fundadora do Geledés",
+                "Coordenadora do Projeto SOS Racismo",
+                "Membro do Conselho Nacional da Condição Feminina",
+                "Autora"
+            ],
+            "Idade": "(1950 - )",
+            "Biografia": "Formada em Filosofia pela USP (1980) e doutora em Filosofia da Educação pela mesma instituição (2005), Sueli teve sua formação intelectual moldada por sua vivência na militância negra e feminista. Em 1988, fundou o Geledés – Instituto da Mulher Negra, primeira organização do gênero em SP, avançando a inclusão das mulheres negras em espaços institucionais. Coordenou o Projeto SOS Racismo, Programa Rappers, atuou no Conselho Nacional da Condição Feminina e foi membro do CDES no governo Lula, além de publicar mais de 150 artigos e 17 capítulos de livro.",
+            "texto_obras" : {
+            "obra1": [
+                "Título: A construção do outro como não‑ser como fundamento do ser (Doutorado, 2005; livro Zahar, 2023)",
+                "Conceito: Introduz o conceito de dispositivo de racialidade, baseado em Foucault e Mills, explicando como a branquitude é sustentada como norma cultural — destaca também o epistemicídio, o apagamento dos saberes negros."
+            ],
+            "obra2": [
+                "Título: Racismo, Sexismo e Desigualdade no Brasil (Selo Negro, 2011)",
+                "Conceito: Coletânea de artigos que abordam interseccionalidade racial e de gênero, defendendo políticas afirmativas como cotas e demarcação de terras quilombolas ― obra significativa na consolidação do feminismo negro no país."
+            ]},
+            "legado":
+                "Pioneira do feminismo negro no Brasil, fundadora do Geledés e voz ativa em políticas públicas, inclusive no Programa da Mulher Negra do Conselho Nacional da Condição Feminina."
+            }
+
+
+    ],
+    "T" : 
+    [
+        {
+            "Nome": "Tia Ciata",
+            "Idade": "(1854–1924)",
+            "Profissoes": ["Cozinheira", "Compositora", "Figura Cultural"],
+            "Biografia": "Tia Ciata foi uma importante figura cultural brasileira, considerada uma das mães do samba no Rio de Janeiro. Sua casa serviu como ponto de encontro para músicos e compositores que ajudaram a consolidar o gênero musical do samba.",
+            "texto_obras": {
+                "obra1": [
+                "Contribuição para o Samba",
+                "A partir de sua casa em Oswaldo Cruz, Tia Ciata promoveu rodas de samba que reuniam grandes nomes da música brasileira, influenciando a formação do samba carioca."
+                ],
+                "obra2": [
+                "Culinária e Cultura",
+                "Além da música, Tia Ciata era conhecida por sua culinária afro-brasileira, que reforçava os vínculos culturais das comunidades negras no Rio de Janeiro."
+                ]
+            },
+            "legado": "Tia Ciata é celebrada como uma matriarca do samba e um símbolo da cultura afro-brasileira, cuja influência permanece vital para a música e identidade cultural do Brasil."
+            }
+        ,
+        {
+            "Nome": "Tatau",
+            "Idade": "(1967 - )",
+            "Profissoes" : ["Cantor", "Compositor", "Percussionista", "Instrumentista"],
+            "Biografia": "Começou a cantar aos 14 anos e compor aos 16; venceu o Festival do Olodum com “Protesto do Olodum”. Aos 18, entrou para Araketu, conquistando grande sucesso com hits como “Araketu é Bom Demais”, “Pipoca,” e “Mal Acostumada”; foi eleito “Cantor Revelação” em 1994. Em 2008, partiu para carreira solo com o CD Formas e Formas (2008). Retornou brevemente a Araketu em 2012, mas segue carreira solo desde 2015. Reconhecido pelas composições interpretadas por grandes nomes nacionais (Ivete Sangalo, Claudia Leitte, Sorriso Maroto), conta hoje com 141 obras registradas no Ecad. Lançou recentemente o projeto Só As Minhas (EPs e álbum de arrocha), reafirmando suas raízes.",
+            "texto_obras" : {
+            "obra1": [
+                "Título: Protesto do Olodum (1985)",
+                "Descrição: Composição que venceu o Festival do Olodum; se tornou sucesso nacional e foi regravada por Margareth Menezes, Daniela Mercury e pela própria banda Araketu para o filme Ó Paí, Ó.",
+                "Conceito: Mistura crítica social e ancestralidade afro-baiana, denunciando temas como poluição e África, unindo o batuque ao diálogo político sobre identidade e resistência."
+            ],
+            "obra2": [
+                "Título: Projeto Só As Minhas (2024)",
+                "Descrição: Álbum/EP com 13 músicas no ritmo do arrocha, incluindo nomes como “Meu Amor é Maior”, “Problema Diário”, “Bilu Bilu” e releituras antigas em novo arranjo.",
+                "Conceito: Busca reafirmar suas raízes criativas, transformando composições autorais em obras duradouras, menos passageiras — “parte que fica”."
+            ]},
+            "Legado": "Voz do Axé Social: Compositor essencial da música baiana e nacional, suas canções atravessam gerações e ritmos — samba, arrocha, pop e pagode — influenciam artistas como Simone & Simaria, Claudia Leitte, Ivete Sangalo. Obras duradouras: Seus trabalhos visam a permanência – como declara, “música passa, obra fica” — contabiliza centenas de composições com estrutura refinada e narrativa profunda. Respeito e contemporaneidade: Relembra clássicos da Bahia em shows como os “Ensaios de Tatau”, ressignificando cultura com energia, ressaltando que seu repertório acompanha e renova sempre. Reconhecimento sólido: Reconhecido pelo mercado e público, Tatau é figura constante no cenário musical, com carreira que transita entre legado e inovação."
+            }
+    ],
+    "U" : 
+    [
+        {
+            "Nome": "Úrsula de Jesus",
+            "Idade": "(1600–c. 1670)",
+            "Profissoes": ["Escrava", "Escritora", "Freira"],
+            "Biografia": "Úrsula de Jesus foi uma mulher negra escravizada no Brasil colonial que, após obter sua alforria, tornou-se freira e escritora. Seu relato é um dos raros documentos pessoais que oferecem uma perspectiva direta sobre a vida de mulheres negras escravizadas na época.",
+            "texto_obras": {
+                "obra1": [
+                "Memórias e Escrita",
+                "Úrsula escreveu suas memórias, nas quais narra sua vida como escrava, suas experiências religiosas e as dificuldades enfrentadas, proporcionando um importante testemunho histórico e social."
+                ],
+                "obra2": [
+                "Religiosidade",
+                "Sua escrita revela uma profunda espiritualidade e a complexa relação entre fé, sofrimento e liberdade em sua trajetória pessoal."
+                ]
+            },
+            "legado": "Úrsula de Jesus é lembrada como uma pioneira na literatura afro-brasileira e um símbolo da resistência e da voz das mulheres negras no Brasil colonial."
+            }
+        ,
+        {
+            "Nome": "Urias",
+            "Profissoes": [
+                "Cantora",
+                "Compositora",
+                "Artista trans",
+                "Militante LGBTQIA+"
+            ],
+            "Idade": "(1994 - )",
+            "Biografia": "Migrou da dança, teatro e moda para a música, ganhando reconhecimento em 2019 com o single “Diaba” — que venceu o Berlin Music Video Awards de Melhor Direção de Arte — e assumiu destaque nas cenas R&B, pop, eletrônico e experimental. Assinada pela gravadora Mataderos Projects, lançou EPs (“Urias” – 2019, “FÚRIA Pt1” – 2021, “HER MIND Pt.1” – 2022) e os álbuns de estúdio FÚRIA (2022) e HER MIND (2023), posicionando-se como uma das principais artistas trans e negras no Brasil. Artista trans e militante LGBTQIA+, atua em moda (Fashion Week) e advocacy, integrada ao projeto YouTube Black Voices 2021, com mentorias e suporte ao seu canal.",
+            "texto_obras" : {
+            "obra1": [
+                "Título: Diaba (single, 2019)",
+                "Descrição: Debut autoral em videoclipe marcante que lhe rendeu o Berlin Music Video Awards por Direção de Arte, e exposição em telões na Times Square e Los Angeles como parte do YouTube Black Voices.",
+                "Conceito: Afirmação de poder e identidade preta, com estética visual experimental que celebra corpos trans enquanto empodera através da música e da performance."
+            ],
+            "obra2": [
+                "Título: Álbum FÚRIA (2022)",
+                "Descrição: Primeiro disco completo, sucedendo o EP “FÚRIA Pt1”. Conta com colaborações de Vírus, Ebony, HODARI, entre outros, consolidou Urias ao atingir o topo do iTunes Brasil.",
+                "Conceito: Um manifesto sonoro que combina R&B, trap e pop eletrônico para explorar temas como identidade, empoderamento queer e desafios pessoais, em forte estética preto-branca, reafirmando autorresponsabilidade e resistência."
+            ]},
+            "legado": "Pioneira LGBTQIA+ preta: Reconhecida como uma das vozes mais influentes da música contemporânea brasileira, elevou discursos sobre identidade, gênero e diversidade em várias plataformas institucionais e de massa. Premiada e influente: Vencedora no Berlin Music Video Awards, indicada ao Prêmio Multishow, MTV Miaw e Multishow 2022, ganhou visibilidade contínua com seu clip “Racha” e o álbum “HER MIND”. Visibilidade e ativismo: Carrega o ativismo em sua arte, participando de fashion weeks, festivais (como AFROPUNK Bahia), sendo pioneira trans no YouTube Black Voices e ampliando visibilidade de pessoas trans pretas na indústria musical."
+            }
+    ],
+    "V" : 
+    [
+        {
+            "Nome": "Virgínia Rodrigues",
+            "Idade": "(1964– )",
+            "Profissoes": ["Cantora", "Compositora"],
+            "Biografia": "Virgínia Rodrigues é uma cantora brasileira nascida em Salvador, Bahia, no dia 31 de março de 1964. Sua música mistura influências de música clássica, samba, jazz e referências ao candomblé e à umbanda. Descoberta por Caetano Veloso em 1997, ela lançou seu primeiro álbum, 'Sol Negro', que a projetou internacionalmente.",
+            "texto_obras": {
+                "obra1": [
+                "Álbum 'Sol Negro'",
+                "Lançado em 1997, o álbum contou com a participação de Gilberto Gil, Djavan e Milton Nascimento, e direção artística de Caetano Veloso. Foi bem recebido nos Estados Unidos e na Europa, recebendo críticas positivas do The New York Times."
+                ],
+                "obra2": [
+                "Álbum 'Mares Profundos'",
+                "Em 2003, Virgínia lançou 'Mares Profundos', interpretando obras de Baden Powell e Vinícius de Moraes. O álbum foi lançado nos Estados Unidos e na Europa, com produção de Caetano Veloso."
+                ]
+            },
+            "legado": "Virgínia Rodrigues é reconhecida por sua voz poderosa e por sua contribuição à música brasileira, especialmente por sua habilidade em unir elementos da música popular e erudita, além de representar as tradições afro-brasileiras em sua arte."
+            }
+        ,
+        {
+            "Nome": "Virgínia Leone Bicudo",
+            "Idade": "(1910 - 2003)",
+            "Profissoes" : ["Educadora sanitária", "Cientista social", "Psicanalista", "Pesquisadora", "Professora"],
+            "Biografia": "Filha de uma imigrante italiana e de um homem negro (descendente de ex-escravizado), Virgínia formou-se em magistério (1930) e, em 1932, atuou como educadora sanitária em São Paulo. Bacharelou-se em Ciências Sociais na Escola Livre de Sociologia e Política (1939), sendo a única mulher na turma. Em 1945, defendeu a dissertação pioneira Estudo de Atitudes Raciais de Pretos e Mulatos em São Paulo, primeira sobre racismo no Brasil, com abordagem interdisciplinar entre sociologia e psicanálise. Foi a primeira psicanalista não médica do país, após análise com Adelheid Koch, e lecionou Higiene Mental e Psicanálise na ELSP e em institutos de Brasília e São Paulo. Co-fundadora da Sociedade Brasileira de Psicanálise (SP) e do Instituto de Psicanálise de Brasília, dirigindo-o entre 1962–1975; manteve atividade clínica até 2000.",
+            "texto_obras" : {
+            "obra1": [
+                "Título: Estudo de Atitudes Raciais de Pretos e Mulatos em São Paulo (Dissertação, 1945)",
+                "Descrição: Pesquisa com entrevistas a grupos urbanos e ex-membros da Frente Negra, analisando percepções raciais utilizando conceitos sociológicos e psicológicos.",
+                "Conceito: Demonstrou que o preconceito persistia mesmo em classes sociais ascendentes, rejeitando o mito da democracia racial ao evidenciar mecanismos como branqueamento e sentimento de inferioridade."
+            ],
+            "obra2": [
+                "Título: Nosso Mundo Mental (Livro/coluna/rádio, 1956)",
+                "Descrição: Coletânea de 22 artigos e um programa radiofônico sobre saúde mental infantil, laços afetivos, sonhos, ciúmes e família.",
+                "Conceito: Levou a psicanálise ao grande público, especialmente pais e educadores, promovendo o autocuidado e a compreensão emocional — foi a primeira coluna psicanalítica em jornal de grande circulação."
+            ]},
+            "Legado": "Pioneira do estudo do racismo no Brasil, inaugurando uma análise científica das relações étnico-raciais. Primeira psicanalista não médica do país, com importante papel institucional na SBPSP (São Paulo, Brasília) e na introdução da psicanálise infantil. Divulgadora da psicanálise popular, por meio da mídia, alcançando públicos diversos. Referência para pesquisadores negros, intelectuais e feministas, homenageada com Google Doodle e um prêmio psicanalítico em seu nome."
+            }
+    ], 
+    "W" : 
+    [
+        {
+            "Nome": "Wilson Tibério",
+            "Idade": "(1920–2005)",
+            "Profissoes": ["Pintor", "Desenhista", "Escultor"],
+            "Biografia": "Wilson Tibério foi um artista plástico brasileiro nascido em Porto Alegre, RS. Começou a pintar aos 8 anos e, aos 16, mudou-se para o Rio de Janeiro, onde estudou na Escola Nacional de Belas Artes. Em 1947, recebeu uma bolsa de estudos da Embaixada da França e se mudou para Paris, onde viveu até sua morte em 2005. Tibério se destacou por suas obras que retratavam a vivência cotidiana da população negra e seus espaços de sociabilidade.",
+            "texto_obras": {
+                "obra1": [
+                "Autorretrato, 1941",
+                "Óleo sobre tela, 100 x 80 cm. Acervo da Universidade Federal do Rio Grande do Sul."
+                ],
+                "obra2": [
+                "Cena de Candomblé",
+                "Técnica mista sobre papel, 1945. Obra que retrata uma cena de ritual afro-brasileiro."
+                ]
+            },
+            "legado": "Wilson Tibério é reconhecido por sua contribuição à arte afro-brasileira, sendo um dos pioneiros na representação da cultura negra em suas obras. Seu trabalho continua a inspirar artistas e estudiosos da arte brasileira."
+            }
+        ,{
+            "Nome": "Wanda Chase",
+            "Profissoes" : ["Jornalista", "Repórter", "Comentarista", "Podcaster", "Colunista"],
+            "Idade": "(1952 - 2025)",
+            "Biografia": "Formada em Comunicação pela Universidade Federal do Amazonas (1974), iniciou como repórter no Jornal A Crítica, depois trabalhou em TV Amazonas, Rede Manchete, TV Cabo Branco, TV Globo Nordeste e, a partir de 1991, fixou-se em Salvador. Destacou-se como uma das primeiras jornalistas negras em telejornalismo baiano, com mais de 27 anos à frente da TV Bahia em reportagens culturais e cobertura do Carnaval. Militante pelos direitos do povo negro, participou de movimentos como a libertação de Nelson Mandela e foi assessora de imprensa do Olodum. Após deixar a televisão, seguiu ativa com coluna no Portal iBahia, podcasts como \"Bastidores com Wanda Chase\" e projetos literários sobre axé music.",
+            "texto_obras" : {
+            "obra1": [
+                "Título: Cobertura Cultural e do Carnaval",
+                "Descrição/Conceito: Por quase três décadas, foi comentarista e repórter oficial do Carnaval de Salvador, dando voz aos blocos afro, afoxés e à cultura popular baiana — valorizando narrativas negras e periféricas. Colocou temas afro-brasileiros no centro do jornalismo cultural, resgatando histórias muitas vezes ignoradas pela mídia tradicional."
+            ],
+            "obra2": [
+                "Título: Pioneirismo na Televisão e Comunicação Antirracista",
+                "Descrição/Conceito: Tornou-se uma das primeiras jornalistas negras da Bahia, adotando estética afro (afros, roupas fortes) e pautas que denunciaram o racismo estrutural e a exclusão midiática, promovendo diversidade e representatividade. Reverberou uma comunicação comprometida com justiça social, convidando as emissoras a refletirem sobre visibilidade negra."
+            ]},
+            "legado": "Pioneira e ícone da televisão baiana: Reconhecida como uma das grandes inovadoras do jornalismo local. Militância cultural e antirracista: Sua vida foi entrelaçada ao Movimento Negro, com destaque para Olodum e ações de combate à desigualdade. Homenagens e reconhecimento: Recebeu os títulos de Cidadã Soteropolitana (2002) e póstumamente Cidadã Baiana (2025), além de cortejos com Olodum e banda Didá em seu enterro. Inspiração duradoura: Abriu espaço para jornalistas negras, inspirou artistas e comunicadores e transformou o olhar da mídia para a cultura afro-brasileira."
+            }
+
+    ]
+    ,"X" : 
+    [
+        {
+            "Nome": "Xica da Silva ",
+            "Idade": "(1732–1796)",
+            "Profissoes": ["Ex-escrava", "Empresária", "Líder Comunitária"],
+            "Biografia": "Francisca da Silva de Oliveira, conhecida como Chica da Silva, foi uma mulher negra nascida em Minas Gerais, no Brasil colonial. Comprada por João Fernandes de Oliveira, contratador de diamantes, foi alforriada por ele em 1754. Juntos, tiveram treze filhos e viveram em união estável por mais de quinze anos. Chica tornou-se uma figura influente na sociedade local, possuindo propriedades e mantendo relações com diversas irmandades religiosas.",
+            "texto_obras": {
+                "obra1": [
+                "Ascensão Social",
+                "Após sua alforria, Chica acumulou riquezas e tornou-se uma das mulheres mais poderosas do Arraial do Tijuco, atual Diamantina. Sua influência se estendeu à política e à economia local."
+                ],
+                "obra2": [
+                "Legado Cultural",
+                "Chica da Silva é lembrada como um símbolo da resistência e da ascensão social de mulheres negras no Brasil colonial. Sua história inspirou diversas obras culturais, incluindo o filme de 1976 dirigido por Cacá Diegues e a telenovela de 1996 exibida pela Rede Manchete."
+                ]
+            },
+            "legado": "Chica da Silva é reconhecida como uma das primeiras mulheres negras a alcançar destaque na sociedade brasileira colonial, desafiando as normas sociais da época e deixando um legado de resistência e empoderamento."
+            }  ,
+
+        {
+            "Nome": "Xangô da Mangueira",
+            "Idade": "(1923–2009)",
+            "Profissoes": ["Sambista", "Cantor", "Compositor", "Improvisador", "Diretor de Harmonia"],
+            "Biografia": "Olivério Ferreira, conhecido artisticamente como Xangô da Mangueira, foi um dos maiores nomes do samba carioca. Nascido no Rio de Janeiro, iniciou sua trajetória na União de Rocha Miranda e depois na Portela, onde foi discípulo de Paulo da Portela. Na década de 1940, transferiu-se para a Estação Primeira de Mangueira, onde permaneceu por toda a sua vida, atuando como diretor de harmonia e intérprete oficial da escola até 1951.",
+            "texto_obras": {
+                "obra1": [
+                "Primeiro Disco",
+                "Em 1972, Xangô lançou seu primeiro LP, 'O Rei do Partido-Alto', pela gravadora Copacabana, consolidando-se como um dos principais nomes do gênero."
+                ],
+                "obra2": [
+                "Discografia Posterior",
+                "Seguiram-se os álbuns 'Velho Batuqueiro' (1975), 'Chão da Mangueira' (1977) e 'Xangô da Mangueira vol. 3' (1978), todos lançados pela Tapecar."
+                ]
+            },
+            "legado": "Xangô da Mangueira é lembrado como um mestre do partido-alto, com mais de 150 composições gravadas por ele mesmo e por artistas como Clara Nunes, Roberto Ribeiro e Martinho da Vila. Sua contribuição ao samba e à cultura carioca é imensurável, e sua memória é perpetuada por meio de sua música e da história da Mangueira."
+            }
+
+    ],
+    "Y" :
+    [
+        {
+            "Nome": "Yzalú",
+            "Idade": "(1982)",
+            "Profissoes": ["Cantora", "Compositora", "Rapper", "Instrumentista"],
+            "Biografia": "Começou a tocar violão aos 14 anos em Salvador e militou no rap feminista em São Paulo com o grupo Essência Black. Seu destaque veio em 2012 com a interpretação de 'Mulheres Negras', que se tornou um hino do feminismo negro no Brasil. Formada em marketing, voltou à música em 2008 após uma pausa, lançando clipes caseiros que viralizaram e, em 2016, lançou seu primeiro álbum solo.",
+            "texto_obras": {
+                "obra1": [
+                "Single 'Mulheres Negras' (2012)",
+                "Interpretação poderosa do rap de Eduardo, com vocal grave e solo de violão — marcou a entrada de Yzalú no cenário nacional, expondo a opressão interseccional contra mulheres negras."
+                ],
+                "obra2": [
+                "Álbum 'Minha Bossa É Treta' (2016)",
+                "Disco de estreia produzido por Marcelo Sanches, que mescla rap, MPB, samba jazz, afrobeat e bossa nova, incluindo a música 'Figura Difícil' com letra de Sabotage, expondo resistência e empoderamento."
+                ]
+            },
+            "legado": "Voz ativa na representatividade e interseccionalidade no rap, orgulho da comunidade periférica e pessoas com deficiência. Reconhecida como uma das 7 mulheres negras mais influentes (Revista Planeta, 2016), premiada no Palco MP3 e com destaque internacional. Inovou ao unir violão e rap com sofisticação, protagonizando documentários e continuando a lançar trabalhos autorais."
+            }
+
+        ,
+        {
+            "Nome": "Yalorixá Mãe Stella de Oxóssi",
+            "Idade": "(1925–2018)",
+            "Profissoes": ["Yalorixá", "Escritora", "Líder Religiosa"],
+            "Biografia": "Maria Stella de Azevedo Santos, conhecida como Mãe Stella de Oxóssi, foi uma das mais importantes ialorixás do Brasil e uma defensora ativa da cultura e religião afro-brasileira. Nascida em Salvador, Bahia, foi iniciada no Candomblé e, em 1981, tornou-se yalorixá do Ilê Axé Opô Afonjá, um dos mais tradicionais terreiros do país.",
+            "texto_obras": {
+                "obra1": [
+                    "Trajetória Religiosa",
+                    "Como ialorixá do Ilê Axé Opô Afonjá, liderou com sabedoria e dedicação, promovendo a valorização e o respeito às religiões de matriz africana. Sua atuação foi marcada pela preservação e divulgação das tradições do Candomblé."
+                ],
+                "obra2": [
+                    "Contribuições Literárias",
+                    "Mãe Stella publicou diversos livros sobre o Candomblé, seus rituais e a história afro-brasileira, contribuindo significativamente para a educação religiosa e o combate ao preconceito no Brasil."
+                ]
+            },
+            "legado": "Mãe Stella de Oxóssi é lembrada como uma das maiores representantes do Candomblé no Brasil. Sua luta contra o racismo religioso e pela valorização da cultura afro-brasileira permanece viva por meio de seus ensinamentos, publicações e do trabalho contínuo realizado pelos seguidores do Ilê Axé Opô Afonjá."
+        }
+    ],
+    "Z" : 
+    [
+        {
+            "Nome": "Zózimo Bulbul",
+            "Idade": "(1937–2013)",
+            "Profissoes": ["Ator", "Cineasta", "Produtor", "Roteirista"],
+            "Biografia": "Jorge da Silva, conhecido artisticamente como Zózimo Bulbul, nasceu no Rio de Janeiro em 21 de setembro de 1937. Foi um dos maiores expoentes do cinema afro-brasileiro, destacando-se como ator, diretor e ativista cultural. Em 1969, tornou-se o primeiro ator negro a protagonizar uma novela brasileira, 'Vidas em Conflito', na TV Excelsior. Atuou em mais de 30 filmes e dirigiu 12 obras, sempre com foco na valorização da cultura negra no Brasil.",
+            "texto_obras": {
+                "obra1": [
+                "Alma no Olho (1973)",
+                "Curta-metragem experimental que utiliza linguagem corporal para refletir sobre a identidade negra e a diáspora africana. Considerado um marco do cinema negro brasileiro, foi premiado na VI Jornada de Curta-Metragem de Salvador."
+                ],
+                "obra2": [
+                "Abolição (1988)",
+                "Documentário que propõe uma reflexão crítica sobre os 100 anos da abolição da escravatura no Brasil, registrando depoimentos de importantes personalidades do movimento negro brasileiro."
+                ]
+            },
+            "legado": "Zózimo Bulbul é considerado o pai do cinema negro brasileiro. Sua obra influenciou gerações de cineastas e artistas comprometidos com a valorização da cultura afro-brasileira. Seu legado permanece vivo através do Centro Afro Carioca de Cinema e da Mostra de Cinema Negro que leva seu nome, promovendo a representatividade e a diversidade no audiovisual."
+            }
+        ,{
+            "Nome": "Zezé Motta",
+            "Idade": "(1944– )",
+            "Profissoes": ["Atriz", "Cantora", "Ativista"],
+            "Biografia": "Maria José Motta de Oliveira, conhecida artisticamente como Zezé Motta, nasceu em 27 de junho de 1944, em Campos dos Goytacazes, Rio de Janeiro. Iniciou sua carreira artística no teatro com a peça 'Roda Viva' (1967), de Chico Buarque. Em 1968, estreou na televisão com a novela 'Beto Rockfeller', da TV Tupi. Zezé se destacou por sua atuação no filme 'Xica da Silva' (1976), dirigido por Cacá Diegues, que lhe rendeu reconhecimento nacional e internacional.",
+            "texto_obras": {
+                "obra1": [
+                "Xica da Silva (1976)",
+                "Neste filme dirigido por Cacá Diegues, Zezé Motta interpretou a protagonista Xica da Silva, uma escrava que ascende socialmente ao se envolver com um contratador de diamantes. Sua atuação foi amplamente aclamada e marcou um divisor de águas em sua carreira."
+                ],
+                "obra2": [
+                "Carreira Musical",
+                "Zezé lançou seu primeiro disco, 'Muito Prazer, Zezé', em 1978, com composições de artistas renomados como Rita Lee, Roberto de Carvalho, Luiz Melodia, Gilberto Gil e Chico Buarque. Posteriormente, lançou álbuns como 'Frágil Força' (1984), 'Divina Saudade' (2003) e 'Negra Melodia' (2011)."
+                ]
+            },
+            "legado": "Zezé Motta é uma das artistas mais influentes do Brasil, reconhecida por sua contribuição ao cinema, teatro, música e pela militância em prol dos direitos da população negra. Sua atuação em 'Xica da Silva' é considerada um marco no cinema nacional, e sua carreira musical é celebrada por dar voz à cultura afro-brasileira. Além disso, Zezé é uma importante ativista, tendo participado do Movimento Negro Unificado e atuado contra o racismo e a desigualdade social no país."
+            }
+    ]
+} 
+//novo
+const novo = {
+
+}
+
+for (const item of Object.entries(fds)) {
+    const letra = item[0]
+    novo[letra] = []
+
+    item[1].forEach(({Nome, Idade, Biografia, Profissoes, texto_obras}) => {
+        novo[letra].push({
+            name: Nome,
+            age: Idade,
+            bio: Biografia,
+            professions: Profissoes,
+            works: Object.entries(texto_obras)
+                .map(info => {
+                    const [text, description] = info[1]
+                    return {
+                        text: text,
+                        description: description
+                    }
+                })
+        })
+    })
+}
+
+await clipboardy.writeSync(JSON.stringify(novo, null, 4))
+
