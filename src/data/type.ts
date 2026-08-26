@@ -8,14 +8,21 @@ export type ArtistsData = Record<Alfabeto, ArtistData[]>
 
 export type ArtistData = {
     name: string,
-    age: string,
+    age: Age,
     bio: string,
     professions: string[]
-    works: Works[]
+    works: Works[],
+    legacy: string,
+    idImgs: string
+}
+
+export type Age = {
+    birth: string,
+    death: string | null
 }
 
 export type Works = {
-    text: string,
+    title: string,
     description: string
 }
 

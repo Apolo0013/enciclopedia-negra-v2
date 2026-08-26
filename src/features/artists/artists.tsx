@@ -1,7 +1,7 @@
 import './Artists.scss'
 //componentes
 import HeaderNav from '../../shared/components/HeaderNav/HeaderNav'
-import ArtistsGrid from './components/AristisGrid'
+import ArtistsGrid from './components/ArtistsGrid'
 import FeaturesSection from './components/FeaturesSection'
 import Footer from '../../shared/components/Footer/Footer'
 import ArtistsDescription from './components/ArtistsDescription'

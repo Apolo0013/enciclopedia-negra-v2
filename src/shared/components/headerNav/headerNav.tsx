@@ -15,7 +15,7 @@ function HeaderNav({
     showLine = false,
     posAbsolute = false
 }: Props) {
-    //hook
+    //
     const header = useHeaderNav()
     const {
         isMobile,

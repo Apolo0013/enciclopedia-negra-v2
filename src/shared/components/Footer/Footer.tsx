@@ -6,6 +6,8 @@ import ImgLinkedin from '../../assets/linkedin.svg'
 import ImgAspas from '../../assets/aspas.svg'
 
 function Footer() {
+
+
     const year = new Date().getFullYear()
     return (
         <footer className='wraper-footer'>

@@ -1,0 +1,184 @@
+@use '../../../../styles/palletes' as plt;
+@use '../../../../styles/mixins' as *;
+
+.artist-about {
+    padding: 32px;
+    width: 100%;
+    height: auto;
+    background: plt.$surface;
+    border-radius: 10px;
+    border: 1px solid plt.$border;
+    box-shadow: -8px 8px 12px 4px plt.$shadow;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .wraper-btn-view {
+        width: 100%;
+        height: 48px;
+
+        .btn-view {
+            @include flex-center;
+            width: auto;
+            height: 100%;
+            padding: 8px;
+            gap: 8px;
+            border-radius: 5px;
+            border: 1px solid plt.$primary;
+            cursor: pointer;
+
+            p {
+                font-size: 20px;
+                word-wrap: nowrap;
+                color: plt.$primary;
+            }
+
+            svg {
+                g > path {fill: plt.$primary;}
+                height: 20px;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    .line {
+        width: 100%;
+        height: 4px;
+        background: plt.$surface-2;
+    }
+
+    p {
+        color: plt.$text-soft;
+    }
+
+    .artist-profile {
+        width: 100%;
+        height: auto;
+        display: grid;
+        gap: 32px;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr;
+
+        .artist-profile-img {
+            object-fit: cover;
+            height: 300px;
+            aspect-ratio: 1 / 1;
+            border: 2px solid plt.$primary;
+            border-radius: 50%;
+        }
+
+        .artist-profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .artist-profile-name {
+                letter-spacing: 2px;
+                font-size: 68px;
+                font-style: italic;
+                font-family: "Bebas Neue";
+                color: plt.$text;
+            }
+
+            .artist-profile-profession {
+                display: flex;
+                gap: 4px;
+                flex-direction: row;
+                width: 100%;
+                height: auto;
+
+                p {
+                    width: fit-content;
+                    display: inline;
+                    background: plt.$primary;
+                    color: black;
+                    font-weight: bold;
+                    padding: 4px;
+                    border-radius: 4px;
+                }
+            }
+
+            .artist-profile-birth {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .artist-profile-description {
+                font-size: 18px;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .conteiner-artist-work {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .work-title {
+            border-left: 4px solid plt.$primary;
+            font-family: "Inter";
+            padding: 8px 0px 8px 18px;
+            font-size: 32px;
+            color: plt.$text;
+            font-weight: bold;
+        }
+
+        p.paragraph-work {
+            padding: 16px;
+            color: plt.$text-soft;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .artist-work:nth-of-type(even) >  .work-content {
+            grid-template-columns: 1fr auto;
+
+            img, p {
+                grid-row: 1 / 2;
+            }
+
+            img {
+                grid-column: 2 / 3;
+            }
+
+            p {
+                grid-column: 1 / 2;
+            }
+        }
+
+        .artist-work {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .work-content {
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-template-rows: 1fr;
+                gap: 16px;
+
+                img {
+                    border-radius: 15px;
+                    place-self: center;
+                    height: 300px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .legacy {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+}

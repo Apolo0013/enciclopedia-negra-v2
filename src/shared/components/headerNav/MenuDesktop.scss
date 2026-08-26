@@ -15,6 +15,11 @@
         width: auto;
         height: 80%;
 
+        .active-rota::before {
+            opacity: 1 !important;
+            box-shadow: 0px -1px 7px 0px plt.$primary;
+        }
+
         li {
             padding: 0 8px 0 8px;
             @include flex-center;

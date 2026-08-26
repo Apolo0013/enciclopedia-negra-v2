@@ -2,7 +2,10 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 //Pages
 import Home from "../../features/home/Home";
 import Artists from "../../features/artists/Artists";
+import ArtistPage from "../../features/artists/pages/ArtistPage";
 import AboutUs from "../../features/aboutUs/AboutUs";
+
+const baseURL = import.meta.env.BASE_URL
 
 export const router = createBrowserRouter([
     {
@@ -11,18 +14,22 @@ export const router = createBrowserRouter([
     },
     {
         path: "/",
-        element: <Navigate to="/home" replace/>
+        element: <Navigate to={`${baseURL}home`} replace/>
     },
     {
-        path: "/home",
+        path: `${baseURL}home`,
         element: <Home />
     },
     {
-        path: "/artists",
+        path: `${baseURL}artists`,
         element: <Artists />
     },
     {
-        path: "/about-us",
+        path: `${baseURL}artists/:letra`,
+        element: <ArtistPage/>
+    },
+    {
+        path: `${baseURL}about-us`,
         element: <AboutUs />
     }
 ])

@@ -12,9 +12,10 @@ function ArtistsGrid() {
     return (
         <section className='grid-artists'>
             {
-                alfabeto.map((letra) => (
+                alfabeto.map((letra, key) => (
                     <CardArtist
                         letra={letra}
+                        key={key}
                     />
                 ))
             }

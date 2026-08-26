@@ -793,7 +793,7 @@ const fds = {
                 "Descrição: Álbum/EP com 13 músicas no ritmo do arrocha, incluindo nomes como “Meu Amor é Maior”, “Problema Diário”, “Bilu Bilu” e releituras antigas em novo arranjo.",
                 "Conceito: Busca reafirmar suas raízes criativas, transformando composições autorais em obras duradouras, menos passageiras — “parte que fica”."
             ]},
-            "Legado": "Voz do Axé Social: Compositor essencial da música baiana e nacional, suas canções atravessam gerações e ritmos — samba, arrocha, pop e pagode — influenciam artistas como Simone & Simaria, Claudia Leitte, Ivete Sangalo. Obras duradouras: Seus trabalhos visam a permanência – como declara, “música passa, obra fica” — contabiliza centenas de composições com estrutura refinada e narrativa profunda. Respeito e contemporaneidade: Relembra clássicos da Bahia em shows como os “Ensaios de Tatau”, ressignificando cultura com energia, ressaltando que seu repertório acompanha e renova sempre. Reconhecimento sólido: Reconhecido pelo mercado e público, Tatau é figura constante no cenário musical, com carreira que transita entre legado e inovação."
+            "legado": "Voz do Axé Social: Compositor essencial da música baiana e nacional, suas canções atravessam gerações e ritmos — samba, arrocha, pop e pagode — influenciam artistas como Simone & Simaria, Claudia Leitte, Ivete Sangalo. Obras duradouras: Seus trabalhos visam a permanência – como declara, “música passa, obra fica” — contabiliza centenas de composições com estrutura refinada e narrativa profunda. Respeito e contemporaneidade: Relembra clássicos da Bahia em shows como os “Ensaios de Tatau”, ressignificando cultura com energia, ressaltando que seu repertório acompanha e renova sempre. Reconhecimento sólido: Reconhecido pelo mercado e público, Tatau é figura constante no cenário musical, com carreira que transita entre legado e inovação."
             }
     ],
     "U" : 
@@ -876,7 +876,7 @@ const fds = {
                 "Descrição: Coletânea de 22 artigos e um programa radiofônico sobre saúde mental infantil, laços afetivos, sonhos, ciúmes e família.",
                 "Conceito: Levou a psicanálise ao grande público, especialmente pais e educadores, promovendo o autocuidado e a compreensão emocional — foi a primeira coluna psicanalítica em jornal de grande circulação."
             ]},
-            "Legado": "Pioneira do estudo do racismo no Brasil, inaugurando uma análise científica das relações étnico-raciais. Primeira psicanalista não médica do país, com importante papel institucional na SBPSP (São Paulo, Brasília) e na introdução da psicanálise infantil. Divulgadora da psicanálise popular, por meio da mídia, alcançando públicos diversos. Referência para pesquisadores negros, intelectuais e feministas, homenageada com Google Doodle e um prêmio psicanalítico em seu nome."
+            "legado": "Pioneira do estudo do racismo no Brasil, inaugurando uma análise científica das relações étnico-raciais. Primeira psicanalista não médica do país, com importante papel institucional na SBPSP (São Paulo, Brasília) e na introdução da psicanálise infantil. Divulgadora da psicanálise popular, por meio da mídia, alcançando públicos diversos. Referência para pesquisadores negros, intelectuais e feministas, homenageada com Google Doodle e um prêmio psicanalítico em seu nome."
             }
     ], 
     "W" : 
@@ -1032,6 +1032,36 @@ const fds = {
             }
     ]
 } 
+
+const idImgs = {
+    "A": ["Abdias-cfc3fadd-7ace-4119-bc04-58a3e6bd0a2b", "Arthur_Timótheo_da_Costa-bee60bd9-7825-4120-b493-f076a77a4fcd"],
+    "B": ["Benedito-José-Tobias-78843c02-2a5b-4c0e-96fc-a7bc601c87fd", "Bruno-Baptistelli-271553ab-0434-449a-b0e9-3e4f0a5b830b"],
+    "C": ["Chica-Xavier-a5fea2bd-467d-4c42-ae19-b774261ed3ff", "Conceição-Evaristo-492b8aeb-a2a7-4f8e-a0c0-f53ddde39c41"],
+    "D": ["Dalton-Paula-fcffff5f-7c31-4a22-9b86-1c1fe48904e2", "Djavan-50baa62f-f500-4c5c-b9b4-91b8be6d2ce9"],
+    "E": ["Emanoel-Alves-de-Araújo-02633e92-098b-4964-943a-e1f3b3e398b1", "Estêvão-Silva-0942d1d2-a0fe-4a95-a302-f979ad35d437"],
+    "F": ["Fabiana-Cozza-83d5b43d-42bf-494e-9684-4c1a6462fab5", "Firmino-Monteiro-63881fa5-fc06-4fd7-a4fa-67d23c304986"],
+    "G": ["Gerson-King-Combo-8ee32217-4c2b-4f65-9034-f8b94aeb182e", "Gilberto-Gil-e8716270-2afc-45b3-b8d6-230ded053669"],
+    "H": ["Helena-Theodoro-6dfe6499-e933-4099-9f9f-cfa123f3ebe3", "Horácio-Hora-dd504765-f9d2-4360-9ee8-71a2bc4744d0"],
+    "I": ["Iléa-Ferraz-54323dfc-575e-47b8-94f4-aca42b44d958", "Ingrid-Silva-6c3fa384-6b08-4b72-ba18-b8ee6bd7bd41"],
+    "J": ["Jackson-do-Pandeiro-31e8b2e6-4e12-41a5-919a-99a4d3e4a53e", "Jean-Michel-Basquiat-aecdb872-a6b0-4e91-b638-491671a79163", "João-Timótheo-da-Costa-cb058702-ee70-4366-9c8c-f8b3583209f7"],
+    "K": ["Ketleyn-Quadros-25ca8c00-7324-46fb-8f55-137dfb38e5a4", "Kika-Carvalho-1b4a2287-93b8-4db0-b1f4-59e5ba7f059a"],
+    "L": ["Liniker-de-Barros-Ferreira-Campos-8f1895dc-c112-4b23-b09d-cc2cedfee75c", "Lélia-Gonzalez-aae48ff1-1b1d-4097-87a5-340a2bb74a00"],
+    "M": ["Mestre-Didi-834c6272-2e37-4ae8-af6d-3645c34dae8c", "Moisés-Patrício-8045526d-ddf5-48df-88d7-07c892c3f3ae"],
+    "N": ["Neusa-Santos-Souza-215f165d-ff57-43f4-b22c-2f77847d531d", "Nádia-Taquary-51452481-0f21-4423-8788-b1b0aba9b302"],
+    "O": ["Oga-Mendonça-3b8fdbbd-c55f-43df-9208-44412f44e081", "Olga-de-Alaketu-4d8d8f43-1a18-47e0-bcf0-7b8e0705cbc9"],
+    "P": ["Paulo-Nazareth-7ea850d4-5be9-4e6f-93f0-91554ee2dc9d", "Preta-Ferreira-bbf51f22-2b87-4588-9b74-c044f15f6b9e"],
+    "Q": ["quelynah-050f5fb1-6894-426c-8e50-5f6a0760926b", "Quinho-9af58339-2d64-41f4-a0d5-77a0774844eb"],
+    "R": ["Robinho-Santana-18ce8f0e-c350-459f-b9ba-f274d457f568", "Rosana-Paulino-828c0418-2448-4440-9daa-b89084a1ee2c"],
+    "S": ["Sabotage-0383d289-6f27-4f72-b163-b78399180d3b", "Sueli-Carneiro-07557318-2d75-4f6a-ba56-e033859ef312"],
+    "T": ["Tatau-afb9d73c-18dd-4bcd-abdd-faf90f96360a", "Tia-Ciata-aa0bf413-e363-4dc1-bed6-679483b997ae"],
+    "U": ["Urias-Reis-d1f18de7-4f64-4777-a841-83b6e55e1b58", "Ursula-de-Jesus-69551826-717f-4d63-9ed2-078dc3a48340"],
+    "V": ["Virgínia-Leone-Bicudo-6ac54f61-e1d6-479d-bf7c-be93caf32b3c", "Virgínia-Rodrigues-4e1b1d7f-e9f6-4193-8a40-f2b4e57f90e3"],
+    "W": ["Wanda-Chase-da-Silva-5bf13036-48fb-4adf-992c-2f05c955183c", "Wilson-Tibério-0640e74c-dde7-46f0-8bae-9d0a2cd479e0"],
+    "X": ["Xangô-da-Mangueira-e632b172-4165-408c-aa65-1fda850eb6d0", "Xica-da-Silva-c87d5dd0-7ff1-4f40-8759-9b96de6d3613"],
+    "Y": ["Y-Mãe-Stella-de-Oxóssi-e5f97c3a-ea43-4b1d-b5fa-375542eb4676", "Yzalú-45455132-220b-41b1-87ba-af10335e84a5"],
+    "Z": ["Zezé-Motta-b85ac489-e08f-48ab-9631-c0d4fde1b4d4", "Zózimo-Bulbul-a3f62e7f-7534-4123-9bdd-cb5e8bcd42b1"]
+}
+
 //novo
 const novo = {
 
@@ -1040,21 +1070,31 @@ const novo = {
 for (const item of Object.entries(fds)) {
     const letra = item[0]
     novo[letra] = []
+    item[1].forEach((f) => {
+        if (Object.keys(f)[5] != "legado") console.log(item[0])
+    })
 
-    item[1].forEach(({Nome, Idade, Biografia, Profissoes, texto_obras}) => {
+    item[1].forEach(({ Nome, Idade, Biografia, Profissoes, texto_obras, legado}, i) => {
+        const origin = Idade.match(/\d{3,4}/g)
+        const id = idImgs[letra][i]
         novo[letra].push({
             name: Nome,
-            age: Idade,
+            age: {
+                birth: origin[0],
+                death: origin.length == 2 ? origin[1] : null
+            },
             bio: Biografia,
             professions: Profissoes,
             works: Object.entries(texto_obras)
                 .map(info => {
                     const [text, description] = info[1]
                     return {
-                        text: text,
+                        title: text.replaceAll("Título:", '').trim(),
                         description: description
                     }
-                })
+                }),
+            legacy: legado,
+            idImgs: id
         })
     })
 }
