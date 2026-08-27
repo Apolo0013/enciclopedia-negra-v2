@@ -26,6 +26,15 @@
             border-radius: 5px;
             border: 1px solid plt.$primary;
             cursor: pointer;
+            transition: 0.4s ease-in-out;
+
+            &:hover {
+                background: plt.$primary-hover;
+                p {color: black;}
+                svg > g > path {
+                    fill: black;
+                }
+            }
 
             p {
                 font-size: 20px;
@@ -34,6 +43,7 @@
             }
 
             svg {
+                transition: transform 0.1s ease-in;
                 g > path {fill: plt.$primary;}
                 height: 20px;
                 aspect-ratio: 1 / 1;
@@ -134,7 +144,7 @@
         }
         
         .artist-work:nth-of-type(even) >  .work-content {
-            grid-template-columns: 1fr auto;
+            grid-template-columns: 1fr minmax(0, 400px);
 
             img, p {
                 grid-row: 1 / 2;
@@ -160,7 +170,7 @@
                 width: 100%;
                 height: auto;
                 display: grid;
-                grid-template-columns: auto 1fr;
+                grid-template-columns: minmax(0, 400px) 1fr;
                 grid-template-rows: 1fr;
                 gap: 16px;
 

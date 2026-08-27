@@ -27,8 +27,15 @@
         }
 
         p {
+            cursor: pointer;
             color: plt.$text;
             font-size: 18px;
+            transition: color 0.2s ease-in-out;
+
+
+            &:hover {
+                color: darken(plt.$text, 50%);
+            }
         }
 
         p:last-of-type {

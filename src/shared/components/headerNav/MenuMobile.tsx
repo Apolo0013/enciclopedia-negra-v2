@@ -8,6 +8,8 @@ import ImgInfo from '../../assets/info.svg'
 //hook
 import useHeaderNav from './useHeaderNav'
 import { useNavigate } from 'react-router-dom'
+//base url
+const baseURL = import.meta.env.BASE_URL
 //
 type Props = {
     useHeaderNav: ReturnType<typeof useHeaderNav>
@@ -39,7 +41,7 @@ function MenuMobile({ useHeaderNav }: Props) {
                 </div>
                 <nav className='nav-mobile'>
                     <li
-                        onClick={() => nav('/home')}
+                        onClick={() => nav(baseURL+'home')}
                     >
                         <img
                             src={ImgHome}
@@ -49,7 +51,7 @@ function MenuMobile({ useHeaderNav }: Props) {
                     </li>
                     <div className='nav-line'></div>
                     <li
-                        onClick={() => nav('/artists')}
+                        onClick={() => nav(baseURL+'artists')}
                     >                        
                         <img
                             src={ImgArtists}
@@ -59,7 +61,7 @@ function MenuMobile({ useHeaderNav }: Props) {
                     </li>
                     <div className='nav-line'></div>
                     <li
-                        onClick={() => nav('/about-us')}
+                        onClick={() => nav(baseURL+'about-us')}
                     >
                         <img
                             src={ImgInfo}

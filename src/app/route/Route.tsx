@@ -6,14 +6,15 @@ import ArtistPage from "../../features/artists/pages/ArtistPage";
 import AboutUs from "../../features/aboutUs/AboutUs";
 
 const baseURL = import.meta.env.BASE_URL
+console.log(`${baseURL}artists`)
 
 export const router = createBrowserRouter([
     {
         path: "*",
-        element: <Navigate to="/" replace/>
+        element: <Navigate to={baseURL} replace/>
     },
     {
-        path: "/",
+        path: baseURL,
         element: <Navigate to={`${baseURL}home`} replace/>
     },
     {
