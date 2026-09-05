@@ -5,17 +5,18 @@ $width-line: 2px;
 .wraper-features-section {
     width: 100%;
     height: auto;
+    padding: 0 32px 0 32px; 
 }
 
 .features-section {
     place-self: center;
-    margin-top: 18px;
     padding: 32px;
+    margin-top: 18px;
     background: rgba(plt.$surface-2, 0.2);
     border: 1px solid plt.$border;
     border-radius: 14px;
     width: 100%;
-    flex-basis: 170px;
+    height: 200px;
     display: grid;
     grid-template-columns: 1fr $width-line 1fr $width-line 1fr;
     grid-template-rows: auto;
@@ -29,6 +30,12 @@ $width-line: 2px;
         height: 100%;
         background: plt.$border;
         border-radius: 14px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .features-section {
+        height: 170px;
     }
 }
 

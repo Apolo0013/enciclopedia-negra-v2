@@ -82,7 +82,7 @@
                 }
             ],
             "legacy": "Bruno Baptistelli é um artista, gravurista e muralista brasileiro conhecido por sua produção ligada à xilogravura e à arte urbana. Nascido em São Paulo, sua obra dialoga com o espaço urbano, muitas vezes propondo reflexões sobre o cotidiano, o trabalho e a paisagem das grandes cidades. Ele também atua no campo da arte pública e da intervenção urbana, sendo bastante ativo em muros e espaços coletivos.",
-            "idImgs": "Benedito-José-Tobias-5e8d96e6-7a61-405d-b876-30fea0fff029"
+            "idImgs": "Bruno-Baptistelli-5924b61c-cd12-421d-93f1-4cb8e60d886c"
         },
         {
             "name": "Benedito José Tobias",
@@ -106,7 +106,8 @@
                 }
             ],
             "legacy": "Benedito José Tobias (1894–1963) foi um importante pintor, desenhista e aquarelista brasileiro, notável por retratar com sensibilidade e dignidade a população negra de São Paulo nas décadas de 1930 e 1940. Seu legado está na representação humanizada e expressiva de pessoas negras, muitas vezes invisibilizadas na arte da época. Apesar de ter sido pouco reconhecido em vida, sua obra ganhou valorização nas últimas décadas, sendo hoje vista como fundamental para a história da arte afro-brasileira e da representação racial no Brasil.",
-            "idImgs": "Bruno-Baptistelli-5924b61c-cd12-421d-93f1-4cb8e60d886c"
+            "idImgs": 
+            "Benedito-José-Tobias-5e8d96e6-7a61-405d-b876-30fea0fff029"
         }
     ],
     "C": [
@@ -237,7 +238,7 @@
                 }
             ],
             "legacy": "Após sua morte, a obra de Estêvão Silva foi reavaliada e ganhou reconhecimento a partir da década de 1980, com suas pinturas preservadas no Museu Nacional de Belas Artes e no Museu Afro Brasil. É hoje celebrado como pioneiro negro da arte acadêmica brasileira e mestre das naturezas-mortas.",
-            "idImgs": "Emanoel-Alves-de-Araújo-72f60de6-d090-4ccf-910b-52099714f077"
+            "idImgs": "Estêvão-Silva-4134744f-700d-4656-a582-208972f9ffc3"
         },
         {
             "name": "Emanoel Alves de Araújo",
@@ -264,7 +265,7 @@
                 }
             ],
             "legacy": "Emanoel Araújo foi fundamental na promoção da arte afro-brasileira como artista e curador, valorizando artistas negros e preservando a memória cultural afrodescendente no Brasil. Faleceu em 2022, sendo amplamente homenageado.",
-            "idImgs": "Estêvão-Silva-4134744f-700d-4656-a582-208972f9ffc3"
+            "idImgs": "Emanoel-Alves-de-Araújo-72f60de6-d090-4ccf-910b-52099714f077"
         }
     ],
     "F": [
@@ -290,7 +291,7 @@
                 }
             ],
             "legacy": "Monteiro lecionou pintura e perspectiva em escolas de arte, e sua obra é preservada em instituições como o Museu Afro Brasil e o Museu Nacional de Belas Artes, reconhecida por representar a cultura afro-brasileira no século XIX.",
-            "idImgs": "Fabiana-Cozza-6f66e3d3-fc88-42a5-8d5e-a1c937034f1a"
+            "idImgs": "Firmino-Monteiro-b1b7a996-1eb4-4446-9d36-e01f0dd4d2d2"
         },
         {
             "name": "Fabiana Cozza dos Santos",
@@ -317,7 +318,7 @@
                 }
             ],
             "legacy": "Fabiana é reconhecida como uma das vozes mais marcantes da nova geração da MPB, mesclando pesquisa e performance. É referência em curadoria (como a oficina 'O Corpo da Voz'), e seus álbuns têm presença internacional e premiações. Seu trabalho fortalece a visibilidade do samba e da cultura afro-brasileira, com destaque em festivais como Nuits d’Afrique e pelo álbum celebrado 'Dos Santos'.",
-            "idImgs": "Firmino-Monteiro-b1b7a996-1eb4-4446-9d36-e01f0dd4d2d2"
+            "idImgs": "Fabiana-Cozza-6f66e3d3-fc88-42a5-8d5e-a1c937034f1a"
         }
     ],
     "G": [
@@ -396,7 +397,7 @@
                 }
             ],
             "legacy": "Horácio Hora produziu mais de 300 obras, que estão preservadas em instituições como o Museu Histórico de Sergipe, Museu Afro Brasil e Museu Mariano Procópio. Apesar de ter falecido jovem, aos 36 anos, seu legado artístico é celebrado e estudado até hoje, com eventos comemorativos realizados em seu sesquicentenário.",
-            "idImgs": "Helena-Theodoro-f10ae9f6-a2a6-4405-8558-1398a736bba9"
+            "idImgs": "Horácio-Hora-43b3757a-0646-4031-bf87-8d8d8b8454c0"
         },
         {
             "name": "Helena Theodoro",
@@ -422,7 +423,7 @@
                 }
             ],
             "legacy": "Primeira doutora negra em Filosofia no Brasil, abrindo caminho para intelectuais negras. Radiofônica e escritora engajada, deu voz à cultura e auxílios negros por meio de programas inovadores. Recebeu Medalha Tiradentes e Medalha Chiquinha Gonzaga (2024), reconhecendo sua luta contra a intolerância religiosa e destaque na cultura afro-brasileira. Inspirou projetos culturais como a trilogia teatral 'Matriarcas' (CCBB) e segue sendo referência nos estudos sobre ancestralidade, filosofia e protagonismo feminino negro.",
-            "idImgs": "Horácio-Hora-43b3757a-0646-4031-bf87-8d8d8b8454c0"
+            "idImgs": "Helena-Theodoro-f10ae9f6-a2a6-4405-8558-1398a736bba9"
         }
     ],
     "I": [
@@ -448,7 +449,7 @@
                 }
             ],
             "legacy": "Ingrid Silva é uma referência no balé mundial e ativismo por diversidade, quebrando barreiras para bailarinos negros e inspirando novas gerações, conciliando carreira artística e maternidade.",
-            "idImgs": "Iléa-Ferraz-bb4ad476-984a-4c81-b77d-26fb3bdd9e1b"
+            "idImgs": "Ingrid-Silva-eda98bb8-647e-425a-a1b2-2635799e8d0d"
         },
         {
             "name": "Iléa Ferraz",
@@ -475,7 +476,7 @@
                 }
             ],
             "legacy": "Pioneira no teatro negro, Iléa Ferraz ocupou espaços majoritariamente brancos com liderança criativa e autoral. Contribuiu para a valorização da cultura afro-brasileira por meio de espetáculos engajados e educativos, como 'O Cheiro da Feijoada'. Fundadora da Companhia Black e Preto no Rio de Janeiro, inspirou novas gerações de artistas negras, ampliando a representatividade nos palcos. Permanece ativa com produções cênico-musicais e literárias, reafirmando a força da arte negra nas artes cênicas brasileiras.",
-            "idImgs": "Ingrid-Silva-eda98bb8-647e-425a-a1b2-2635799e8d0d"
+            "idImgs": "Iléa-Ferraz-bb4ad476-984a-4c81-b77d-26fb3bdd9e1b"
         }
     ],
     "J": [
@@ -873,7 +874,7 @@
                 }
             ],
             "legacy": "Quinho deixou um legado importante para a percussão brasileira, ajudando a preservar e difundir ritmos tradicionais afro-brasileiros e inspirando gerações de músicos a valorizar a cultura negra na música popular.",
-            "idImgs": "quelynah-4d2f3388-b285-4e3a-98a3-a170c7c2a624"
+            "idImgs": "Quinho-75e214b0-355d-4c61-a5a8-576dddff6a3e"
         },
         {
             "name": "Quelynah",
@@ -898,7 +899,7 @@
                 }
             ],
             "legacy": "Quelynah é uma referência importante na música negra brasileira, inspirando novas gerações com sua arte e contribuindo para a valorização da cultura afro-brasileira no cenário musical nacional.",
-            "idImgs": "Quinho-75e214b0-355d-4c61-a5a8-576dddff6a3e"
+            "idImgs": "quelynah-4d2f3388-b285-4e3a-98a3-a170c7c2a624"
         }
     ],
     "R": [
@@ -924,7 +925,7 @@
                 }
             ],
             "legacy": "Rosana Paulino é considerada uma voz importante na arte contemporânea brasileira, contribuindo para o debate sobre racismo, feminismo negro e memória histórica, e inspirando novas gerações de artistas e ativistas.",
-            "idImgs": "Robinho-Santana-d1d04a32-a870-4ab6-8c20-bb2d56ea2a84"
+            "idImgs": "Rosana-Paulino-3ff67fe8-fc94-49a2-a518-92a12010a3ea"
         },
         {
             "name": "Robinho Santana",
@@ -949,7 +950,7 @@
                 }
             ],
             "legacy": "Robinho Santana é reconhecido por sua contribuição para a valorização da cultura afro-brasileira nas artes contemporâneas, ampliando o diálogo sobre identidade e memória através de múltiplas linguagens artísticas.",
-            "idImgs": "Rosana-Paulino-3ff67fe8-fc94-49a2-a518-92a12010a3ea"
+            "idImgs": "Robinho-Santana-d1d04a32-a870-4ab6-8c20-bb2d56ea2a84"
         }
     ],
     "S": [
@@ -1032,7 +1033,7 @@
                 }
             ],
             "legacy": "Tia Ciata é celebrada como uma matriarca do samba e um símbolo da cultura afro-brasileira, cuja influência permanece vital para a música e identidade cultural do Brasil.",
-            "idImgs": "Tatau-df8cd043-6622-4849-82a0-decde0b0d8d0"
+            "idImgs": "Tia-Ciata-11dcf768-3ad6-465a-9963-cc48012a13c3"
         },
         {
             "name": "Tatau",
@@ -1058,7 +1059,7 @@
                 }
             ],
             "legacy": "Voz do Axé Social: Compositor essencial da música baiana e nacional, suas canções atravessam gerações e ritmos — samba, arrocha, pop e pagode — influenciam artistas como Simone & Simaria, Claudia Leitte, Ivete Sangalo. Obras duradouras: Seus trabalhos visam a permanência – como declara, “música passa, obra fica” — contabiliza centenas de composições com estrutura refinada e narrativa profunda. Respeito e contemporaneidade: Relembra clássicos da Bahia em shows como os “Ensaios de Tatau”, ressignificando cultura com energia, ressaltando que seu repertório acompanha e renova sempre. Reconhecimento sólido: Reconhecido pelo mercado e público, Tatau é figura constante no cenário musical, com carreira que transita entre legado e inovação.",
-            "idImgs": "Tia-Ciata-11dcf768-3ad6-465a-9963-cc48012a13c3"
+            "idImgs": "Tatau-df8cd043-6622-4849-82a0-decde0b0d8d0"
         }
     ],
     "U": [
@@ -1137,7 +1138,7 @@
                 }
             ],
             "legacy": "Virgínia Rodrigues é reconhecida por sua voz poderosa e por sua contribuição à música brasileira, especialmente por sua habilidade em unir elementos da música popular e erudita, além de representar as tradições afro-brasileiras em sua arte.",
-            "idImgs": "Virgínia-Leone-Bicudo-d02ca5ce-7f48-483e-a979-4fc11bce03f4"
+            "idImgs": "Virgínia-Rodrigues-7e2ac319-4fe5-4d39-8252-4beb6f2f9739"
         },
         {
             "name": "Virgínia Leone Bicudo",
@@ -1164,7 +1165,7 @@
                 }
             ],
             "legacy": "Pioneira do estudo do racismo no Brasil, inaugurando uma análise científica das relações étnico-raciais. Primeira psicanalista não médica do país, com importante papel institucional na SBPSP (São Paulo, Brasília) e na introdução da psicanálise infantil. Divulgadora da psicanálise popular, por meio da mídia, alcançando públicos diversos. Referência para pesquisadores negros, intelectuais e feministas, homenageada com Google Doodle e um prêmio psicanalítico em seu nome.",
-            "idImgs": "Virgínia-Rodrigues-7e2ac319-4fe5-4d39-8252-4beb6f2f9739"
+            "idImgs": "Virgínia-Leone-Bicudo-d02ca5ce-7f48-483e-a979-4fc11bce03f4"
         }
     ],
     "W": [
@@ -1191,7 +1192,7 @@
                 }
             ],
             "legacy": "Wilson Tibério é reconhecido por sua contribuição à arte afro-brasileira, sendo um dos pioneiros na representação da cultura negra em suas obras. Seu trabalho continua a inspirar artistas e estudiosos da arte brasileira.",
-            "idImgs": "Wanda-Chase-da-Silva-4e820dc9-d0bf-4d04-8c35-8ab6dff1b8e8"
+            "idImgs": "Wilson-Tibério-885c074e-2dc9-4fdf-b067-19b2c2503422"
         },
         {
             "name": "Wanda Chase",
@@ -1218,7 +1219,7 @@
                 }
             ],
             "legacy": "Pioneira e ícone da televisão baiana: Reconhecida como uma das grandes inovadoras do jornalismo local. Militância cultural e antirracista: Sua vida foi entrelaçada ao Movimento Negro, com destaque para Olodum e ações de combate à desigualdade. Homenagens e reconhecimento: Recebeu os títulos de Cidadã Soteropolitana (2002) e póstumamente Cidadã Baiana (2025), além de cortejos com Olodum e banda Didá em seu enterro. Inspiração duradoura: Abriu espaço para jornalistas negras, inspirou artistas e comunicadores e transformou o olhar da mídia para a cultura afro-brasileira.",
-            "idImgs": "Wilson-Tibério-885c074e-2dc9-4fdf-b067-19b2c2503422"
+            "idImgs": "Wanda-Chase-da-Silva-4e820dc9-d0bf-4d04-8c35-8ab6dff1b8e8"
         }
     ],
     "X": [
@@ -1245,7 +1246,7 @@
                 }
             ],
             "legacy": "Chica da Silva é reconhecida como uma das primeiras mulheres negras a alcançar destaque na sociedade brasileira colonial, desafiando as normas sociais da época e deixando um legado de resistência e empoderamento.",
-            "idImgs": "Xangô-da-Mangueira-4a90ef51-310e-4854-a710-a1c27968c3c0"
+            "idImgs": "Xica-da-Silva-c5c8cef7-7eac-4172-9227-a3ffd2004f3b"
         },
         {
             "name": "Xangô da Mangueira",
@@ -1272,7 +1273,7 @@
                 }
             ],
             "legacy": "Xangô da Mangueira é lembrado como um mestre do partido-alto, com mais de 150 composições gravadas por ele mesmo e por artistas como Clara Nunes, Roberto Ribeiro e Martinho da Vila. Sua contribuição ao samba e à cultura carioca é imensurável, e sua memória é perpetuada por meio de sua música e da história da Mangueira.",
-            "idImgs": "Xica-da-Silva-c5c8cef7-7eac-4172-9227-a3ffd2004f3b"
+            "idImgs": "Xangô-da-Mangueira-4a90ef51-310e-4854-a710-a1c27968c3c0"
         }
     ],
     "Y": [
@@ -1300,7 +1301,7 @@
                 }
             ],
             "legacy": "Voz ativa na representatividade e interseccionalidade no rap, orgulho da comunidade periférica e pessoas com deficiência. Reconhecida como uma das 7 mulheres negras mais influentes (Revista Planeta, 2016), premiada no Palco MP3 e com destaque internacional. Inovou ao unir violão e rap com sofisticação, protagonizando documentários e continuando a lançar trabalhos autorais.",
-            "idImgs": "Y-Mãe-Stella-de-Oxóssi-24322cdd-2ec8-44d7-89b2-08c2fa17dc96"
+            "idImgs": "Yzalú-f3f2cff7-c822-4210-a978-1b9fd6421bf1"
         },
         {
             "name": "Yalorixá Mãe Stella de Oxóssi",
@@ -1325,7 +1326,7 @@
                 }
             ],
             "legacy": "Mãe Stella de Oxóssi é lembrada como uma das maiores representantes do Candomblé no Brasil. Sua luta contra o racismo religioso e pela valorização da cultura afro-brasileira permanece viva por meio de seus ensinamentos, publicações e do trabalho contínuo realizado pelos seguidores do Ilê Axé Opô Afonjá.",
-            "idImgs": "Yzalú-f3f2cff7-c822-4210-a978-1b9fd6421bf1"
+            "idImgs": "Y-Mãe-Stella-de-Oxóssi-24322cdd-2ec8-44d7-89b2-08c2fa17dc96"
         }
     ],
     "Z": [
@@ -1353,7 +1354,7 @@
                 }
             ],
             "legacy": "Zózimo Bulbul é considerado o pai do cinema negro brasileiro. Sua obra influenciou gerações de cineastas e artistas comprometidos com a valorização da cultura afro-brasileira. Seu legado permanece vivo através do Centro Afro Carioca de Cinema e da Mostra de Cinema Negro que leva seu nome, promovendo a representatividade e a diversidade no audiovisual.",
-            "idImgs": "Zezé-Motta-5ac8fda0-e4c3-4429-9bf1-9ceef9528156"
+            "idImgs": "Zózimo-Bulbul-c11e8390-ed2b-4157-8972-3f079f9cf4dc"
         },
         {
             "name": "Zezé Motta",
@@ -1378,7 +1379,7 @@
                 }
             ],
             "legacy": "Zezé Motta é uma das artistas mais influentes do Brasil, reconhecida por sua contribuição ao cinema, teatro, música e pela militância em prol dos direitos da população negra. Sua atuação em 'Xica da Silva' é considerada um marco no cinema nacional, e sua carreira musical é celebrada por dar voz à cultura afro-brasileira. Além disso, Zezé é uma importante ativista, tendo participado do Movimento Negro Unificado e atuado contra o racismo e a desigualdade social no país.",
-            "idImgs": "Zózimo-Bulbul-c11e8390-ed2b-4157-8972-3f079f9cf4dc"
+            "idImgs": "Zezé-Motta-5ac8fda0-e4c3-4429-9bf1-9ceef9528156"
         }
     ]
 }

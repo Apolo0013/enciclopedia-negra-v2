@@ -11,9 +11,7 @@ const baseURL = import.meta.env.BASE_URL
 function MenuDesktop() {
     const location = useLocation()
     type namesPages = "home" | "artists" | "about-us"
-
-    const namePage = location.pathname.split('/')[1] as namesPages
-
+    const namePage = location.pathname.split('/')[2] as namesPages  
     const nav = useNavigate()
     return (
         <nav className='nav-main'>
