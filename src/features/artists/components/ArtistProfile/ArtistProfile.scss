@@ -1,0 +1,61 @@
+@use '../../../../styles/palletes' as plt;
+
+.artist-profile {
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+
+    .artist-profile-img {
+        object-fit: cover;
+        height: 300px;
+        aspect-ratio: 1 / 1;
+        border: 2px solid plt.$primary;
+        border-radius: 50%;
+    }
+
+    .artist-profile-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .artist-profile-name {
+            letter-spacing: 2px;
+            font-size: 68px;
+            font-style: italic;
+            font-family: "Bebas Neue";
+            color: plt.$text;
+        }
+
+        .artist-profile-profession {
+            display: flex;
+            gap: 4px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+
+            p {
+                width: fit-content;
+                display: inline;
+                background: plt.$primary;
+                color: black;
+                font-weight: bold;
+                padding: 4px;
+                border-radius: 4px;
+            }
+        }
+
+        .artist-profile-birth {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .artist-profile-description {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+    }
+}

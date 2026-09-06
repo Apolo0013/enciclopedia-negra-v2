@@ -5,6 +5,7 @@ import type { ArtistData } from '../../../../data/type'
 //imagens
 import ImgArrow from '../../assets/ImgArrow'
 import { useState } from 'react'
+import ArtistProfile from '../ArtistProfile'
 //base url
 const baseURL = import.meta.env.BASE_URL
 
@@ -13,43 +14,13 @@ type Props = {
 }
 ///Enciclopedia-Negra/pasta/Chica-Xavier-a5fea2bd-467d-4c42-ae19-b774261ed3ff/work-number-1.webp
 function ArtistAbout({ artistData }: Props) {
-    const faceSquareSrc = `${baseURL}pasta/${artistData.idImgs}/square-face.webp`
     //state
     const [view, setview] = useState<boolean>(false)
     return (
         <section className='artist-about'>
-            <div className='artist-profile'>
-                <img
-                    className='artist-profile-img'
-                    src={faceSquareSrc}
-                    alt="Imagem do Artista"
-                />
-                <div className='artist-profile-info'>
-                    <h1 className='artist-profile-name' >{artistData.name}</h1>
-                    <div className="artist-profile-profession">
-                        {
-                            artistData.professions.map((pro, key) => (
-                                <p key={key}>{pro}</p>
-                            )) 
-                        }
-                    </div>
-                    <p className='artist-profile-birth'>
-                        {
-                            `
-                                ${artistData.age.birth} -
-                                ${
-                                    artistData.age.death
-                                        ? artistData.age.death
-                                        : "Presente"
-                                }
-                            `
-                        }
-                    </p>
-                    <p className='artist-profile-description'>
-                        {artistData.bio}
-                    </p>
-                </div>
-            </div>
+            <ArtistProfile
+                artistData={artistData}
+            />
             {
                 view 
                 ? <>
