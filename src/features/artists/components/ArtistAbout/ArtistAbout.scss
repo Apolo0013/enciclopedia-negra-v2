@@ -135,3 +135,15 @@
         }
     }
 }
+
+//responsividade
+
+@media (max-width: 768px) {
+    .artist-about .wraper-btn-view {
+        height: 38px;
+
+        .btn-view > p {
+            font-size: 18px;
+        }
+    }
+}
