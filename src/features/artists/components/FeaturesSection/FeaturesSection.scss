@@ -44,13 +44,18 @@ $width-line: 2px;
     .wraper-features-section > .features-section {
         grid-template-columns: 1fr;
         grid-template-rows: 90px $width-line 90px $width-line 90px;
+        height: auto;
     }
 }
 
 @media (max-width: 768px) {
-    .wraper-features-section > .features-section {
-        grid-template-rows: 100px $width-line 100px $width-line 100px;
-        gap: 24px;
+    .wraper-features-section {
+        padding: 0 16px 0 16px;
+
+        .features-section {
+            grid-template-rows: 100px $width-line 100px $width-line 100px;
+            gap: 24px;
+        }
     }
 } 
 

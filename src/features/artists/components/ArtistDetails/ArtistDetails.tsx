@@ -7,7 +7,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import data from '../../../../data'
 import {type Alfabeto} from '../../../../data/type'
 //component
-import ArtistAbout from '../ArtistAbout/ArtistAbout'
+import ArtistAbout from '../ArtistAbout'
 //base URL
 const baseURL = import.meta.env.BASE_URL
 

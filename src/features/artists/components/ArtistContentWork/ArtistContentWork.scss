@@ -1,0 +1,107 @@
+@use '../../../../styles/palletes' as plt;
+
+.conteiner-artist-work {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+
+
+    .artist-work > .work-title, .legacy > .work-title {
+        border-left: 4px solid plt.$primary;
+        font-family: "Inter";
+        padding: 8px 0px 8px 18px;
+        font-size: 32px;
+        color: plt.$text;
+        font-weight: bold;
+    }
+
+    .paragraph-work {
+        padding: 16px;
+        color: plt.$text-soft;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    
+    .artist-work:nth-of-type(even) >  .work-content {
+        grid-template-columns: 1fr minmax(0, 400px);
+
+        img, p {
+            grid-row: 1 / 2;
+        }
+
+        img {
+            grid-column: 2 / 3;
+        }
+
+        p {
+            grid-column: 1 / 2;
+        }
+    }
+
+    .artist-work {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    
+        .work-content {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: minmax(0, 400px) 1fr;
+            grid-template-rows: 1fr;
+            gap: 16px;
+
+            img {
+                border-radius: 15px;
+                place-self: center;
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .legacy {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+//Responsividede
+@media (max-width: 1024px) {
+    .conteiner-artist-work > .artist-work > .work-content {
+        p, img {
+            grid-column: auto !important;
+            grid-row: auto !important;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .conteiner-artist-work > .artist-work > .work-content {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: minmax(0, 300px) auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .conteiner-artist-work > .artist-work { 
+        .work-content {
+            gap: 8px;
+        }
+
+        .work-title {
+            font-size: 26px;    
+        }
+        .paragraph-work {
+            font-size: 16px;
+            padding: 8px;
+        }
+    }
+}

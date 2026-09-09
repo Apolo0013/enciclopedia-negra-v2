@@ -48,5 +48,9 @@
 @media (max-width: 768px) {
     .artist-details {
         padding: 16px;
+
+        .artist-nav > p { 
+            font-size: 16px;
+        }
     }
 }

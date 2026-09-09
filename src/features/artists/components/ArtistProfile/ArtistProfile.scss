@@ -9,6 +9,7 @@
     grid-template-rows: 1fr;
 
     .artist-profile-img {
+        box-shadow: -12px 12px 20px 2px plt.$shadow;
         object-fit: cover;
         height: 300px;
         aspect-ratio: 1 / 1;
@@ -143,5 +144,12 @@
                 font-size: 40px;
             }
         }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .artist-about > .artist-profile {
+        grid-template-rows: 190px auto;
     }
 }

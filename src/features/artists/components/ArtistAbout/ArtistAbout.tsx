@@ -4,10 +4,11 @@ import './ArtistAbout.scss'
 import type { ArtistData } from '../../../../data/type'
 //imagens
 import ImgArrow from '../../assets/ImgArrow'
+//hook
 import { useState } from 'react'
+//componentes
 import ArtistProfile from '../ArtistProfile'
-//base url
-const baseURL = import.meta.env.BASE_URL
+import ArtistContentWork from '../ArtistContentWork'
 
 type Props = {
     artistData: ArtistData
@@ -23,38 +24,9 @@ function ArtistAbout({ artistData }: Props) {
             />
             {
                 view 
-                ? <>
-                    <span className="line"></span>
-                    <div className='conteiner-artist-work'>
-                        {
-                            artistData.works.map(({description, title}, key) => (
-                                <>
-                                    <div className='artist-work' key={key}>
-                                        <h2 className="work-title">
-                                            {title}
-                                        </h2>
-                                        <div className='work-content'>
-                                            <img
-                                                src={`${baseURL}pasta/${artistData.idImgs}/work-number-${key + 1}.webp`}
-                                                alt="Imagem da obra"
-                                            />
-                                            <p className='paragraph-work'>
-                                                {description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <span className="line"></span>    
-                                </>
-                            ))
-                        }
-                        <div className="legacy">
-                            <h2 className="work-title">
-                                Legado
-                            </h2>
-                            <p className='paragraph-work'>{artistData.legacy}</p>
-                        </div>
-                    </div>
-                    </>
+                    ? <ArtistContentWork
+                        artistData={artistData}
+                    />
                     : null
             }
             <div className='wraper-btn-view'>
