@@ -4,6 +4,7 @@ import Home from "../../features/home/Home";
 import Artists from "../../features/artists/Artists";
 import ArtistPage from "../../features/artists/pages/ArtistPage";
 import AboutUs from "../../features/aboutUs/AboutUs";
+import Search from "../../features/search/Search";
 
 const baseURL = import.meta.env.BASE_URL
 console.log(`${baseURL}artists`)
@@ -27,10 +28,14 @@ export const router = createBrowserRouter([
     },
     {
         path: `${baseURL}artists/:letra`,
-        element: <ArtistPage/>
+        element: <ArtistPage />
     },
     {
         path: `${baseURL}about-us`,
         element: <AboutUs />
+    },
+    {
+        path: `${baseURL}search`,
+        element: <Search />
     }
 ])

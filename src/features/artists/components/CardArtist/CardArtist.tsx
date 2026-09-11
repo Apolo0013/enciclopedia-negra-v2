@@ -1,6 +1,6 @@
 import './CardArtist.scss'
 //imagens
-import ImgArrow from '../../assets/ImgArrowTail.tsx'
+import ImgArrow from '../../../../shared/assets/ImgArrowTail.tsx'
 import { useNavigate } from 'react-router-dom'
 //base url
 const baseURL = import.meta.env.BASE_URL

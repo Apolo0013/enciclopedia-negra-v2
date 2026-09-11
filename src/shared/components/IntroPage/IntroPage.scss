@@ -1,13 +1,13 @@
-@use '../../../../styles/palletes' as plt;
+@use '../../../styles/palletes' as plt;
 
 
-.wraper-artists-description {
+.wraper-intro-page {
     margin-top: 120px;
     width: 600px;
     height: auto;
     place-self: start;
 
-    .artists-description {
+    .intro-page {
         padding: 16px 0px 16px 32px;
         border-left: 4px solid plt.$primary;
         margin-left: 32px;
@@ -19,6 +19,7 @@
 
         h1,
         p {
+            color: plt.$text;
             font-family: "Manrope";
         }
 
@@ -35,7 +36,7 @@
 }
 
 @media (max-width: 1024px) {
-    .wraper-artists-description > .artists-description {
+    .wraper-intro-page {
         h1 {
             font-size: 38px;
         }
@@ -47,11 +48,11 @@
 }
 
 @media (max-width: 768px) {
-    .wraper-artists-description {       
+    .wraper-intro-page {
         margin-top: 80px;
         width: 100%;
 
-        .artists-description {
+        .intro-page {
             padding: 16px;
             gap: 14px;
             margin-left: 0;
@@ -69,10 +70,10 @@
 }
 
 @media (max-width: 480px) {
-    .wraper-artists-description {
+    .wraper-intro-page {
         margin-top: 50px;
 
-        .artists-description {
+        .intro-page {
             gap: 8px;
 
             h1 {

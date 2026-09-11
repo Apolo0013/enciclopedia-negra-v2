@@ -34,7 +34,9 @@ function MenuDesktop() {
                 >
                     Sobre Nos
                 </li>
-                <li>
+                <li
+                    onClick={() => nav(baseURL+"search")}
+                >
                     <ImgSearch/>
                 </li>
             </ul>
