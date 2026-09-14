@@ -1,4 +1,4 @@
-import './BarSearch.scss'
+import './SearchBar.scss'
 //imagens
 import ImgSearch from '../../../../shared/assets/Search'
 import ImgArrowTail from '../../../../shared/assets/ImgArrowTail'
@@ -23,9 +23,7 @@ function BarSearch() {
                     <p>Buscar</p>
                     <ImgArrowTail />
                 </button>
-            
             </form>
-            
         </search>
     )
 }

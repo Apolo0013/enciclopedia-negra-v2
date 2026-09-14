@@ -1,6 +1,12 @@
 @use '../../../../styles/palletes' as plt;
 @use '../../../../styles/mixins' as *;
 
+.wraper-bar-search {
+    width: 100%;
+    height: auto;
+
+}
+
 .bar-search {
     margin-top: 32px;
     width: 100%;

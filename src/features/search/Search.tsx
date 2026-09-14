@@ -2,7 +2,8 @@ import './Search.scss'
 //componentes
 import HeaderNav from '../../shared/components/HeaderNav'
 import IntroPage from '../../shared/components/IntroPage'
-import BarSearch from './components/BarSearch'
+import SearchBar from './components/SearchBar'
+import SearchResult from './components/SearchResult'
 
 function Search() {
     const contentIntro = {
@@ -17,7 +18,8 @@ function Search() {
                 description={contentIntro.description}
             />
             <div className="wraper-padding">
-                <BarSearch/>
+                <SearchBar />
+                <SearchResult />
             </div>
         </main>
     )
