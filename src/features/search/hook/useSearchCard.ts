@@ -1,15 +1,13 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 
 function useSearchCard() {
     function ScrollAnimation() {
-        console.log(refProfGrade.current)
         if (!refProfGrade.current) return   
         const children = [...refProfGrade.current.children] as HTMLDivElement[]
         const el = refProfGrade!.current
         const distance = 32
         let index = 0
-        setInterval(() => {
-            console.log(index)
+        timer.current = setInterval(() => {
             if (index == children.length) { // final
                 //voltando pro comeco
                 el.style.transition = 'none'
@@ -30,6 +28,13 @@ function useSearchCard() {
     }
 
     const refProfGrade = useRef<HTMLDivElement | null>(null)
+    //variavel do loop
+    const timer = useRef<number>(0)
+    useEffect(() => {
+        return () => {
+            clearInterval(timer.current)
+        }
+    }, [])
     return {
         refProfGrade,
         ScrollAnimation
