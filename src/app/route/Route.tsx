@@ -27,6 +27,10 @@ export const router = createBrowserRouter([
         element: <Artists />
     },
     {
+        path: `${baseURL}artists/:letra/:name`,
+        element: <ArtistPage />
+    },
+    {
         path: `${baseURL}artists/:letra`,
         element: <ArtistPage />
     },

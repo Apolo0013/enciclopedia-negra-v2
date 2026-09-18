@@ -12,13 +12,15 @@ import ArtistAbout from '../ArtistAbout'
 const baseURL = import.meta.env.BASE_URL
 
 function ArtistDetails() {
-    const { letra } = useParams()
+    //hook route, para pegar parametros
+    const {
+        letra
+    } = useParams()
     const nv = useNavigate()
     if (!letra) return
     //pegar dados do artista
     const chave = letra as Alfabeto
     const dados = data[chave]
-    //
     return (
         <section className='artist-details'>
             <div className='artist-nav'>

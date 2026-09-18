@@ -13,7 +13,8 @@ export type ArtistData = {
     professions: string[]
     works: Works[],
     legacy: string,
-    idImgs: string
+    idImgs: string,
+    letter: Alfabeto
 }
 
 export type Age = {

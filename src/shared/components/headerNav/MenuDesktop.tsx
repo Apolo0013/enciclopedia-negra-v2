@@ -10,9 +10,10 @@ const baseURL = import.meta.env.BASE_URL
 
 function MenuDesktop() {
     const location = useLocation()
-    type namesPages = "home" | "artists" | "about-us"
+    type namesPages = "home" | "artists" | "about-us" | "search"
     const namePage = location.pathname.split('/')[2] as namesPages  
     const nav = useNavigate()
+    console.log(namePage)
     return (
         <nav className='nav-main'>
             <ul>
@@ -35,6 +36,7 @@ function MenuDesktop() {
                     Sobre Nos
                 </li>
                 <li
+                    className={namePage == 'search' ? "active-rota" : ""}
                     onClick={() => nav(baseURL+"search")}
                 >
                     <ImgSearch/>
