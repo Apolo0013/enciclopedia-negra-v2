@@ -1,10 +1,12 @@
 import './SearchCard.scss'
 //Imagens
 import ImgArrowTail from '../../../../shared/assets/ImgArrowTail'
-import type { ArtistData } from '../../../../data/type'
-import { useNavigate } from 'react-router-dom'
-import useSearchCard from '../../hook/useSearchCard'
+//imagens
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+///componentes
+import useSearchCard from '../../hook/useSearchCard'
+import type { ArtistData } from '../../../../data/type'
 //base URL
 const baseURL = import.meta.env.BASE_URL
 
@@ -12,7 +14,7 @@ type Props = {
     artistData: ArtistData
 }
 
-function SearchCard({ artistData }: Props) {
+function SearchCard({artistData}: Props) {
     const {
         name,
         professions,

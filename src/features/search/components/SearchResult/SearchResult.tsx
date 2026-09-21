@@ -1,16 +1,29 @@
+import type { ArtistData } from '../../../../data/type'
 import SearchArtists from '../SearchArtists'
 import './SearchResult.scss'
+type Props = {
+    valuesSearch: ArtistData[],
+    valueEntry: string
+}
 
-function SearchResult() {
+function SearchResult({ valuesSearch, valueEntry}: Props) {
     return (
         <section className='search-result'>
-            <div className="search-current">
-                <h3>Resultados para:</h3>
-                <p>
-                    "ab"
-                </p>
-            </div>
-            <SearchArtists />
+            {
+                valueEntry.length > 0
+                    ? <>
+                        <div className="search-current">
+                            <h3>Resultados para:</h3>
+                            <p>
+                                "{valueEntry}"
+                            </p>
+                        </div>
+                            <SearchArtists
+                            valuesSearch={valuesSearch}
+                            />
+                        </>
+                    : null
+            }
         </section>
     )
 }

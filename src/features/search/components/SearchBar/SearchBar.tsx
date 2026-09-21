@@ -2,18 +2,25 @@ import './SearchBar.scss'
 //imagens
 import ImgSearch from '../../../../shared/assets/Search'
 import ImgArrowTail from '../../../../shared/assets/ImgArrowTail'
-import useSearch from '../../hook/useSearch'
+//type
+import type { Dispatch, SetStateAction, SubmitEvent } from 'react'
+type Props = {
+    setValueEntry: Dispatch<SetStateAction<string>>,
+    valueEntry: string,
+    handleSubmit: (e: SubmitEvent<HTMLFormElement>) => void
+}
 
-function BarSearch() {
-    const {
-        setValueEntry,
-        valueEntry
-    } = useSearch()
+function BarSearch({
+    handleSubmit,
+    setValueEntry,
+    valueEntry
+}: Props) {
     return (
         <search className='bar-search'>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <ImgSearch />
                 <input
+                    autoComplete='off' // retirar os autocomplete
                     onChange={(e) => {
                         setValueEntry(e.currentTarget.value)
                     }}
@@ -23,7 +30,7 @@ function BarSearch() {
                     name='q'
                     placeholder='Digite o nome do artista, banda ou palavra-chave...'
                 />
-                
+
                 <button
                     className='btn-search'
                     type='submit'

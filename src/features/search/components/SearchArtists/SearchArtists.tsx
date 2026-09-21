@@ -1,15 +1,17 @@
 import './SearchArtists.scss'
-//temp
-import data from '../../../../data'
 //components
 import SearchCard from '../SearchCard'
+import type { ArtistData } from '../../../../data/type'
+//type
+type Props = {
+    valuesSearch: ArtistData[]
+}
 
-function SearchArtists() {
-    const list = Object.values(data).flatMap(x => x)
+function SearchArtists({valuesSearch}: Props) {
     return (
         <div className='artists-results-search'>
             {
-                list.map((artistData, key) => (
+                valuesSearch.map((artistData, key) => (
                     <SearchCard
                         key={key}
                         artistData={artistData}
