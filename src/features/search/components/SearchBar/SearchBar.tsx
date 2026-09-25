@@ -3,17 +3,25 @@ import './SearchBar.scss'
 import ImgSearch from '../../../../shared/assets/Search'
 import ImgArrowTail from '../../../../shared/assets/ImgArrowTail'
 //type
-import type { Dispatch, SetStateAction, SubmitEvent } from 'react'
+import { type Dispatch, type InputEvent, type SetStateAction, type SubmitEvent } from 'react'
+import SearchSuggestion from '../SearchSuggestion'
+import type { suggestionSearch } from '../../hook/type'
 type Props = {
     setValueEntry: Dispatch<SetStateAction<string>>,
     valueEntry: string,
-    handleSubmit: (e: SubmitEvent<HTMLFormElement>) => void
+    valuesSeggestion: suggestionSearch[],
+    handleSubmit: (e: SubmitEvent<HTMLFormElement>) => void,
+    handleInput: (e: InputEvent<HTMLInputElement>) => void,
+    handleClickInSeggestion: (name: string) => void
 }
 
 function BarSearch({
     handleSubmit,
+    handleInput,
     setValueEntry,
-    valueEntry
+    handleClickInSeggestion,
+    valueEntry,
+    valuesSeggestion
 }: Props) {
     return (
         <search className='bar-search'>
@@ -23,6 +31,9 @@ function BarSearch({
                     autoComplete='off' // retirar os autocomplete
                     onChange={(e) => {
                         setValueEntry(e.currentTarget.value)
+                    }}
+                    onInput={(e) => {
+                        handleInput(e)
                     }}
                     value={valueEntry}
                     type="search"
@@ -40,6 +51,14 @@ function BarSearch({
                     <ImgArrowTail />
                 </button>
             </form>
+            {
+                valueEntry.length > 0 && valuesSeggestion.length > 0
+                    ? <SearchSuggestion
+                        valuesSeggestion={valuesSeggestion}
+                        onClick={handleClickInSeggestion}
+                    />
+                    : null
+            }
         </search>
     )
 }

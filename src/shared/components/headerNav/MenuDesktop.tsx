@@ -13,7 +13,6 @@ function MenuDesktop() {
     type namesPages = "home" | "artists" | "about-us" | "search"
     const namePage = location.pathname.split('/')[2] as namesPages  
     const nav = useNavigate()
-    console.log(namePage)
     return (
         <nav className='nav-main'>
             <ul>

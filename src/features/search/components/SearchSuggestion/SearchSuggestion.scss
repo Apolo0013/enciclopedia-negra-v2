@@ -1,0 +1,83 @@
+@use '../../../../styles/palletes' as plt;
+
+.search-suggestion {
+    left: 32px;
+    top: calc(100%);
+    position: absolute;
+    background: plt.$surface;
+    border: 2px solid plt.$border;
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .search-suggestion-title {
+        color: plt.$text-muted;
+        font-weight: bold;
+        font-size: 16px;
+        padding-left: 8px;
+        padding-top: 8px;
+    }
+
+    .grid-suggestion {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 48px;
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        gap: 4px;
+
+        .suggestion {
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: 1fr;
+            gap: 20px;
+            padding-left: 20px;
+            transition: background 0.3s ease-in-out;
+            border-radius: 5px;
+            
+            &:hover {
+                background: rgba(plt.$primary-hover, 50%);
+                //para o icone de pesquisa
+                svg:nth-of-type(1) > g > path {
+                    stroke: plt.$primary;
+                }
+                ///para o arrow
+                svg:nth-of-type(2) > g > path {
+                    fill: plt.$primary;
+                }
+            }
+
+            svg {
+                transition: 
+                    stroke 0.2s ease-in,
+                    fill 0.2s ease-out
+                ;
+                place-self: center;
+                flex-shrink: 0;
+                aspect-ratio: 1 / 1;
+            }
+
+            svg:nth-of-type(1) {
+                height: 60%;
+            }
+
+            svg:nth-of-type(2) {
+                height: 50%;
+                place-self: center end;
+            }
+
+            p {
+                font-size: 16px;
+                color: plt.$text;
+                place-self: center start;
+            }
+        }
+    }
+}
