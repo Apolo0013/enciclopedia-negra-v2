@@ -11,10 +11,14 @@ function useSearch() {
             .toLowerCase()
     }
 
-    function getSearch(): ArtistData[] | null {
+    function getSearch(name?: string): ArtistData[] | null {
         if (valueEntry.length == 0) return null
+        const contentSearch = name ? name : valueEntry
         const search: namesInfo[] = names // "pesquisando" os nome que forem parecido e aguandando
-            .filter(({ name }) => name.includes(normalize(valueEntry)))
+            .filter(({ name }) =>
+                    name
+                    .includes(normalize(contentSearch))
+            )
         const resultSearch = Object.values(data)
             .flatMap(values => values)
             .filter(({ idImgs }) => search.some(v => v.id == idImgs))
@@ -23,10 +27,15 @@ function useSearch() {
 
     function handleClickInSeggestion(name: string) {
         //essa funcao é chamada quando o usuaria clica em algum sugestao
+        console.log("antes: " + valueEntry)
         setValueEntry(name) // coloca a sugestao da entrada
         setValuesSearch([]) // resetando a pesquisa
         setValuesSeggestion([]) // resetando as sugestao
-        handleSubmit() // pesquisando oq esta na entrada (ou seja a sugestao)
+        //aqui é especial, por causa do state a atualizacao do valor nao acontece na hora, entao damos pra ele o valor dirreto pra ele pesquisa
+        const result = getSearch(name)
+        if (result) setValuesSearch(result)
+        ///
+        console.log("depois: " + valueEntry)
     }
 
     function handleInput() {
@@ -66,6 +75,7 @@ function useSearch() {
     //--!
     useEffect(() => {
         //se nao tive nenhum valor na entrada tudo sera resetado, por logica isso ja acontece mas em alguns caso nao.
+        console.log("current: " + valueEntry)
         if (valueEntry.length == 0) {
             setValuesSearch([])
             setValuesSeggestion([])
