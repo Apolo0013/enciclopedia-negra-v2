@@ -70,7 +70,9 @@ function MenuMobile({ useHeaderNav }: Props) {
                         <p>Sobre nós</p>
                     </li>
                     <div className='nav-line'></div>
-                    <li>
+                    <li
+                        onClick={() => nav(baseURL+"search")}
+                    >
                         <ImgSearch />
                         <p>Pesquisa</p>
                     </li>

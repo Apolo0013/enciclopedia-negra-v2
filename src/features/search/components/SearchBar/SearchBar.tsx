@@ -6,6 +6,7 @@ import ImgArrowTail from '../../../../shared/assets/ImgArrowTail'
 import { type Dispatch, type InputEvent, type SetStateAction, type SubmitEvent } from 'react'
 import SearchSuggestion from '../SearchSuggestion'
 import type { suggestionSearch } from '../../hook/type'
+import useMediaQuery from '../../../../shared/hook/useMediaQuery'
 type Props = {
     setValueEntry: Dispatch<SetStateAction<string>>,
     valueEntry: string,
@@ -23,6 +24,9 @@ function BarSearch({
     valueEntry,
     valuesSeggestion
 }: Props) {
+    //Responsividade
+    //! é igual ou menor do que 768px
+    const isMobile = useMediaQuery("(max-width: 768px)")
     return (
         <search className='bar-search'>
             <form onSubmit={handleSubmit}>
@@ -39,7 +43,7 @@ function BarSearch({
                     type="search"
                     id="pesquisa"
                     name='q'
-                    placeholder='Digite o nome do artista, banda ou palavra-chave...'
+                    placeholder='Digite o nome do artista...'
                 />
 
                 <button
@@ -47,8 +51,14 @@ function BarSearch({
                     type='submit'
                     id='pesquisa'
                 >
-                    <p>Buscar</p>
-                    <ImgArrowTail />
+                    {
+                        !isMobile  
+                            ?   <>
+                                    <p>Buscar</p>
+                                    <ImgArrowTail />
+                                </>
+                            : <ImgSearch/>
+                    }
                 </button>
             </form>
             {

@@ -18,3 +18,9 @@
         flex-shrink: 0;
     }
 }
+//Responsividade
+@media (max-width: 768px) {
+    .search > .wraper-padding {
+        padding: 0 16px 0 16px;
+    }
+}

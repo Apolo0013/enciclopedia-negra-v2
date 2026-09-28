@@ -17,7 +17,6 @@ function ArtistDetails() {
         letra
     } = useParams()
     const nv = useNavigate()
-    if (!letra) return
     //pegar dados do artista
     const chave = letra as Alfabeto
     const dados = data[chave]

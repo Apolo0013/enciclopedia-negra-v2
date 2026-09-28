@@ -1,11 +1,6 @@
 @use '../../../../styles/palletes' as plt;
 @use '../../../../styles/mixins' as *;
 
-.wraper-bar-search {
-    width: 100%;
-    height: auto;
-
-}
 
 .bar-search {
     z-index: 3;
@@ -80,5 +75,43 @@
                 }
             }
         }
+    }
+}
+//Responsavidade
+@media (max-width: 1024px) {
+    .bar-search {
+        height: 60px;
+
+        form {
+            padding-left: 24px;
+
+            input, input::placeholder {
+                font-size: 16px;                
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .bar-search > form {
+        padding: 4px;
+        padding-left: 16px;
+        
+        svg {
+            height: 60%;
+        }
+
+        .btn-search {
+            & > svg > g > path {
+                fill: transparent;
+                stroke: black;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .bar-search {
+        height: 55px;
     }
 }
