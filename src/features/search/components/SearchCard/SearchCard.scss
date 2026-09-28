@@ -17,7 +17,7 @@
         }
     }
 
-    img {
+    .card-back-img {
         position: absolute;
         z-index: 1;
         object-fit: cover;
@@ -64,7 +64,7 @@
             width: 100%;
             height: 100%;
             display: grid;
-            grid-template-columns: 24px 1fr 1fr;
+            grid-template-columns: 24px 1fr auto;
             grid-template-rows: 32px;
 
             span {
@@ -117,5 +117,48 @@
                 }
             }
         }
+    }
+}
+
+//Responsividade
+//<div className={`card-artist-search ${isMobile ? "layout-adpitive-card" : ""}`}>
+.layout-adpitive-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100%;
+
+    &:hover > .card-back-img {
+        transform: none;
+    }
+
+    .shadow-background {
+        display: none;
+    }
+
+    .artist-result-info, .card-back-img {
+        height: 100%;
+        position: relative;
+    }
+
+    .artist-result-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .artist-result-professions {
+            height: 32px;
+        }
+
+        .artist-result-name {
+            width: 100%;
+            text-align: start;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .layout-adpitive-card {
+        grid-template-columns: 150px 1fr;
     }
 }

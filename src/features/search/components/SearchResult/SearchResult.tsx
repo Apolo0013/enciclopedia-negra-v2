@@ -10,7 +10,7 @@ function SearchResult({ valuesSearch, valueEntry}: Props) {
     return (
         <section className='search-result'>
             {
-                valueEntry.length > 0
+                true //valueEntry.length > 0
                     ? <>
                         <div className="search-current">
                             <h3>Resultados para:</h3>
