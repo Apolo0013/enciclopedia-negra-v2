@@ -29,3 +29,16 @@
         }
     }
 }
+
+//Responsividade
+@media (max-width: 500px) {
+    .search-result > .search-current {
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
