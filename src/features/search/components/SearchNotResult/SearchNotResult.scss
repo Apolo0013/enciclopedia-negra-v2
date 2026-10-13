@@ -27,17 +27,18 @@
         position: relative;
 
         &::after {
-            width: 25px;
+            @include flex-center;
+            width: 25px !important;
             height: 25px !important;
             content: '!';
             font-size: 20px;
             font-weight: bolder;
-            @include flex-center;
             position: absolute;
-            left: 75%;
-            height: 90%;
+            left: 70%;
+            height: 85%;
             background: plt.$primary;
             border-radius: 50%;
+            border: 2px solid plt.$surface;
         }
 
         svg {
@@ -54,6 +55,7 @@
         font-size: 32px;
         color: plt.$text;
         font-weight: bold;
+        text-align: center;
     }
 
     p {
@@ -61,5 +63,73 @@
         width: 50%;
         font-size: 16px;
         color: plt.$text-soft
+    }
+}
+
+//Responsividade
+@media (max-width: 1200px) {
+    .search-not-result {
+        background: radial-gradient(
+            circle at center center,
+            rgba(plt.$primary, 0.05) 0%,
+            rgba(plt.$primary, 0.05) 30%,
+            transparent 40%
+        );
+    }
+}
+
+@media (max-width: 1024px) {
+    .search-not-result {
+        background: radial-gradient(
+            circle at center center,
+            rgba(plt.$primary, 0.05) 0%,
+            rgba(plt.$primary, 0.05) 15%,
+            transparent 40%
+        );
+    }
+}
+
+@media (max-width: 768px) {
+    .search-not-result {
+        h2 {
+            font-size: 28px;
+        }
+
+        .icone-not-result {
+            width: 90px;
+
+            &::after {
+                left: 73%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .search-not-result {
+        background: radial-gradient(
+            circle at center center,
+            rgba(plt.$primary, 0.05) 0%,
+            rgba(plt.$primary, 0.05) 30%,
+            transparent 50%
+        );
+    }
+}
+
+//Mobile
+@media (max-width: 500px) {
+    .search-not-result {
+        p {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .search-not-result {
+        h2 {
+            font-size: 24px;
+        }
     }
 }
