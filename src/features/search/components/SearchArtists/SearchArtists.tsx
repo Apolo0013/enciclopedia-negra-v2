@@ -9,12 +9,12 @@ type Props = {
 }
 
 function SearchArtists({ valuesSearch }: Props) {
-    const list = Object.values(data).flatMap(x => x)//.slice(0, 1)
+    //const list = Object.values(data).flatMap(x => x)//.slice(0, 1)
     return (
         <div className='artists-results-search'>
             {
                 //valuesSearch
-                    list.map((artistData, key) => (
+                    valuesSearch.map((artistData, key) => (
                     <SearchCard
                         key={key}
                         artistData={artistData}

@@ -124,7 +124,7 @@
 //<div className={`card-artist-search ${isMobile ? "layout-adpitive-card" : ""}`}>
 .layout-adpitive-card {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 170px 1fr;
     grid-template-rows: 100%;
 
     &:hover > .card-back-img {
@@ -136,6 +136,7 @@
     }
 
     .artist-result-info, .card-back-img {
+        inset: 0;
         height: 100%;
         position: relative;
     }
@@ -154,6 +155,12 @@
             width: 100%;
             text-align: start;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .card-artist-search > .artist-result-info > .artist-result-name {
+        font-size: 18px;
     }
 }
 

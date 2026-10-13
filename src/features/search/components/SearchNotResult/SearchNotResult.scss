@@ -1,0 +1,65 @@
+@use '../../../../styles/palletes' as plt;
+@use '../../../../styles/mixins' as *;
+
+.search-not-result {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: radial-gradient(
+        ellipse 50% 120% at center center,
+        rgba(plt.$primary, 0.05) 0%,
+        rgba(plt.$primary, 0.05) 30%,
+        transparent 40%
+    );
+
+    //add o icone de ! abaixo a direita
+    .icone-not-result {
+        width: 100px;
+        aspect-ratio:  1 / 1;
+        padding: 20px;
+        border-radius: 50%;
+        border: 1px solid plt.$border;
+        background: plt.$surface;
+        position: relative;
+
+        &::after {
+            width: 25px;
+            height: 25px !important;
+            content: '!';
+            font-size: 20px;
+            font-weight: bolder;
+            @include flex-center;
+            position: absolute;
+            left: 75%;
+            height: 90%;
+            background: plt.$primary;
+            border-radius: 50%;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            g > path {
+                stroke: plt.$primary;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 32px;
+        color: plt.$text;
+        font-weight: bold;
+    }
+
+    p {
+        text-align: center;
+        width: 50%;
+        font-size: 16px;
+        color: plt.$text-soft
+    }
+}

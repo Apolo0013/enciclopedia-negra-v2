@@ -1,4 +1,4 @@
-import { useEffect,  useState, type InputEvent, type SubmitEvent } from "react"
+import { useEffect,  useState, type SubmitEvent } from "react"
 import data from "../../../data"
 import type { namesInfo, suggestionSearch } from "./type"
 import type { ArtistData } from "../../../data/type"
@@ -22,7 +22,9 @@ function useSearch() {
         const resultSearch = Object.values(data)
             .flatMap(values => values)
             .filter(({ idImgs }) => search.some(v => v.id == idImgs))
-        return resultSearch
+        return resultSearch.length == 0
+            ? null 
+            : resultSearch
     }
 
     function handleClickInSeggestion(name: string) {
@@ -55,8 +57,10 @@ function useSearch() {
     function handleSubmit(e?: SubmitEvent<HTMLFormElement> | undefined) {
         if (e) e.preventDefault() //retirar o efeito padrao do evento
         const result = getSearch()
-        if (!result) return
-        setValuesSearch(result)
+        setValuesSearch(prev => {
+            console.log(prev)
+            return result
+        })
     }
     //data
     const names: Array<namesInfo> = Object.values(data)
@@ -69,7 +73,7 @@ function useSearch() {
     //state/valor da entrada pesquisa
     const [valueEntry, setValueEntry] = useState<string>("")
     //valores das pesquisa
-    const [valuesSearch, setValuesSearch] = useState<ArtistData[]>([])
+    const [valuesSearch, setValuesSearch] = useState<ArtistData[] | null>([])
     //sugestoes de pesquisa
     const [valuesSeggestion, setValuesSeggestion] = useState<suggestionSearch[]>([])
     //--!

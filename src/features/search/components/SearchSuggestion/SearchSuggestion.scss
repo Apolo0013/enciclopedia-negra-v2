@@ -1,24 +1,50 @@
 @use '../../../../styles/palletes' as plt;
 
 .search-suggestion {
-    left: 32px;
-    top: calc(100%);
     position: absolute;
+    z-index: 2;
+    left: 32px;
+    top: 100%;
     background: plt.$surface;
     border: 2px solid plt.$border;
     width: 700px;
     height: auto;
+    max-height: calc(48px * 6);
+    overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 
+    //SCROLL
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(plt.$surface-2, 50%);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: plt.$primary-hover;
+        border-radius: 5px;
+    }
+
     .search-suggestion-title {
+        position: sticky;
+        z-index: 1;
+        top: 0;
+        height: auto;
+        width: 100%;
+        background: plt.$surface;
         color: plt.$text-muted;
         font-weight: bold;
         font-size: 16px;
         padding-left: 8px;
-        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-top: 16px;
+        border-bottom: 1px solid plt.$border;
     }
 
     .grid-suggestion {
@@ -78,6 +104,36 @@
                 color: plt.$text;
                 place-self: center start;
             }
+        }
+    }
+}
+
+//Responsividade
+@media (max-width: 1024px) {
+    .search-suggestion {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-suggestion {
+        width: 100%;
+
+        .search-suggestion-title {
+
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .search-suggestion  {
+        .grid-suggestion {
+            grid-auto-rows: 44px;
+            gap: 8px;
+        }
+
+        .search-suggestion-title {
+            font-size: 14px;    
         }
     }
 }
