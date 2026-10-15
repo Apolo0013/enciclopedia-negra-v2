@@ -8,8 +8,6 @@ import data from '../../../../data'
 import {type Alfabeto} from '../../../../data/type'
 //component
 import ArtistAbout from '../ArtistAbout'
-//base URL
-const baseURL = import.meta.env.BASE_URL
 
 function ArtistDetails() {
     //hook route, para pegar parametros
@@ -24,13 +22,13 @@ function ArtistDetails() {
         <section className='artist-details'>
             <div className='artist-nav'>
                 <p
-                    onClick={() => nv(baseURL+"home")}
+                    onClick={() => nv("home")}
                 >Inicio</p>
                 <div className='artist-nav-img'>
                     <ImgArrow />
                 </div>
                 <p
-                    onClick={() => nv(baseURL+"artists")}
+                    onClick={() => nv("artists")}
                 >Artistas</p>
                 <div className='artist-nav-img'>
                     <ImgArrow />

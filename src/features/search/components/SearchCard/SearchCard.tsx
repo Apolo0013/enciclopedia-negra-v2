@@ -8,9 +8,8 @@ import { useNavigate } from 'react-router-dom'
 import useSearchCard from '../../hook/useSearchCard'
 import type { ArtistData } from '../../../../data/type'
 import useMediaQuery from '../../../../shared/hook/useMediaQuery'
-//base URL
+//base URRL
 const baseURL = import.meta.env.BASE_URL
-
 type Props = {
     artistData: ArtistData
 }
@@ -22,7 +21,7 @@ function SearchCard({ artistData }: Props) {
         idImgs,
         letter
     } = artistData
-    const routeArtist = `${baseURL}artists/${letter}/${name}`
+    const routeArtist = `/artists/${letter}/${name}`
     //se trata de uma funcao simples
     const DirectToArtist = () => nv(routeArtist)
     //hook

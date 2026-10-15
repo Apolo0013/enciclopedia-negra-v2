@@ -2,8 +2,6 @@ import './CardArtist.scss'
 //imagens
 import ImgArrow from '../../../../shared/assets/ImgArrowTail.tsx'
 import { useNavigate } from 'react-router-dom'
-//base url
-const baseURL = import.meta.env.BASE_URL
 
 type Props = {
     letra: string
@@ -11,12 +9,13 @@ type Props = {
 
 function CardArtist({ letra }: Props) {
     const nv = useNavigate()
+    //alert('/artists/'+letra)
     return (
         <div className="card-artist">
             <h2 className='card-artist-letra'>{letra}</h2>
             <button
                 className='card-artist-btn'
-                onClick={() => nv(baseURL+'artists/'+letra)}
+                onClick={() => nv('/artists/'+letra)}
             >
                 <p>Ver Artista</p>
                 <ImgArrow/>

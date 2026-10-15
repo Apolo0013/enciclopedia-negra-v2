@@ -5,41 +5,45 @@ import Artists from "../../features/artists/Artists";
 import ArtistPage from "../../features/artists/pages/ArtistPage";
 import AboutUs from "../../features/aboutUs/AboutUs";
 import Search from "../../features/search/Search";
+import NotFound from "../../shared/components/NotFound";
 
 const baseURL = import.meta.env.BASE_URL
-console.log(`${baseURL}artists`)
 
 export const router = createBrowserRouter([
     {
-        path: "*",
-        element: <Navigate to={baseURL} replace/>
+        path: "/",
+        element: <Navigate to={'/home'} replace/>
     },
     {
-        path: baseURL,
-        element: <Navigate to={`${baseURL}home`} replace/>
-    },
-    {
-        path: `${baseURL}home`,
+        path: `/home`,
         element: <Home />
     },
     {
-        path: `${baseURL}artists`,
+        path: `/artists`,
         element: <Artists />
     },
     {
-        path: `${baseURL}artists/:letra/:name`,
+        path: `/artists/:letra/:name`,
         element: <ArtistPage />
     },
     {
-        path: `${baseURL}artists/:letra`,
+        path: `/artists/:letra`,
         element: <ArtistPage />
     },
     {
-        path: `${baseURL}about-us`,
+        path: `/about-us`,
         element: <AboutUs />
     },
     {
-        path: `${baseURL}search`,
+        path: `/search`,
         element: <Search />
+    },
+    {
+        path: "*",
+        element: <NotFound/>
     }
-])
+],
+    {
+        basename: baseURL
+    }
+)

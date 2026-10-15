@@ -2,8 +2,6 @@
 import { useNavigate } from 'react-router-dom'
 //css
 import './ContentHome.scss'
-//base URL
-const baseURL = import.meta.env.BASE_URL
 
 function ContentHome() {
     const nv = useNavigate()
@@ -14,7 +12,7 @@ function ContentHome() {
                 Histórias, obras e representatividade em um só lugar.</p>
             <button
                 className='btn-show-artist'
-                onClick={() => nv(baseURL+"artists")}
+                onClick={() => nv("/artists")}
             >Explorar Agora</button>
         </section>
     )

@@ -5,11 +5,11 @@ import ArtistDetails from '../../components/ArtistDetails'
 import FeaturesSection from '../../components/FeaturesSection'
 import Footer from '../../../../shared/components/Footer'
 //guard route
-import RouteArtist from '../../../../app/wraperRoute/RouteArtist'
+import ArtistsRouteGuard from '../../../../app/RouteGuard/ArtistsRouteGuard'
 
 function ArtistsPage() {
     return (
-        <RouteArtist>
+        <ArtistsRouteGuard>
             <main
             className='artist-page'
             >
@@ -18,7 +18,7 @@ function ArtistsPage() {
                 <FeaturesSection />
                 <Footer />
             </main>
-        </RouteArtist>
+        </ArtistsRouteGuard>
     )
 }
 

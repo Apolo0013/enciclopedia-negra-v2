@@ -4,10 +4,6 @@ import ImgSearch from '../../assets/Search'
 //hook
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-//base url
-const baseURL = import.meta.env.BASE_URL
-
-
 function MenuDesktop() {
     const location = useLocation()
     type namesPages = "home" | "artists" | "about-us" | "search"
@@ -18,25 +14,25 @@ function MenuDesktop() {
             <ul>
                 <li
                     className={namePage == "home" ? 'active-rota' : ''}
-                    onClick={() => nav(baseURL+'home')}
+                    onClick={() => nav('/home')}
                 >
                     Inicio
                 </li>
                 <li
                     className={namePage == 'artists' ? 'active-rota' : ''}
-                    onClick={() => nav(baseURL+'artists')}
+                    onClick={() => nav('/artists')}
                 >
                     Artista
                 </li>
                 <li
                     className={namePage == "about-us" ? 'active-rota' : ""}
-                    onClick={() => nav(baseURL+'about-us')}
+                    onClick={() => nav('/about-us')}
                 >
                     Sobre Nos
                 </li>
                 <li
                     className={namePage == 'search' ? "active-rota" : ""}
-                    onClick={() => nav(baseURL+"search")}
+                    onClick={() => nav("/search")}
                 >
                     <ImgSearch/>
                 </li>

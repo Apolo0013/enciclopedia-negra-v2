@@ -4,11 +4,13 @@ import svgr from 'vite-plugin-svgr'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-export default defineConfig({
-    plugins: [
+export default defineConfig(() => {
+    return {
+        plugins: [
         react(),
         svgr(),
         tailwindcss()
-    ],
-    base: '/Enciclopedia-Negra/'
+        ],
+        base: '/Enciclopedia-Negra/'
+    }
 })
